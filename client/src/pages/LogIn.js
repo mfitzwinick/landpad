@@ -6,7 +6,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "./Login.css";
 
-function LogIn() {
+function Login() {
     return (
       <div className="App">
         <h1>Hello World!</h1>
@@ -72,4 +72,4 @@ export default function Login() {
 
 import Login from "./containers/Login";
 
-export default LogIn;
+export default Login;
