@@ -6,7 +6,7 @@ import ListGroup from 'react-bootstrap/ListGroup'
 function UserPost() {
     return (
 
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '18rem', backgroundColor: 'whitesmoke' }}>
             <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
             <Card.Body>
                 <Card.Title>Card Title</Card.Title>
