@@ -11,7 +11,7 @@ let userSeed =
     firstName: "Michele",
     lastName: "Winick",
     userName: "@fitzy",
-    type: "Real Estate Agent",
+    password: "password",
     image: "image here",
     userId: 1
 }

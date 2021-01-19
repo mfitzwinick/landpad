@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import UserPost from "../../components/UserPost/UserPost";
-import Footer from "../components/Footer";
+import UserPost from "../../components/UserPost";
+import Footer from "../../components/Footer";
 
 
 class Posts extends Component {
@@ -74,31 +74,7 @@ class Posts extends Component {
                 <Row>
                     <Col size="md-12">
                         <Card title="Results">
-                            {this.state.posts.length ? (
-                                <List>
-                                    {this.state.posts.map(post => (
-                                        <Post
-                                            // key={post.id}
-                                            // title={book.volumeInfo.title}
-                                            // subtitle={book.volumeInfo.subtitle}
-                                            // link={book.volumeInfo.infoLink}
-                                            // authors={book.volumeInfo.authors.join(", ")}
-                                            // description={book.volumeInfo.description}
-                                            // image={book.volumeInfo.imageLinks.thumbnail}
-                                            Button={() => (
-                                                <button
-                                                    onClick={() => this.handleBookSave(book.id)}
-                                                    className="btn btn-primary ml-2"
-                                                >
-                                                    Save
-                                                </button>
-                                            )}
-                                        />
-                                    ))}
-                                </List>
-                            ) : (
-                                    <h2 className="text-center">{this.state.message}</h2>
-                                )}
+
                         </Card>
                     </Col>
                 </Row>

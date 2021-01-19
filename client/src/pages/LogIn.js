@@ -1,19 +1,7 @@
-import React from "react";
 import Button from 'react-bootstrap/Button';
 import Post from "../pages/VisionBoard";
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import "./Login.css";
-
-function Login() {
-    return (
-      <div className="App">
-        <h1>Hello World!</h1>
-      </div>
-    )
-
-}
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -66,10 +54,6 @@ export default function Login() {
 //   }
 // }
 
-<Route exact path="/login">
-  <Login />
-</Route>
 
-import Login from "./containers/Login";
 
-export default Login;
+

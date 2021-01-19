@@ -9,4 +9,6 @@ function Footer() {
       </p>
         </footer>
     );
-}
+};
+
+export default Footer;
