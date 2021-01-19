@@ -1,32 +1,39 @@
-import React from "react"
-import Card from 'react-bootstrap/Card';
-import ListGroupItem from 'react-bootstrap/ListGroupItem'
-import ListGroup from 'react-bootstrap/ListGroup'
+import React, { useState } from "react"
+import Modal from 'react-bootstrap/Modal'
+import Button from 'react-bootstrap/Button'
+import UserProfile from "./UserProfile";
 
-function UserProfile() {
+
+function ProfileModal() {
+    const [show, setShow] = useState(false);
+
     return (
+        <>
+            <Button variant="primary" onClick={() => setShow(true)}>
+                Create User Profile!
+                </Button>
 
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
-            <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
-            </Card.Text>
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-                <ListGroupItem>Cras justo odio</ListGroupItem>
-                <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-                <ListGroupItem>Vestibulum at eros</ListGroupItem>
-            </ListGroup>
-            <Card.Body>
-                <Card.Link href="#">Card Link</Card.Link>
-                <Card.Link href="#">Another Link</Card.Link>
-            </Card.Body>
-        </Card>
-
-    )
+            <Modal
+                show={show}
+                onHide={() => setShow(false)}
+                dialogClassName="modal-90w"
+                aria-labelledby="example-custom-modal-styling-title"
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title id="example-custom-modal-styling-title">
+                        WELCOME TO LAND PAD!
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <UserProfile />
+                </Modal.Body>
+            </Modal>
+        </>
+    );
 }
 
-export default UserProfile;
+
+
+
+
+export default ProfileModal;
