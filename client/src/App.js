@@ -8,6 +8,7 @@ import Posts from "./pages/Posts";
 import Data from "./pages/Data";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import Modal from "./components/Modal";
 
 function App() {
   return (
