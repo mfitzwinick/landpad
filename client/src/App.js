@@ -14,13 +14,13 @@ function App() {
     <div>
       <Navigation />
       <Router>
-            <Route exact path="/" component={Login} />
-            <Route exact path="/posts" component={Posts} />
-            <Route exact path="/financial" component={Financial} />
-            <Route exact path="/vision-board" component={VisionBoard} />
-            <Route exact path="/data" component={Data} />
+        <Route exact path="/" component={Modal} />
+        {/* <Route exact path="/posts" component={Posts} /> */}
+        <Route exact path="/financial" component={Financial} />
+        <Route exact path="/vision-board" component={VisionBoard} />
+        <Route exact path="/data" component={Data} />
+        <Route exact path="/modal" component={Modal} />
       </Router>
-      <Posts />
       <Footer />
     </div>
   );
