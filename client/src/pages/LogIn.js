@@ -2,14 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Post from "../pages/VisionBoard";
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
-
-function Login() {
-    return (
-      <div className="App">
-        <h1>Hello World!</h1>
-      </div>
-    )
-
+import Carousel from '../components/CarouselSlider';
 
 
   function UserLogin() {
@@ -26,6 +19,7 @@ function Login() {
 
     return (
       <div className="Login">
+        <Carousel />
         <Form onSubmit={handleSubmit}>
           <Form.Group size="lg" controlId="email">
             <Form.Label>Email</Form.Label>
@@ -50,19 +44,6 @@ function Login() {
         </Form>
       </div>
     );
-  }
-}
-// @media all and (min-width: 480px) {
-//   .Login {
-//     padding: 60px 0;
-//   }
+  };
 
-//   .Login form {
-//     margin: 0 auto;
-//     max-width: 320px;
-//   }
-// }
-
-
-
-
+  export default UserLogin;
