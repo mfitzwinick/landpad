@@ -1,0 +1,15 @@
+.search-form {
+    width: 30%;
+}
+
+.search, 
+.search-btn {
+    border-radius: 20px;
+    justify-content: end;
+} 
+
+.search-btn {
+    background-color: rgb(145, 141, 141);
+    border: none;
+}
+
