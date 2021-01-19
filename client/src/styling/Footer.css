@@ -1,0 +1,15 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    text-align: right;
+    background-color: rgb(199, 194, 194);
+    height: 3rem;
+    width: 100%;
+    margin-bottom: 0;
+    letter-spacing: 3px;
+}
+
+.footer-text {
+    margin-top: 0.5rem;
+    margin-right: 20px;
+}
