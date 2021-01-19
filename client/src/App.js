@@ -7,6 +7,7 @@ import Financial from "./pages/Financial";
 import Posts from "./pages/Posts/Posts";
 import Data from "./pages/Data";
 import Navigation from "./components/Navigation/Navigation";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route exact path="/data" component={Data} />
       </Router>
       <Posts />
+      <Footer />
     </div>
   );
 }
