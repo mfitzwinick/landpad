@@ -4,10 +4,10 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from './pages/LogIn';
 import VisionBoard from "./pages/VisionBoard";
 import Financial from "./pages/Financial";
-import Modal from "./pages/Modal";
-
+import Posts from "./pages/Posts";
 import Data from "./pages/Data";
 import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
         <Route exact path="/data" component={Data} />
         <Route exact path="/modal" component={Modal} />
       </Router>
+      <Footer />
     </div>
   );
 }
