@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import UserPost from "../../components/UserPost/UserPost";
+// import UserPost from "../../components/UserPost/UserPost";
 import Footer from "../components/Footer";
+import "../styling/Posts.css";
 
 
 class Posts extends Component {
