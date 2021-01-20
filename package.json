@@ -1,12 +1,15 @@
 {
   "name": "landpad",
-  
   "scripts": {
+    "client": "cd client && npm run start",
     "seed": "node seeders/seedProfile.js"
   },
   "dependencies": {
+    "apexcharts": "^3.23.1",
+    "chart.js": "^2.9.4",
     "express": "^4.17.1",
     "mongoose": "^5.11.12",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "mortgage-calculator-react": "^0.1.3"
   }
 }

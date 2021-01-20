@@ -12,11 +12,10 @@ const Navigation = () => {
                     <Nav.Item className="location">
                         <Nav.Link href="/posts">SHARE</Nav.Link>
                     </Nav.Item>
-                    <Nav.Item className="location">
                         <Nav.Link href="/vision-board">VISON BOARD</Nav.Link>
                     </Nav.Item>
                     <Nav.Item className="location">
-                        <Nav.Link href="/finances">FINANCES</Nav.Link>
+                        <Nav.Link href="/plan">PLAN</Nav.Link>
                     </Nav.Item>
                     <Nav.Item className="location">
                         <Nav.Link href="/learn">LEARN</Nav.Link>
