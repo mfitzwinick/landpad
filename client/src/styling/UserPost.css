@@ -1,13 +1,16 @@
-.card-columns {
-    display: flex;
+#side-margins {
+   margin-left: 40px;
+   margin-right: 40px;
 }
 
 .whole-card {
-    /* display: flex; */
-    margin-left: 20px;
-    background-color: none;
     margin-bottom: 20px;
-    width: 230px;
+}
+
+.post-card {
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5),
+            2px 2px 5px rgba(0,0,0,0.5),
+            -1px -1px 5px rgba(0,0,0,0.2);
 }
 
 .card {
@@ -21,9 +24,12 @@
 .post-footer {
     border-radius: 20px;
     padding-bottom: 20px;
+}  
+
+.like {
+    width: 2rem;
+    height: 2rem;
+    float: right;
 }
 
-.post-image { order: 2; }
-.post-body { order: 3; }
-.post-footer { order: 4; }  
-.post-card { order: 1; }
+
