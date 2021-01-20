@@ -1,17 +1,16 @@
-
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
-import UserProfile from "./UserProfile";
+import SavingsProfile from "./SavingsProfile"
 import React, { useState } from "react"
 
 
-function ProfileModal() {
+function SavingsModal() {
     const [show, setShow] = useState(false);
-
     return (
-        <>
+        
+        <div>
             <Button variant="primary" onClick={() => setShow(true)}>
-                Create User Profile!
+                Update your Savings Plan
                 </Button>
 
             <Modal
@@ -22,16 +21,17 @@ function ProfileModal() {
             >
                 <Modal.Header closeButton>
                     <Modal.Title id="example-custom-modal-styling-title">
-                        WELCOME TO LAND PAD!
+                        You're on the path to your dream pad!
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <UserProfile />
+                    <SavingsProfile />
                 </Modal.Body>
             </Modal>
-        </>
+        </div>
     );
 }
 
 
-export default ProfileModal;
+
+export default SavingsModal;
