@@ -1,0 +1,18 @@
+.logo {
+    font-weight: 200;
+    margin: 40px
+}
+
+#photo {
+    display: inline-block;
+    width: 70%;
+    height: 70%;
+    margin-left: 40px;
+}
+
+.auth {
+    width: 20%;
+    margin: 40px;
+    display: inline-block;
+    line-height: 3;
+}

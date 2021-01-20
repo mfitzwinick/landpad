@@ -6,20 +6,26 @@ mongoose.connect("mongodb://localhost/landpad", {
     useUnifiedTopology: true
 });
 
-let userSeed =
+let profileSeed =
 {
     firstName: "Michele",
     lastName: "Winick",
     userName: "@fitzy",
     password: "password",
+    california: true,
+    city: "Los Angeles",
+    area: "Studio City",
+    agree: true,
     image: "image here",
-    userId: 1
+
 }
 
-db.User.deleteMany()
-    .then(() => db.User.create(userSeed))
+
+
+db.Profiles.deleteMany()
+    .then(() => db.Profiles.create(profileSeed))
     .then(data => {
-        console.log(" user input received!");
+        console.log(" New profile received!");
 
     })
     .catch(err => {

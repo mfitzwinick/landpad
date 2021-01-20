@@ -1,0 +1,35 @@
+#side-margins {
+   margin-left: 40px;
+   margin-right: 40px;
+}
+
+.whole-card {
+    margin-bottom: 20px;
+}
+
+.post-card {
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5),
+            2px 2px 5px rgba(0,0,0,0.5),
+            -1px -1px 5px rgba(0,0,0,0.2);
+}
+
+.card {
+    border-radius: 20px;
+}
+
+.post-image {
+    border-radius: 20px 20px 0 0;
+}
+
+.post-footer {
+    border-radius: 20px;
+    padding-bottom: 20px;
+}  
+
+.like {
+    width: 2rem;
+    height: 2rem;
+    float: right;
+}
+
+

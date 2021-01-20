@@ -1,5 +1,5 @@
 import React from "react";
-import ModalProfile from "../components/Modal/Modal"
+import ModalProfile from "../components/Modal"
 
 function Modal() {
     return (
