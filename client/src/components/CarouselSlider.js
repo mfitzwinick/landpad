@@ -1,14 +1,17 @@
 import React from "react";
 import { Carousel, Card, Button } from 'react-bootstrap'
 import "../styling/login.css";
-
+import LoginPhoto from "../images/1.png";
+import LoginPhoto2 from "../images/1.png";
+import LoginPhoto3 from "../images/1.png";
+import LoginPhoto4 from "../images/1.png"
 
 const CarouselSlider = () => {
     return (
 <Carousel>
   <Carousel.Item interval={1000}>
   <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="1.png/100px160" />
+  <Card.Img variant="top" src={LoginPhoto} />
   <Card.Body>
     <Card.Title>NEW NEW NEW</Card.Title>
     <Card.Text>

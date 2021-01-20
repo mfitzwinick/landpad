@@ -2,6 +2,9 @@ import Button from 'react-bootstrap/Button';
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Carousel from '../components/CarouselSlider';
+import Modal from "./Modal";
+import Jumbotron from '../components/Jumbotron';
+
 
 
   function UserLogin() {
@@ -18,7 +21,7 @@ import Carousel from '../components/CarouselSlider';
 
     return (
       <div className="Login">
-        <Carousel />
+        {/* <Carousel />
         <Form onSubmit={handleSubmit}>
           <Form.Group size="lg" controlId="email">
             <Form.Label>Email</Form.Label>
@@ -40,7 +43,10 @@ import Carousel from '../components/CarouselSlider';
           <Button block size="lg" type="submit" disabled={!validateForm()}>
             Login
           </Button>
-        </Form>
+  
+        </Form>         */}
+        <Jumbotron />
+          {/* <Modal /> */}
       </div>
     );
   };

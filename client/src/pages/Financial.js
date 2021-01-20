@@ -5,9 +5,11 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import MortgageCalculator from "mortgage-calculator-react";
 import "../styling/Financial.css"
+import customStyle from '../styling/DefaultStyle.css'
 import ApexChart from "../components/ApexChart"
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import SavingsModal from "../components/SavingsModal";
 
 
 function Financial() {
@@ -17,11 +19,11 @@ function Financial() {
 
 const reactElement = (
     <div>
-       <Navigation />
+        <Navigation />
         <Container>
             <Row>
                 <Col></Col>
-                <MortgageCalculator showPaymentSchedule />
+                <MortgageCalculator showPaymentSchedule styles={customStyle} />
 
                 <Col></Col>
                 <div className="box">
@@ -30,6 +32,7 @@ const reactElement = (
 
                     <h1 id="donuttext">PLAN YOUR FUTURE</h1>
                     <ApexChart />
+                    <SavingsModal />
                     <Col></Col>
 
 
@@ -42,7 +45,7 @@ const reactElement = (
             </Row>
 
         </Container>
-       <Footer />
+        <Footer />
 
     </div>
 );
