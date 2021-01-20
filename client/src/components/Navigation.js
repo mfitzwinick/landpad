@@ -12,14 +12,16 @@ const Navigation = () => {
                     <Nav.Item>
                         <Nav.Link href="/posts">SHARE</Nav.Link>
                     </Nav.Item>
+
                     <Nav.Item>
-                        <Nav.Link href="/finances">FINANCES</Nav.Link>
+                        <Nav.Link href="/learn">LEARN</Nav.Link>
+                    </Nav.Item>
+
+                    <Nav.Item>
+                        <Nav.Link href="/finances">PLAN</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link href="/vision-board">VISON BOARD</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link href="/learn">LEARN</Nav.Link>
                     </Nav.Item>
                 </Nav>
             </Navbar>
