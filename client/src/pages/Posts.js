@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-// import UserPost from "../../components/UserPost/UserPost";
-import Footer from "../components/Footer";
+import UserPost from "../components/UserPost";
 import "../styling/Posts.css";
 
 
@@ -28,6 +27,7 @@ class Posts extends Component {
     render() {
         return (
             <>
+                <UserPost />
             </>
         );
     }

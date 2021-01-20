@@ -4,7 +4,6 @@ function Financial() {
     return (
 
         <div>
-
         </div>
     )
 

@@ -19,7 +19,7 @@ const Navigation = () => {
                         <Nav.Link href="/vision-board">VISON BOARD</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link href="/Learn">LEARN</Nav.Link>
+                        <Nav.Link href="/learn">LEARN</Nav.Link>
                     </Nav.Item>
                 </Nav>
             </Navbar>
