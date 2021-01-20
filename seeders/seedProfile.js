@@ -6,8 +6,8 @@ mongoose.connect("mongodb://localhost/landpad", {
     useUnifiedTopology: true
 });
 
-let profileSeed =
-{
+let profileSeed = [{
+
     firstName: "Michele",
     lastName: "Winick",
     userName: "@fitzy",
@@ -16,9 +16,19 @@ let profileSeed =
     city: "Los Angeles",
     area: "Studio City",
     agree: true,
-    image: "image here",
-
-}
+    image: "image here"
+}, 
+{
+    firstName: "Jessica",
+    lastName: "Crump",
+    userName: "@jesscru",
+    password: "password",
+    california: false,
+    city: null,
+    area: null,
+    agree: true,
+    image: "../client/src/images/xs-profile-jc.JPG"
+}]
 
 
 

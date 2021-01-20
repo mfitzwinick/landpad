@@ -8,7 +8,10 @@ import "../styling/Jumbotron.css";
 import Modal from "./Modal"
 
 
-function Jumbotron(){
+// function Jumbotron({ children }) {
+//     return <div className="jumbotron mt-4">{children}</div>;
+// }
+function Landing(){
     return (
         <Container fluid>
             <Row>
@@ -38,4 +41,4 @@ function Jumbotron(){
     );
 }
 
-export default Jumbotron;
+export default Landing;
