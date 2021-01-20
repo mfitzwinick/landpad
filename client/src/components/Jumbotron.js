@@ -1,33 +1,40 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import LoginPhoto from "../images/1.png"
+import { Container, Row, Col} from 'react-bootstrap';
+import LoginPhoto from "../images/1.png";
+import Modal from '../components/Modal';
 import "../styling/Jumbotron.css";
 import Modal from "./Modal"
 
-// function Jumbotron({ children }) {
-//     return <div className="jumbotron mt-4">{children}</div>;
-// }
-function Jumbotron() {
+
+function Jumbotron(){
     return (
-        <div>
-            <h1 className="logo">LAND PAD</h1>
-            <img id="photo" variant="top" alt="award winning, modern-looking home" src={LoginPhoto}></img>
-            <Form className="auth">
-                <Form.Group size="lg" controlId="email">
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control />
-                </Form.Group>
-                <Form.Group size="lg" controlId="password">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control />
-                </Form.Group>
-                <Button block size="lg" type="submit">
-                    Login
+        <Container fluid>
+            <Row>
+                <Col sm={9} className="img-section">
+                <img id="photo" variant="top" alt="award winning, modern-looking home" src={LoginPhoto}></img>
+                </Col>
+                <Col sm={3} className="form-section">
+                <Form className="auth">
+                    <Form.Group size="lg" controlId="email">
+                        <Form.Label>Email</Form.Label>
+                        <Form.Control />
+                    </Form.Group>
+                    <Form.Group size="lg" controlId="password">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control/>
+                    </Form.Group>
+                    <Button block size="lg" type="submit">
+                        Login
                     </Button>
-                <Modal />
-            </Form>
-        </div>
+                    <Modal />
+                </Form>
+                </Col>
+            </Row>
+                
+        </Container>
+
     );
 }
 
