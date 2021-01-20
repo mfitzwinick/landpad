@@ -1,4 +1,9 @@
 {
+  "name": "landpad",
+  
+  "scripts": {
+    "seed": "node seeders/seedProfile.js"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^5.11.12",
