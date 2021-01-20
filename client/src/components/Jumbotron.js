@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import LoginPhoto from "../images/an-award-winning-modern-masterpiece-inspired-by-neutra.png"
+import LoginPhoto from "../images/1.png"
 import "../styling/Jumbotron.css";
 
 // function Jumbotron({ children }) {

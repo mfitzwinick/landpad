@@ -12,9 +12,8 @@ import Jumbotron from './components/Jumbotron';
 function App() {
   return (
       <Router>
-    
          <div className="page-container">
-          {UserLogin ? null : <Navigation />}
+          {/* {UserLogin ? null : <Navigation />} */}
           <Route exact path="/" component={Login} />
           <Route exact path="/modal" component={Modal} />
           <Route exact path="/posts" component={Posts} />
@@ -22,9 +21,6 @@ function App() {
           <Route exact path="/vision-board" component={VisionBoard} />
           <Route exact path="/learn" component={Resources} />
           <Route exact path="/jumbotron" component={Jumbotron} />
-
-
-        
         </div>
       </Router>
    
