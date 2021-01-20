@@ -6,15 +6,24 @@ mongoose.connect("mongodb://localhost/landpad", {
     useUnifiedTopology: true
 });
 
-let postSeed =
-{
-    id: 2000,
+let postSeed = [{
+
+    // id: 2000,
     userName: "@fitzy",
     type: "Real Estate Agent",
     message: "Look at my great new listing!",
     like: false,
     image: "image here"
-}
+},
+{
+    // id: 2000,
+    userName: "@jesscru",
+    type: "Aspiring Homewner",
+    message: "Check out this architecture!",
+    like: true,
+    image: "image here"
+
+}]
 
 db.Post.deleteMany()
     .then(() => db.Post.create(postSeed))

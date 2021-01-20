@@ -14,6 +14,12 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  findByUsername: function(req, res) {
+    db.Posts
+      .findByUsername({_username: req.params.username })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
   create: function(req, res) {
     db.Posts
       .create(req.body)
@@ -34,3 +40,5 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   }
 };
+
+

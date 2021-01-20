@@ -1,6 +1,6 @@
 module.exports = {
-  Post: require("./Post"),
-  Profiles: require("./Profiles")
+  Post: require("./post"),
+  Profiles: require("./profiles")
 };
 
 

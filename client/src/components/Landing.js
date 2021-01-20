@@ -7,7 +7,7 @@ import "../styling/Jumbotron.css";
 // function Jumbotron({ children }) {
 //     return <div className="jumbotron mt-4">{children}</div>;
 // }
-function Jumbotron(){
+function Landing(){
     return (
         <div>
             <h1 className="logo">LAND PAD</h1>
@@ -29,4 +29,4 @@ function Jumbotron(){
     );
 }
 
-export default Jumbotron;
+export default Landing;
