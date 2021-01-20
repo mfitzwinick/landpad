@@ -12,8 +12,9 @@ import Jumbotron from './components/Jumbotron';
 function App() {
   return (
       <Router>
+    
          <div className="page-container">
-        
+          {UserLogin ? null : <Navigation />}
           <Route exact path="/" component={Login} />
           <Route exact path="/modal" component={Modal} />
           <Route exact path="/posts" component={Posts} />
@@ -25,10 +26,10 @@ function App() {
 
         
         </div>
-
       </Router>
    
   );
 }
+
 
 export default App;

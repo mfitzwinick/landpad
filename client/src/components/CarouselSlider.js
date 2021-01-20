@@ -2,14 +2,15 @@ import React from "react";
 import { Carousel, Card, Button } from 'react-bootstrap'
 import "../styling/login.css";
 
+
 const CarouselSlider = () => {
     return (
 <Carousel>
   <Carousel.Item interval={1000}>
   <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="holder.js/100px180" />
+  <Card.Img variant="top" src="1.png/100px160" />
   <Card.Body>
-    <Card.Title>Card Title</Card.Title>
+    <Card.Title>NEW NEW NEW</Card.Title>
     <Card.Text>
       Some quick example text to build on the card title and make up the bulk of
       the card's content.
