@@ -1,18 +1,16 @@
 .nav-area {
     text-align: right;
     background-color: rgb(199, 194, 194);
-    height: 3rem;
+    height: 5rem;
     width: 100%;
     letter-spacing: 3px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
-
-a, 
+ 
 .nav-link {
     letter-spacing: 5px;
-    justify-content: end;
 }
-/* 
-.choice {
-    color: rgba(0,0,0,.5);
-} */
+
+.location {
+    padding: 8px 20px;
+}

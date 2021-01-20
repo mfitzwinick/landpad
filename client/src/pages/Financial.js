@@ -1,11 +1,13 @@
 import React from "react";
+
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import MortgageCalculator from "mortgage-calculator-react"
 import "../styling/Financial.css"
 import ApexChart from "../components/ApexChart"
-
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 
 function Financial() {
@@ -15,6 +17,7 @@ function Financial() {
 
 const reactElement = (
     <div>
+       <Navigation />
         <Container>
             <Row>
                 <Col></Col>
@@ -39,6 +42,7 @@ const reactElement = (
             </Row>
 
         </Container>
+       <Footer />
 
     </div>
 );

@@ -1,0 +1,44 @@
+#title {
+    text-align: center;
+    font-weight: 400;
+    margin: 25px;
+}
+
+.info {
+    text-align: center;
+    width: 65%;
+    margin: 0 auto 25px;
+}
+
+#accordian {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.color {
+    background-color: rgb(199, 194, 194);
+}
+
+.new-color {
+    background-color: rgb(245, 245, 245)
+}
+
+.card-header {
+    cursor: pointer;
+}
+
+.resource {
+    list-style-type: none;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.res-link {
+    color: rgb(9, 0, 128);
+}
+
+.res-link:hover {
+    font-weight: 400;
+    color:initial;
+    text-decoration: none;
+}
