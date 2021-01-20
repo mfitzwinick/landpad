@@ -1,0 +1,29 @@
+.card-columns {
+    display: flex;
+}
+
+.whole-card {
+    /* display: flex; */
+    margin-left: 20px;
+    background-color: none;
+    margin-bottom: 20px;
+    width: 230px;
+}
+
+.card {
+    border-radius: 20px;
+}
+
+.post-image {
+    border-radius: 20px 20px 0 0;
+}
+
+.post-footer {
+    border-radius: 20px;
+    padding-bottom: 20px;
+}
+
+.post-image { order: 2; }
+.post-body { order: 3; }
+.post-footer { order: 4; }  
+.post-card { order: 1; }
