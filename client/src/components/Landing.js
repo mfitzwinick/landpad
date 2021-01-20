@@ -3,7 +3,6 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { Container, Row, Col} from 'react-bootstrap';
 import LoginPhoto from "../images/1.png";
-import Modal from '../components/Modal';
 import "../styling/Jumbotron.css";
 import Modal from "./Modal"
 
