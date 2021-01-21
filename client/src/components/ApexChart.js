@@ -16,7 +16,7 @@ class Donut extends Component {
         horizontalAlign: 'center',
         floating: false,
         fontSize: '18px',
-        fontFamily: 'Helvetica, Arial',
+        fontFamily: 'Quicksand',
         fontWeight: 400,
         formatter: undefined,
         inverseOrder: false,
@@ -52,12 +52,12 @@ class Donut extends Component {
           highlightDataSeries: true
         },
       },
-      colors: ['#546E7A', '#E91E63'],
-      labels: ['', 'Oranges', 'Berries', 'Grapes']
+      colors: ['#01b26f', '#41c253', '#bde11d', '#fff100'],
+      labels: ['Down Payment', 'Closing Costs', 'Reserves', 'Inspections', 'Moving Costs']
 
     },
     series: [24, 55, 41, 17, 2],
-  
+
   };
 
   //  
