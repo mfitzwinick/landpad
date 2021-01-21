@@ -13,7 +13,7 @@ function Resources() {
                 <h1 id="title">RESOURCES</h1>
                     <p className="info">
                         Click on the category you'd like to learn a bit more about. We've provided some information
-                        as to why the information might be of value to you as well as some resources you can start your
+                        as to why thdhhfhfhfhfhfhe information might be of value to you as well as some resources you can start your
                         journey with.
                     </p>
 
