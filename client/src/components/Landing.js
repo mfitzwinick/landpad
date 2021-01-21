@@ -5,7 +5,7 @@ import { Container, Row, Col} from 'react-bootstrap';
 import LoginPhoto from "../images/1.png";
 import "../styling/Landing.css";
 import Modal from "./Modal";
-import Logo from "../images/LogoC2v2B.png";
+// import Logo from "../images/LogoC2v2B.png";
 
 
 function Landing(){

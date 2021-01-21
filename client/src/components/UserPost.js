@@ -12,6 +12,7 @@ function UserPost() {
 
     const [like, setLike] = useState(false);
     const [fav, setFav] = useState(false);
+    const [likeCounter, setLikeCounter] = useState(0);
 
     useEffect(() => {
         setLike(true);
@@ -19,7 +20,12 @@ function UserPost() {
       },[]);
 
 
-     const handleLike = () => {
+    const incrementLikeCounter = () => {
+        setLikeCounter(likeCounter + 1);
+        console.log(likeCounter);
+    }
+
+     const changeLikeImg = () => {
         const likeIcon = window.document.querySelector(".like"); 
         setLike(!like);
         console.log(like);
@@ -31,10 +37,11 @@ function UserPost() {
         } else {
             likeIcon.src=`${likeImg}` 
             likeIcon.alt="heart"
+            console.log('it\'s false');
         }
     }
 
-    const handleFav = () => {
+    const changeFavImg = () => {
         const favIcon = window.document.querySelector(".fav");
         setFav(!fav);
         console.log(fav);
@@ -44,11 +51,10 @@ function UserPost() {
         if(favIcon){
             favIcon.src = `${favedImg}`;
             favIcon.alt = "wide open eye";
-        } 
-        
-        if (!favIcon){
+        } else {
             favIcon.src= `${favImg}`
             favIcon.alt="eye with focus bars around it"
+            console.log('it\'s false');
         }
     }
 
@@ -67,9 +73,12 @@ function UserPost() {
                             </Card.Text>
                         </Card.Body>
                         <Card.Footer className="post-footer">
-                            <small id="likes-here">3 Likes
-                                <img className="like" src={likeImg} alt="heart" onClick={() => handleLike()}></img>
-                                <img className="fav" src={favImg} alt="eye with focus bars around it" onClick={() => handleFav()}></img>
+                            <small id="likes-here">{likeCounter} likes
+                                <img className="like" src={likeImg} alt="heart" onClick={() => {
+                                    changeLikeImg();
+                                    incrementLikeCounter();
+                                    }}></img>
+                                <img className="fav" src={favImg} alt="eye with focus bars around it" onClick={() => changeFavImg()}></img>
                             </small>
                         </Card.Footer>
                     </Card>
