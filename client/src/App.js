@@ -15,7 +15,7 @@ function App() {
           <Route exact path="/" component={Landing} />
           <Route exact path="/modal" component={Modal} />
           <Route exact path="/share" component={Share} />
-          <Route exact path="/finances" component={Financial} />
+          <Route exact path="/plan" component={Financial} />
           <Route exact path="/vision-board" component={VisionBoard} />
           <Route exact path="/learn" component={Resources} />
         </div>
