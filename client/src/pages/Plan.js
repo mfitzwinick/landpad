@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import MortgageCalculator from "mortgage-calculator-react";
-import "../styling/Financial.css"
+import "../styling/Plan.css"
 import customStyle from '../styling/DefaultStyle.css'
 import ApexChart from "../components/ApexChart"
 import Navigation from "../components/Navigation";
