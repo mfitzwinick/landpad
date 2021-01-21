@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import UserPost from "../components/UserPost";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import "../styling/Posts.css";
+import "../styling/Share.css";
 
 
-class Posts extends Component {
+class Share extends Component {
     state = {
         posts: [],
         message: "Tell us everything!"
@@ -38,4 +38,4 @@ class Posts extends Component {
 }
 
 
-export default Posts;
+export default Share;
