@@ -10,6 +10,9 @@ import Landing from './components/Landing';
 
 function App() {
   return (
+
+    <div>
+      <h1>testing</h1>
       <Router>
          <div className="page-container">
           <Route exact path="/" component={Landing} />
@@ -20,6 +23,7 @@ function App() {
           <Route exact path="/learn" component={Resources} />
         </div>
       </Router>
+      </div>
   );
 }
 
