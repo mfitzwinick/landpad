@@ -13,7 +13,7 @@ const Navigation = () => {
                         <Nav.Link href="/posts">SHARE</Nav.Link>
                     </Nav.Item>
                     <Nav.Item className="location">
-                        <Nav.Link href="/vision-board">VISON BOARD</Nav.Link>
+                        <Nav.Link href="/vision-board">VISION BOARD</Nav.Link>
                     </Nav.Item>
                     <Nav.Item className="location">
                         <Nav.Link href="/finances">PLAN</Nav.Link>
