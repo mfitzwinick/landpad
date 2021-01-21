@@ -7,10 +7,12 @@ import React, { useState } from "react"
 function SavingsModal() {
     const [show, setShow] = useState(false);
     return (
-        
+
         <div>
-            <Button variant="primary" onClick={() => setShow(true)}>
-                Update your Savings Plan
+            <br />
+            <br />
+            <Button style={{ backgroundColor: "black", color: "white" }} variant="primary" onClick={() => setShow(true)}>
+                Update your Plan
                 </Button>
 
             <Modal
@@ -21,7 +23,7 @@ function SavingsModal() {
             >
                 <Modal.Header closeButton>
                     <Modal.Title id="example-custom-modal-styling-title">
-                        You're on the path to your dream pad!
+                        You're on the way to your dream pad!
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>

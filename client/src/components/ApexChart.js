@@ -5,26 +5,15 @@ import "../styling/Financial.css"
 
 class Donut extends Component {
 
-    state = {
-      options: {},
-      series: [24, 55, 41, 17, 2],
-      labels: ['A', 'B', 'C', 'D', 'E']
-    };
-  
+  state = {
+    options: {
 
-    // colors: [function({ value, seriesIndex, w }) {
-    //   if (value < 55) {
-    //       return '#7E36AF'
-    //   } else {
-    //       return '#D9534F'
-    //   }
-    // }, function({ value, seriesIndex, w }) {
-    //   if (value < 111) {
-    //       return '#7E36AF'
-    //   } else {
-    //       return '#D9534F'
-    //   }
-    // }]
+    },
+    series: [24, 55, 41, 17, 2],
+    labels: ['A', 'B', 'C', 'D', 'E']
+  };
+
+  //  
   componentDidMount() {
     // API call goes here
     // Once data is retrieved you need to format the data to look like initial state

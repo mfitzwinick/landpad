@@ -10,8 +10,8 @@ function ProfileModal() {
 
     return (
         <>
-            <Button variant="primary" onClick={() => setShow(true)}>
-                Create User Profile!
+            <Button style={{ backgroundColor: "black" }} variant="primary" onClick={() => setShow(true)}>
+                Create User Profile
                 </Button>
 
             <Modal

@@ -23,16 +23,17 @@ const reactElement = (
         <Container>
             <Row>
                 <Col></Col>
-                <MortgageCalculator showPaymentSchedule styles={customStyle} />
+                <MortgageCalculator showPaymentSchedule />
 
                 <Col></Col>
                 <div className="box">
                     <br />
                     <br />
 
-                    <h1 id="donuttext">PLAN YOUR FUTURE</h1>
+                    <h1 id="donuttext">PROGRESS toward your PAD</h1>
                     <ApexChart />
                     <SavingsModal />
+
                     <Col></Col>
 
 
