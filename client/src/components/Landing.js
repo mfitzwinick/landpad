@@ -5,7 +5,7 @@ import { Container, Row, Col} from 'react-bootstrap';
 import LoginPhoto from "../images/1.png";
 import "../styling/Landing.css";
 import Modal from "./Modal";
-import Logo from "..images/LogoC2v2B.png";
+import Logo from "../images/LogoC2v2B.png";
 
 
 function Landing(){
@@ -17,7 +17,7 @@ function Landing(){
                 <img id="photo" variant="top" alt="award winning, modern-looking home" src={LoginPhoto}></img>
                 </Col>
                 <Col sm={3} className="form-section">
-                <Logo />
+                    {/* <Logo /> */}
                 <Form className="auth">
                     <Form.Group size="lg" controlId="email">
                         <Form.Label>EMAIL</Form.Label>
