@@ -1,13 +1,13 @@
 import React from "react";
 import "../styling/logo.css";
-import LoginPhoto2 from "../images/LogoC2v2B.png";
+import LogoIcon from "../images/LogoC2v2B.png";
 
 
 
 function Logo(){
     return (
         
-        <img id="photo-logo" variant="top" alt="award winning, modern-looking home" src={LoginPhoto2}></img>
+        <img id="photo-logo" variant="top" alt="award winning, modern-looking home" src={LogoIcon}></img>
                 
            
     );

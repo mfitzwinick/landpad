@@ -10,17 +10,20 @@ import Landing from './components/Landing';
 
 function App() {
   return (
+
+    <div>
+      <h1>testing</h1>
       <Router>
          <div className="page-container">
           <Route exact path="/" component={Landing} />
           <Route exact path="/modal" component={Modal} />
-          <Route exact path="/share" component={Share} />
           <Route exact path="/share" component={Share} />
           <Route exact path="/plan" component={Plan} />
           <Route exact path="/vision-board" component={VisionBoard} />
           <Route exact path="/learn" component={Resources} />
         </div>
       </Router>
+      </div>
   );
 }
 

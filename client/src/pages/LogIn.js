@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
 import Landing from '../components/Landing';
-import Logo from "../components/Logo";
+import LogoIcon from "../components/LogoC2v2B";
 
 
 function UserLogin() {
   return (
       <div className="Login">
         {}
-        <Logo />
+        <LogoIcon />
         <Landing />
           <Modal />
       </div>

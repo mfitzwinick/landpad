@@ -1,11 +1,13 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import { Container, Row, Col} from 'react-bootstrap';
+import { Container, Row, Col, Carousel} from 'react-bootstrap';
 import LoginPhoto from "../images/1.png";
-import "../styling/Landing.css";
+//import "../styling/Landing.css";
 import Modal from "./Modal";
-// import Logo from "../images/LogoC2v2B.png";
+import MainLogo from "../components/MainLogo/MainLogo";
+import PageLogo from "../images/1.png"
+
 
 
 function Landing(){
@@ -14,10 +16,10 @@ function Landing(){
             
             <Row>
                 <Col sm={9} className="img-section">
-                <img id="photo" variant="top" alt="award winning, modern-looking home" src={LoginPhoto}></img>
+        <img id="photo" variant="top" alt="award winning, modern-looking home" src={PageLogo}></img>
                 </Col>
                 <Col sm={3} className="form-section">
-                    {/* <Logo /> */}
+                <MainLogo />
                 <Form className="auth">
                     <Form.Group size="lg" controlId="email">
                         <Form.Label>EMAIL</Form.Label>
