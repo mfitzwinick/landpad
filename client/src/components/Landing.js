@@ -4,12 +4,8 @@ import Button from "react-bootstrap/Button";
 import { Container, Row, Col} from 'react-bootstrap';
 import LoginPhoto from "../images/1.png";
 import "../styling/Landing.css";
-<<<<<<< HEAD
-import Modal from "./Modal"
-=======
 import Modal from "./Modal";
-import Logo from "../images/LogoC2v2B.png";
->>>>>>> 674670318dc78223c009a2da0b8cbe57c04488e8
+// import Logo from "../images/LogoC2v2B.png";
 
 
 function Landing(){
