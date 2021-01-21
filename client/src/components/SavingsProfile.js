@@ -57,39 +57,40 @@ class SavingsProfile extends Component {
                     <br />
 
                     <input
+                        name="closingCostSavings"
+                        value={this.state.closingCostSavings}
+                        onChange={this.handleChange}
+                        placeholder="Estimate Closing Costs"
+                    />
+
+                    <input
+                        name="movingExpenseSavings"
+                        value={this.state.movingExpenseSavings}
+                        onChange={this.handleChange}
+                        placeholder="Savings for Moving"
+                    /><br />
+
+                    <input
                         name="reserveSavings"
                         value={this.state.reserveSavings}
                         onChange={this.handleChange}
                         placeholder="Reserves"
                     />
                     <br />
-                    <input
-                        name="movingExpenseSavings"
-                        value={this.state.movingExpenseSavings}
-                        onChange={this.handleChange}
-                        placeholder="Savings for Moving"
-                    />
-
+                    <br />
                     <br />
 
-                    <input
-                        name="closingCostSavings"
-                        value={this.state.area}
-                        onChange={this.handleChange}
-                        placeholder="area"
-                    />
-                    <br />
 
-                    <label>
-                        <p>Are you a veteran or currently serving in the military?</p>
-                        <p>VA LOAN LINK HERE </p>
-                        <input
-                            type="checkbox"
-                            name="veteran"
-                            onChange={this.handleChange}
-                            checked={this.state.veteran}
-                        />
-                    </label>
+                    <select
+                        value={this.state.veteran}
+                        name="veteran"
+                        onChange={this.handleChange}
+                    >
+                        <option value="">Are you a veteran or serving now?</option>
+                        <option value="yes">Yes - Click on VA loan info below</option>
+                        <option value="No">No - Let's get planning</option>
+                    </select>
+                    <a href src="https://www.benefits.va.gov/homeloans" style={{ fontStyle: "italic", color: "#4169E1" }}>VA loan info here</a>
                     <br />
 
                 </form>
@@ -97,7 +98,7 @@ class SavingsProfile extends Component {
                 <h2>Get excited about your goal!</h2>
                 <h2>You got this!</h2>
                 <p>Your savings goal:{this.state.savingsGoal} </p>
-                <button>Submit</button>
+                <button>Update Your Progress</button>
             </main>
         )
     }

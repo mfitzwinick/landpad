@@ -10,7 +10,6 @@ class UserProfile extends Component {
             email: "",
             password: "",
             confirmPassword: "",
-            california: false,
             city: "",
             area: "",
             agree: false,
@@ -75,38 +74,13 @@ class UserProfile extends Component {
                         placeholder="Confirm Password"
                     />
                     <br />
-
-                    <label>
-                        <p>Do you live in California?  (more states coming soon!)</p>
-                        <input
-                            type="radio"
-                            name="california"
-                            value="no"
-                            checked={this.state.gender === "no"}
-                            onChange={this.handleChange}
-                        /> No
-                    </label>
-
-                    <br />
-
-                    <label>
-                        <input
-                            type="radio"
-                            name="california"
-                            value="yes"
-                            checked={this.state.gender === "yes"}
-                            onChange={this.handleChange}
-                        /> Yes
-                    </label>
-
-                    <br />
-
+                    <p>Select your closest CA city (more locations coming soon!)</p>
                     <select
                         value={this.state.city}
                         name="city"
                         onChange={this.handleChange}
                     >
-                        <option value="">-- Please Choose your nearest city --</option>
+                        <option value="">-- Please Choose your nearest CA city --</option>
                         <option value="losangeles">Los Angeles</option>
                         <option value="sandiego">San Diego</option>
                         <option value="sanfrancisco">San Francisco</option>
@@ -124,35 +98,26 @@ class UserProfile extends Component {
                     <br />
                     <br />
                     <button>UPLOAD PROFILE IMAGE</button>
-
-                    <label>
-                        <p>Do you agree to LAND PAD terms of use?</p>
-                        <p>TERMS HERE (a href to terms here)</p>
-                        <input
-                            type="checkbox"
-                            name="agree"
-                            onChange={this.handleChange}
-                            checked={this.state.agree}
-                        /> Agree?
-                    </label>
                     <br />
-
-                    <br />
-
-
+                    <a href src="" style={{ fontStyle: "italic", color: "#4169E1" }}>TERMS AGREEMENT</a>
+                    <p>Do you agree to LAND PAD terms of use?</p>
+                    <select
+                        value={this.state.agree}
+                        name="agree"
+                        onChange={this.handleChange}
+                    >
+                        <option value="">Please select yes or no</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
                 </form>
+                <br />
                 <hr />
                 <h2>Confirm your information:</h2>
                 <p>Your name:{this.state.firstName} {this.state.lastName}</p>
                 <p>Your user name: {this.state.userName}</p>
-
-                <p>Please choose your nearest city: {this.state.city}</p>
-
-                <p>CA: {this.state.california ? "Yes" : "No"}</p>
-
                 <p>Agree to Terms?: {this.state.agree ? "Yes" : "No"}</p>
                 <button>Submit</button>
-
 
             </main>
         )

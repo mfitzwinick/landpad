@@ -1,11 +1,11 @@
 :root {
-  --primary-one: #ff4830;
+  --primary-one: #198f33;
   --primary-one-light: #a0e4ff;
   --primary-two: #ffe74c;
   --primary-three: #69e062;
   --secondary-one: #2a2d34;
   --secondary-one-light: #9e9fa2;
-  --secondary-two: #1b4965;
+  --secondary-two: #269ce0;
 }
 
 :local(.container) {

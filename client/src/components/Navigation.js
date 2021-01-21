@@ -16,7 +16,7 @@ const Navigation = () => {
                         <Nav.Link href="/vision-board">VISON BOARD</Nav.Link>
                     </Nav.Item>
                     <Nav.Item className="location">
-                        <Nav.Link href="/plan">PLAN</Nav.Link>
+                        <Nav.Link href="/finances">PLAN</Nav.Link>
                     </Nav.Item>
                     <Nav.Item className="location">
                         <Nav.Link href="/learn">LEARN</Nav.Link>
