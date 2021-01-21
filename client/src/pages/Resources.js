@@ -4,12 +4,14 @@ import Footer from "../components/Footer";
 import Card from "react-bootstrap/Card";
 import Accordion from "react-bootstrap/Accordion";
 import "../styling/Resources.css"
+import { Carousel } from "react-bootstrap";
 
 function Resources() {
     return (
 
         <div>
             <Navigation />
+            <Carousel />
                 <h1 id="title">RESOURCES</h1>
                     <p className="info">
                         Click on the category you'd like to learn a bit more about. We've provided some information

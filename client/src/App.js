@@ -12,7 +12,6 @@ function App() {
   return (
       <Router>
          <div className="page-container">
-          {/* {UserLogin ? null : <Navigation />} */}
           <Route exact path="/" component={Landing} />
           <Route exact path="/modal" component={Modal} />
           <Route exact path="/share" component={Share} />

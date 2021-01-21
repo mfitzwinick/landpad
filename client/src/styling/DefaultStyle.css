@@ -19,7 +19,7 @@
 
 :local(label) {
   display: block;
-  color: #777777;
+  color: black;
 }
 
 :local(.inputIcon) {

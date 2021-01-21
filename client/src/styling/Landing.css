@@ -15,11 +15,14 @@
     display: inline-block;
     line-height: 3;
 }
-
-.container-fluid {
+label{
+    color: black;
+    font-weight: bold;
+}
+/* .container-fluid {
     padding-right: 0;
     padding-left: 0;
-}
+} */
 
 .img-section {
     padding-right: 0 !important;
@@ -29,4 +32,26 @@
    background: url("../images/dooropacity.png") center center rgba(255, 255, 255, .8);
     /* opacity: .4;
     z-index: -1; */
+}
+
+
+.col-sm-3{
+    padding-top: 300px;
+}
+
+.from-label{
+    color:black;
+    font-weight: bold;
+}
+
+.btn-block.btn-lg{
+    color: white;
+    background: black;
+    border: black;
+}
+
+.btn.btn-primary{
+    color: white;
+    background: black;
+    border: black;
 }
