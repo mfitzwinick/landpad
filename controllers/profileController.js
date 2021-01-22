@@ -24,11 +24,7 @@ module.exports = {
     create: function (req, res) {
         const { firstName, lastName, userName, password } = req.body
         try {
-            console.log("does it break here?")
-            console.log(firstName)
-            console.log(lastName)
-            console.log(userName)
-            console.log(password)
+            // Error handling
             if (!firstName || !lastName || !userName || !password ) {
                 return res.status(400).send("Please fill out all fields");
             }
