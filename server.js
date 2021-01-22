@@ -1,6 +1,9 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
+const passport = require("passport");
+const apiRoutes = require("./routes");
+require("dotenv").config();
 
 const PORT = process.env.PORT || 3001;
 
@@ -12,21 +15,15 @@ app.use(logger("dev"));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(express.static("public"));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/populatedb", { useNewUrlParser: true });
 
 
-app.post("/submit", ({ body }, res) => {
-    db.Users.create(body)
-      .then(dbUser => {
-        res.json(dbUser);
-      })
-      .catch(err => {
-        res.json(err);
-      });
-  });
+app.use("/", apiRoutes)
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);

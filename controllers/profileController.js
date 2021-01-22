@@ -2,41 +2,47 @@ const db = require("../models");
 const jwt = require("../configs/jwt");
 
 module.exports = {
-    findAll: function (req, res) {
-        db.Profiles
-            .find(req.query)
-            .sort({ date: -1 })
-            .then(dbModel => res.json(dbModel))
-            .catch(err => res.status(422).json(err));
-    },
-    findById: function (req, res) {
-        db.Profiles
-            .findById(req.params.id)
-            .then(dbModel => res.json(dbModel))
-            .catch(err => res.status(422).json(err));
-    },
-    findByUsername: function(req, res) {
-        db.Profiles
-          .findByUsername({_username: req.params.username })
-          .then(dbModel => res.json(dbModel))
-          .catch(err => res.status(422).json(err));
-      },
+    // findAll: function (req, res) {
+    //     db.Profiles
+    //         .find(req.query)
+    //         .sort({ date: -1 })
+    //         .then(dbModel => res.json(dbModel))
+    //         .catch(err => res.status(422).json(err));
+    // },
+    // findById: function (req, res) {
+    //     db.Profiles
+    //         .findById(req.params.id)
+    //         .then(dbModel => res.json(dbModel))
+    //         .catch(err => res.status(422).json(err));
+    // },
+    // findByUsername: function(req, res) {
+    //     db.Profiles
+    //       .findByUsername({_username: req.params.username })
+    //       .then(dbModel => res.json(dbModel))
+    //       .catch(err => res.status(422).json(err));
+    //   },
     create: function (req, res) {
         const { firstName, lastName, userName, password } = req.body
         try {
+            console.log("does it break here?")
+            console.log(firstName)
+            console.log(lastName)
+            console.log(userName)
+            console.log(password)
             if (!firstName || !lastName || !userName || !password ) {
                 return res.status(400).send("Please fill out all fields");
             }
-            db.Profiles.findOne({ username }).then(user => {
+            db.Profiles.findOne({ userName }).then(user => {
                 if(user === null) {
                     db.Profiles.create(req.body)
                     return res.status(200).json("User created")
                 }
-                if (username === user.username) {
+                if (userName === user.userName) {
                     return res.status(400).send("Username already exists. Please use a different username.");
                 };
             })
         } catch (err){
+            console.error(err);
             return res.status(500).json("Internal server error");
         }
     },
@@ -45,6 +51,7 @@ module.exports = {
             const { id } = req.user
             res.status(200).json({ token: jwt.sign(id), token_type: "Bearer" });
         } catch (err) {
+            console.error(err)
             return res.status(500).send("Server Error, cannot login")
         }
     },

@@ -1,11 +1,12 @@
 const passport = require('passport'),
       LocalStrategy = require('passport-local').Strategy,
-      db = require('../models/Profiles'),
+      db = require('../models'),
       { Profiles } = db;
+
 
 passport.use(new LocalStrategy((username, password, done) => {
     Profiles.findOne({ userName: username }, async (err, user) => {
-        try {
+          try {
             if(!user) {
                 return done(null, false, { message: "Incorrect Username"});
             }
@@ -30,3 +31,5 @@ passport.serializeUser((user, done) => {
       done(err, user);
     });
   });
+
+  module.exports = passport;

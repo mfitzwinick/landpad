@@ -4,22 +4,22 @@ const passport = require('../../configs/passport');
 
 // Matches with "/api/users"
 router.route("/")
-  .get(profileController.findAll)
+  // .get(profileController.findAll)
   .post(profileController.create);
 
 // Matches with "/api/users/:username"
-router
-  .route("/:username")
-  .get(profileController.findByUsername)
-  .put(profileController.update)
-  .delete(profileController.remove);
+// router
+//   .route("/:username")
+//   .get(profileController.findByUsername)
+//   .put(profileController.update)
+//   .delete(profileController.remove);
 
-// Matches with "/api/users/:id"
-  router
-  .route("/:id")
-  .get(profileController.findById)
-  .put(profileController.update)
-  .delete(profileController.remove);
+// // Matches with "/api/users/:id"
+//   router
+//   .route("/:id")
+//   .get(profileController.findById)
+//   .put(profileController.update)
+//   .delete(profileController.remove);
 
   router
     .route("/login")
@@ -27,6 +27,6 @@ router
 
   router
     .route("/logout")
-    .post(profileController.logout)
+    .get(profileController.logout)
 
 module.exports = router;
