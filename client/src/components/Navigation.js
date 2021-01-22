@@ -2,7 +2,7 @@ import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from "react-bootstrap/Navbar"
 import "../styling/Navigation.css";
-import LoginPhoto2 from "../images/LogoC2v2W.png";
+// import LoginPhoto2 from "../images/LogoC2v2W.png";
 
 const Navigation = () => {
     return (
