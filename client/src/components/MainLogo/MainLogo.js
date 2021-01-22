@@ -1,5 +1,6 @@
 import React from "react";
-import MainLogo from "./Logo.png"
+import Logo from "./primeLogo.png";
+import "./MainLogo.css"
 
 
 
