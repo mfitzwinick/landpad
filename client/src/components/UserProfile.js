@@ -2,20 +2,21 @@ import React, { Component } from "react";
 import { createUser } from '../utils/API';
 
 class UserProfile extends Component {
-
-    state = {
-        firstName: "",
-        lastName: "",
-        userName: "",
-        email: "",
-        password: "",
-        confirmPassword: "",
-        city: "",
-        area: "",
-        agree: false,
-        profileImage: ""
-
-    };
+   
+        state = {
+            firstName: "",
+            lastName: "",
+            userName: "",
+            email: "",
+            password: "",
+            confirmPassword: "",
+            city: "",
+            area: "",
+            agree: false,
+            profileImage: ""
+    
+        };
+    
 
 
     handleChange = (event) => {
@@ -40,7 +41,7 @@ class UserProfile extends Component {
         }
 
         createUser(data).then(res => {
-            console.log(res)
+            this.props.setShow(false);
         });
     }
 

@@ -22,7 +22,7 @@ app.use(passport.session());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/populatedb", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/landpad", { useNewUrlParser: true });
 
 app.post('/api/upload', async (req, res) => {
   try {
