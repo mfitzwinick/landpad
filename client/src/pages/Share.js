@@ -6,6 +6,7 @@ import "../styling/Share.css";
 
 
 class Share extends Component {
+
     state = {
         posts: [],
         message: "Tell us everything!"
@@ -18,14 +19,14 @@ class Share extends Component {
         });
     };
 
-    
-  
+
+
     handleFormSubmit = event => {
         event.preventDefault();
         this.getPosts();
     };
-    
-  
+
+
     render() {
         return (
             <>

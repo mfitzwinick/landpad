@@ -9,5 +9,5 @@ export const logout = () => {
 };
 
 export const createUser = (data) => {
-    return axios.post("/api/profile", data)
+    return axios.post("/api/profile/", data)
 }
