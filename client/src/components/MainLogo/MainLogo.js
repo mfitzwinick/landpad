@@ -1,11 +1,11 @@
 import React from "react";
-import Logo from "./LogoC2v2B.png"
+import MainLogo from "./Logo.png"
 
 
 
 const MainLogo = () => {
     return (
-        <img alt="Main Logo" src={Logo}></img>
+        <img alt="Logo" src={Logo}></img>
     )
 };
 

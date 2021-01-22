@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import { Container, Row, Col, Carousel} from 'react-bootstrap';
-import LoginPhoto from "../images/1.png";
-//import "../styling/Landing.css";
+import { Container, Row, Col} from 'react-bootstrap';
+import "../styling/Landing.css";
 import Modal from "./Modal";
 import MainLogo from "../components/MainLogo/MainLogo";
 import PageLogo from "../images/1.png";
