@@ -1,37 +1,47 @@
-import e from "express"
-import React, { Component } from "react"
-
+import React, { Component } from "react";
+import { createUser } from '../utils/API';
 
 class UserProfile extends Component {
-    constructor() {
-        super()
-        this.state = {
-            firstName: "",
-            lastName: "",
-            userName: "",
-            email: "",
-            password: "",
-            confirmPassword: "",
-            city: "",
-            area: "",
-            agree: false,
-            profileImage: ""
 
-        }
-        this.handleChange = this.handleChange.bind(this)
-        this.handleClick = this.handleClick.bind(this);
+    state = {
+        firstName: "",
+        lastName: "",
+        userName: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+        city: "",
+        area: "",
+        agree: false,
+        profileImage: ""
+
+    };
+
+
+    handleChange = (event) => {
+        const { name, value } = event.target
+        this.setState({
+            [name]: value
+        });
     }
 
-    handleChange(event) {
-        const { name, value, type, checked } = event.target
-        type === "checkbox" ?
-            this.setState({
-                [name]: checked
-            })
-            :
-            this.setState({
-                [name]: value
-            })
+    handleClick = (e) => {
+        e.preventDefault();
+        const data = {
+            firstName: this.state.firstName,
+            lastName: this.state.lastName,
+            userName: this.state.userName,
+            email: this.state.email,
+            password: this.state.password,
+            city: this.state.city,
+            area: this.state.area,
+            agree: this.state.agree,
+            // image: this.state.profileImage
+        }
+
+        createUser(data).then(res => {
+            console.log(res)
+        });
     }
 
     render() {
@@ -60,6 +70,14 @@ class UserProfile extends Component {
                         value={this.state.userName}
                         onChange={this.handleChange}
                         placeholder="User Name"
+                    />
+                    <br />
+
+                    <input
+                        name="email"
+                        value={this.state.email}
+                        onChange={this.handleChange}
+                        placeholder="email"
                     />
                     <br />
 
@@ -120,15 +138,12 @@ class UserProfile extends Component {
                 <p>Your name:{this.state.firstName} {this.state.lastName}</p>
                 <p>Your user name: {this.state.userName}</p>
                 <p>Agree to Terms?: {this.state.agree ? "Yes" : "No"}</p>
-                <button type="button" onClick={handleClick}>Submit</button>
+                <button type="button" onClick={this.handleClick}>Submit</button>
 
             </main>
         )
     }
 }
-function handleClick() {
-    e.preventDefault();
-    console.log("Profile Submitted")
-}
+
 
 export default UserProfile

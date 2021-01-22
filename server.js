@@ -3,17 +3,10 @@ const logger = require("morgan");
 const mongoose = require("mongoose");
 const passport = require("passport");
 const apiRoutes = require("./routes");
-const { cloudinary } = require('.utils/cloudinary')
+const { cloudinary } = require('./utils/cloudinary')
 require("dotenv").config();
 
-app.get('/api/images', async(req, res)) => {
-  const { resources } = await cloudinary.search.expression('folder:dev_setups')
-    .sort_by('public_id', 'desc')
-    .max_results(30)
-    .execute();
-  const publicIds = resources.map(file => file.public_id)
-  res.send(publicIds)
-}
+
 
 
 const db = require("./models");
@@ -45,7 +38,16 @@ app.post('/api/upload', async (req, res) => {
     res.status(500).json({ err: "Something went wrong" })
   }
 
-}
+});
+
+app.get('/api/images', async (req, res) => {
+  const { resources } = await cloudinary.search.expression('folder:dev_setups')
+    .sort_by('public_id', 'desc')
+    .max_results(30)
+    .execute();
+  const publicIds = resources.map(file => file.public_id)
+  res.send(publicIds)
+})
 
 app.use("/", apiRoutes);
 
