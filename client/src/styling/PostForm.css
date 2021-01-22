@@ -1,0 +1,42 @@
+* {
+    font-family:'Quicksand', sans-serif;
+    padding: 0;
+}
+
+#add-a-post {
+    text-align: center;
+    margin: 30px 20px;
+}
+
+.container {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    /* background-color: white; */
+    overflow: hidden;
+}
+
+.add-post {
+    margin-top: 100px;
+}
+
+.form-control {
+    margin: 0;
+    text-indent: 0.2rem;
+}
+
+.post-label {
+    margin-left: 10px;
+}
+
+.username,
+.headline,
+.content,
+.image {
+    margin: 15px 10px 25px 10px;
+    width: 90%;
+    border-radius: 20px;
+}
