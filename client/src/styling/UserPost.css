@@ -1,10 +1,6 @@
 #side-margins {
-   margin-left: 20px;
-   position: relative;
-}
-
-.card-columns {
-    margin-top: 50px;
+   margin-left: 40px;
+   margin-right: 40px;
 }
 
 .whole-card {
