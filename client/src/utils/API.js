@@ -6,4 +6,8 @@ export const login = (data) => {
 
 export const logout = () => {
     return axios.get("/api/profile/logout")
+};
+
+export const createUser = (data) => {
+    return axios.post("/api/profile", data)
 }
