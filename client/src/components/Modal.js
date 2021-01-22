@@ -26,7 +26,7 @@ function ProfileModal() {
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <UserProfile />
+                    <UserProfile setShow={setShow}/>
                 </Modal.Body>
             </Modal>
         </>

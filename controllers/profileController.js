@@ -30,6 +30,7 @@ module.exports = {
             }
             db.Profiles.findOne({ userName }).then(user => {
                 if(user === null) {
+                    console.log(req.body)
                     db.Profiles.create(req.body)
                     return res.status(200).json("User created")
                 }

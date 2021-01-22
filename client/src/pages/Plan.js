@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useHistory } from 'react-router-dom'
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -13,6 +14,15 @@ import BarChart from "../components/BarChart";
 
 
 function Financial() {
+    const [user, setUser] = useState();
+    const history = useHistory();
+    useEffect(() => {
+        if(localStorage.getItem("token")) {
+            setUser(localStorage.getItem("token"))
+        } else {
+            history.push("/")
+        }
+    }, [])
     return reactElement
 }
 
