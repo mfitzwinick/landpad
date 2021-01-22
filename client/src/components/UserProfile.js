@@ -1,4 +1,6 @@
+import e from "express"
 import React, { Component } from "react"
+
 
 class UserProfile extends Component {
     constructor() {
@@ -17,6 +19,7 @@ class UserProfile extends Component {
 
         }
         this.handleChange = this.handleChange.bind(this)
+        this.handleClick = this.handleClick.bind(this);
     }
 
     handleChange(event) {
@@ -117,11 +120,15 @@ class UserProfile extends Component {
                 <p>Your name:{this.state.firstName} {this.state.lastName}</p>
                 <p>Your user name: {this.state.userName}</p>
                 <p>Agree to Terms?: {this.state.agree ? "Yes" : "No"}</p>
-                <button>Submit</button>
+                <button type="button" onClick={handleClick}>Submit</button>
 
             </main>
         )
     }
+}
+function handleClick() {
+    e.preventDefault();
+    console.log("Profile Submitted")
 }
 
 export default UserProfile
