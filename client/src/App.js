@@ -13,7 +13,6 @@ function App() {
   return (
 
     <div>
-      <h1>testing</h1>
       <Router>
          <div className="page-container">
           <Route exact path="/" component={Landing} />
