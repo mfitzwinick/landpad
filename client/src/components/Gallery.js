@@ -6,7 +6,7 @@ function Gallery (){
             <div className="col-md-4">
     <div className="thumbnail">
       <a href="/w3images/lights.jpg">
-        <img src="/w3images/lights.jpg" alt="Lights" style="width:100%" />
+        <img src="/w3images/lights.jpg" alt="Lights" style={{width: '100%'}} />
         <div className="caption">
           <p>Michelle</p>
         </div>
@@ -16,7 +16,7 @@ function Gallery (){
   <div className="col-md-4">
     <div className="thumbnail">
       <a href="/w3images/lights.jpg">
-        <img src="/w3images/lights.jpg" alt="Lights" style="width:100%" />
+        <img src="/w3images/lights.jpg" alt="Lights" style={{width: '100%'}} />
         <div className="caption">
           <p>Yess</p>
         </div>
@@ -26,7 +26,7 @@ function Gallery (){
   <div className="col-md-4">
     <div className="thumbnail">
       <a href="/w3images/lights.jpg">
-        <img src="/w3images/lights.jpg" alt="Lights" style="width:100%" />
+        <img src="/w3images/lights.jpg" alt="Lights" style={{width: '100%'}} />
         <div className="caption">
           <p>Jessica</p>
         </div>
@@ -36,7 +36,7 @@ function Gallery (){
   <div className="col-md-4">
     <div className="thumbnail">
       <a href="/w3images/lights.jpg">
-        <img src="/w3images/lights.jpg" alt="Lights" style="width:100%" />
+        <img src="/w3images/lights.jpg" alt="Lights" style={{width: '100%'}} />
         <div className="caption">
           <p>Angelo</p>
         </div>

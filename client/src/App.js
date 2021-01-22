@@ -8,21 +8,22 @@ import Share from "./pages/Share";
 import Resources from "./pages/Resources";
 import Modal from "./pages/Modal";
 import Landing from './components/Landing';
+import Team from './pages/Team';
+
 
 function App() {
   return (
 
     <div>
       <Router>
-         <div className="page-container">
-        
+         <div className="page-container">    
           <Route exact path="/" component={Landing} />
           <Route exact path="/modal" component={Modal} />
           <Route exact path="/plan" component={Plan} />
           <Route exact path="/share" component={Share} />
           <Route exact path="/vision-board" component={VisionBoard} />
           <Route exact path="/learn" component={Resources} />
-
+          <Route exact path="/team" component={Team} />    
         </div>
       </Router>
       </div>
