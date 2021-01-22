@@ -46,7 +46,7 @@ Development Team:
 
 ## License
 
-This is project has a MIT license. 
+This project has a MIT license. 
 
 ## Contributing
 
