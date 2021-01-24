@@ -13,11 +13,11 @@ export const createUser = (data) => {
 }; 
 
 export const createPost = (data) => {
-    return axios.post("/api/post/create", data)
+    return axios.post("/api/share/create", data)
 };
 
 export const getPost = () => {
-    return axios.get("/api/post/");
+    return axios.get("/api/share/");
 };
 
 export const createSavings = (data) => {

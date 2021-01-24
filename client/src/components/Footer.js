@@ -19,7 +19,8 @@ function Footer() {
             <p className="footer-text">
                 <i/> Proudly built by the LAND PAD Development Team
             </p>
-            <button onClick={handleLogout}>Logout</button>
+
+            <button id="logout-btn" onClick={handleLogout}>Logout</button>
         </footer>
     );
 }

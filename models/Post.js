@@ -3,10 +3,10 @@ const Schema = mongoose.Schema;
 
 const postSchema = new Schema({
     id: { type: Number, required: true },
-    userName: { type: String, required: true },
+    username: { type: String, required: true },
     title: { type: String, required: true },
-    message: { type: String },
-    like: { type: Boolean },
+    content: { type: String },
+    likes: { type: Number },
     image: { type: String, required: true },
 });
 const Post = mongoose.model("Post", postSchema);

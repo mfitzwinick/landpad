@@ -9,27 +9,27 @@ mongoose.connect("mongodb://localhost/landpad", {
 let postSeed = [{
 
     id: 1000,
-    userName: "@fitzy",
+    username: "@fitzy",
     title: "Real Estate Agent",
-    message: "Look at my great new listing!",
-    like: false,
+    content: "Look at my great new listing!",
+    likes: false,
     image: "image here"
 },
 {
     id: 2000,
-    userName: "@jesscru",
+    username: "@jesscru",
     title: "Aspiring Homewner",
-    message: "Check out this architecture!",
-    like: true,
+    content: "Check out this architecture!",
+    likes: true,
     image: "image here"
 
 }, 
 {
     id: 3000,
-    userName: "@franz",
+    username: "@franz",
     title: "Commercial Real-estate Investor",
     message: "Just bought this mall!",
-    like: true,
+    likes: true,
     image: "image here"
 
 }]
