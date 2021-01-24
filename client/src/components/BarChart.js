@@ -12,7 +12,7 @@ class BarChart extends Component {
                     id: 'apexchart-example'
                 },
                 xaxis: {
-                    categories: ['Saved', 'Goal']
+                    categories: ['Your Savings', 'Your Goal']
                 }
             },
             series: [{
