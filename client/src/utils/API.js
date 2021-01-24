@@ -1,25 +1,36 @@
 import axios from 'axios';
 
-export const login = (data) => {
-    return axios.post("/api/profile/login", data)
-};
+export default {
+        login: function (data){
+        return axios.post("/api/profile/login", data)
+    }, 
 
-export const logout = () => {
-    return axios.get("/api/profile/logout")
-};
+        logout: function(){
+        return axios.get("/api/profile/logout")
+    }, 
 
-export const createUser = (data) => {
-    return axios.post("/api/profile/", data)
-}; 
+        createUser: function (data){
+        return axios.post("/api/profile/", data)
+    },  
 
-export const createPost = (data) => {
-    return axios.post("/api/share/create", data)
-};
+        createPost: function (data){
+        return axios.post("/api/posts/share/create", data)
+    }, 
 
-export const getPost = () => {
-    return axios.get("/api/share/");
-};
+        getPost: function(){
+        return axios.get("/api/posts/share");
+    }, 
 
-export const createSavings = (data) => {
-    return axios.post("/api/savings/", data)
+        createSavings: function(data){
+        return axios.post("/api/savings/", data)
+    }, 
+
+        getAddedLikes: function(id){
+        return axios.get("/api/posts/addlike/" + id);
+    }, 
+
+        getRemovedLikes: function(id){
+        return axios.get("/api/posts/removelike/" + id);
+    }
 }
+

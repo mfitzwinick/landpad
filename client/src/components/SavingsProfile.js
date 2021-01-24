@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { createSavings } from '../utils/API';
+import API from '../utils/API';
 
 class SavingsProfile extends Component {
     constructor() {
@@ -35,7 +35,7 @@ class SavingsProfile extends Component {
             veteran: this.state.veteran
         }
 
-        createSavings(data).then(res => {
+        API.createSavings(data).then(res => {
             this.props.setShow(false);
             console.log(data)
         });

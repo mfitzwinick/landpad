@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../styling/PostForm.css";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
-import { createPost, getPost } from '../utils/API';
+import API from '../utils/API';
 
 
 
@@ -18,7 +18,7 @@ class PostForm extends Component {
     };
 
     componentDidMount() {
-        getPost();
+        API.getPost();
     };
 
     handleInputChange = (e) => {
@@ -40,7 +40,7 @@ class PostForm extends Component {
             image: this.state.image,
         }
 
-        createPost(data).then(res => {
+        API.createPost(data).then(res => {
             console.log(res);
         });
 

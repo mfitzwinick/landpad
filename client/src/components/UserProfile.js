@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { createUser } from '../utils/API';
+import API from '../utils/API';
 import Upload2 from "./Upload2"
 
 
@@ -48,7 +48,7 @@ class UserProfile extends Component {
             image: this.state.profileImage
         }
 
-        createUser(data).then(res => {
+        API.createUser(data).then(res => {
             this.props.setShow(false);
         });
     }

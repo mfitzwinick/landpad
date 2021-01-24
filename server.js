@@ -18,7 +18,7 @@ app.use(passport.session());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/landpad", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/landpad", { useNewUrlParser: true , useFindAndModify: true });
 
 
 app.use("/", apiRoutes);
