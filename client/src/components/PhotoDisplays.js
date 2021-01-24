@@ -17,7 +17,7 @@ export default function Home() {
     }, []);
     return (
         <div>
-            <h1 className="title">Cloudinary Gallery</h1>
+            <h1 className="title">Land Pad Gallery</h1>
             <div className="gallery">
                 {imageIds &&
                     imageIds.map((imageId, index) => (

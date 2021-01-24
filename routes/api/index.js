@@ -5,4 +5,5 @@ const profileRoute = require("./profile");
 router.use("/posts", postRoute);
 router.use("/profile", profileRoute)
 
+
 module.exports = router;
