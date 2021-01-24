@@ -6,7 +6,7 @@ import "../styling/Landing.css";
 import Modal from "./Modal";
 import MainLogo from "../components/MainLogo/MainLogo";
 import PageLogo from "../images/1.png";
-import { login } from '../utils/API';
+import API from '../utils/API';
 import { useHistory } from 'react-router-dom'
 
 
@@ -28,7 +28,7 @@ function Landing(){
             username: username,
             password: password
         };
-        login(data).then(res => {
+        API.login(data).then(res => {
             const { token } = res.data;
             localStorage.setItem("token", token);
             history.push("/share")

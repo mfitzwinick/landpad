@@ -4,6 +4,7 @@ import CardComponent from './CardComponent';
 import PlaceholderImage from '../images/placeholder-image.png';
 import "../styling/PostDisplay.css";
 import PostForm from "./PostForm";
+import API from "../utils/API";
 
 
 
@@ -93,7 +94,10 @@ function PostDisplay() {
     const [APIcall, setAPIcall] = useState()
    
     useEffect(() => {
-        setAPIcall(data)
+       API.getPost().then(res => {
+           setAPIcall(res.data)
+           console.log(res.data);
+        })
       },[]);
 
     if(!APIcall) return <h1>Loading...</h1>
@@ -112,8 +116,8 @@ function PostDisplay() {
                               content={user.content}
                               title={user.title}
                               likes={user.likes}
-                              key={user.id}
-                              id={user.id}
+                              key={user._id}
+                              id={user._id}
                               image={user.image}
                            />
                            )
