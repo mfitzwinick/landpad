@@ -6,6 +6,7 @@
 #add-a-post {
     text-align: center;
     margin: 30px 20px;
+    font-weight: 200;
 }
 
 .container {
@@ -16,7 +17,6 @@
     right: 0;
     height: 100%;
     /* background-color: white; */
-    overflow: hidden;
 }
 
 .add-post {
@@ -24,19 +24,38 @@
 }
 
 .form-control {
-    margin: 0;
+    margin-bottom: 40px;
     text-indent: 0.2rem;
 }
 
 .post-label {
     margin-left: 10px;
+    margin-top: 40px;
+    font-weight: 200;
+
 }
 
 .username,
 .headline,
 .content,
 .image {
-    margin: 15px 10px 25px 10px;
+    margin: 5px 10px 10px;
     width: 90%;
     border-radius: 20px;
+}
+
+#post-image-upload,
+#file-upload-button {
+    border: 1px solid rgb(100, 97, 97);
+}
+
+.form-submit-btn {
+    border-radius: 20px;
+    background-color: rgb(100, 97, 97);
+    margin: 50px 20px;
+    float: right;
+}
+
+.form-submit-btn:hover {
+    background-color: rgb(145, 141, 141);
 }

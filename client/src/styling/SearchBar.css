@@ -9,7 +9,11 @@
 } 
 
 .search-btn {
-    background-color: rgb(145, 141, 141);
+    background-color: rgb(100, 97, 97);
     border: none;
+}
+
+.search-btn:hover {
+    background-color: rgb(145, 141, 141);
 }
 

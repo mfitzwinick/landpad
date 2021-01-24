@@ -1,7 +1,7 @@
 import './styling/App.css';
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import ProtectedRoute from './components/ProtectedRoute';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+// import ProtectedRoute from './components/ProtectedRoute';
 import VisionBoard from "./pages/VisionBoard";
 import Plan from "./pages/Plan";
 import Share from "./pages/Share";

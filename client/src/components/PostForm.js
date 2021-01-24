@@ -1,72 +1,128 @@
-import React from "react";
+import React, { Component } from "react";
 import "../styling/PostForm.css";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
-// import Card from "react-bootstrap/Card";
+import { createPost, getPost } from '../utils/API';
 
 
 
-const PostForm = () => {
-    return (
-        <div className="container">
-            <div className="add-post">
-                {/* <Card.Body> */}
-                    <h1 id="add-a-post">ADD A POST</h1>
+class PostForm extends Component {
+   
+    state = {
+        username: "",
+        title: "",
+        content: "",
+        likes: "",
+        // id: "",
+        image: ""
+    };
 
-            {/* if we need them to input their username: */}
-                    <label className="post-label" htmlFor="basic-url">Enter your username</label>
+    componentDidMount() {
+        getPost();
+    };
 
-                    <InputGroup className="mb-3 username">
-                        <InputGroup.Prepend>
-                            <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
-                        </InputGroup.Prepend>
-                        <FormControl
-                            placeholder="Username"
-                            aria-label="Username"
-                            aria-describedby="basic-addon1">
-                        </FormControl>
+    handleInputChange = (e) => {
+        const { name, value } = e.target
+        this.setState({
+            [name]: value
+        });
+    }
 
-                    </InputGroup>
+    handleClick = (e) => {
+        e.preventDefault();
+        
+        const data = {
+            username: this.state.username,
+            title: this.state.title,
+            content: this.state.content,
+            likes: this.state.likes,
+            // id: this.state.id,
+            image: this.state.image,
+        }
 
-                    <label className="post-label">Enter a post title</label>
-                    <InputGroup className="mb-3 headline">
-                        <FormControl
-                            placeholder="Post headline"
-                            aria-label="Post headline"
-                            aria-describedby="basic-addon2" />
-                    </InputGroup>
+        createPost(data).then(res => {
+            console.log(res);
+        });
+    }
 
-                    <label className="post-label">Enter your post</label>
-                    <InputGroup className="mb-3 content">
-                        <FormControl as="textarea"
-                            placeholder="Share your thoughts"
-                            aria-label="Share your thoughts"
-                            aria-describedby="basic-addon2" />
-                        <InputGroup size="sm" className="mb-3">
-                            <InputGroup.Prepend>
-                                <InputGroup.Text id="inputGroup-sizing-sm">Link (optional)</InputGroup.Text>
-                            </InputGroup.Prepend>
-                            <FormControl aria-label="Link" aria-describedby="inputGroup-sizing-sm" />
-                        </InputGroup>
-                    </InputGroup>
+    render(){
+        return (
+                <div className="container">
+                    <div className="add-post">
+                        {/* <Card.Body> */}
+                            <h1 id="add-a-post">ADD A POST</h1>
 
-                    {/* for cloudinary image upload */}
+                    {/* if we need them to input their username: */}
+                            <label className="post-label" htmlFor="basic-url">ENTER USERNAME</label>
 
-                    <label className="post-label">Upload your image</label>
-                    <InputGroup className="mb-3 image">
-                        <InputGroup.Prepend>
-                        <InputGroup.Text id="basic-addon1">Image</InputGroup.Text>
-                        </InputGroup.Prepend>
-                        <FormControl
-                            placeholder="Upload an Image"
-                            aria-label="Upload an Image"
-                            aria-describedby="basic-addon1"
-                        />
-                    </InputGroup>
-                {/* </Card.Body> */}
-            </div>
-        </div>
-    );
-}
+                            <InputGroup className="mb-3 username">
+                                <InputGroup.Prepend>
+                                    <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
+                                </InputGroup.Prepend>
+                                <FormControl
+                                    name="username"
+                                    onChange={this.handleInputChange}
+                                    value={this.state.username}
+                                    placeholder="Username"
+                                    aria-label="Username"
+                                    aria-describedby="basic-addon1">
+                                </FormControl>
+
+                            </InputGroup>
+
+                            <label className="post-label">ENTER TITLE</label>
+                            <InputGroup className="mb-3 headline">
+                                <FormControl
+                                    name="title"
+                                    onChange={this.handleInputChange}
+                                    value={this.state.title}
+                                    placeholder="Post headline"
+                                    aria-label="Post headline"
+                                    aria-describedby="basic-addon2" />
+                            </InputGroup>
+
+                            <label className="post-label">ENTER POST</label>
+                            <InputGroup className="mb-3 content">
+                                <FormControl as="textarea"
+                                    name="content"
+                                    onChange={this.handleInputChange}
+                                    value={this.state.content}
+                                    placeholder="Share your thoughts"
+                                    aria-label="Share your thoughts"
+                                    aria-describedby="basic-addon2" />
+                            </InputGroup>
+
+                            {/* for cloudinary image upload */}
+
+                            <label className="post-label">UPLOAD IMAGE</label>
+                            <InputGroup className="mb-3 image">
+                                <InputGroup.Prepend>
+                                   
+                                </InputGroup.Prepend>
+                                 <form {...this.props.onSubmit} className="form">
+                                        <input onChange={this.handleInputChange} value={this.state.image} type="file" name="image"
+                                            {...this.props.onChange} {...this.props.value} id="post-image-upload" className="form-input" />
+                                        {/* <button className="btn" type="submit">Submit</button> */}
+                                    
+            {/* ----------------->> ????? what is this? Do I need it????? */}
+                                {/* {{...this.props.src} && (
+                                        <img {...this.props.src} alt="chosen"
+                                            style={{ height: '300px' }} />
+                                    )} */}
+
+                                    </form>
+
+                            </InputGroup>
+
+                        {/* </Card.Body> */}
+                    </div>
+                    
+                    <button type="button" className="form-submit-btn" onClick={this.handleClick}>Submit</button>
+
+                </div>
+            );
+        }
+    }
+
 
 export default PostForm;
