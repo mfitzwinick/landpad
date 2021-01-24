@@ -53,14 +53,14 @@ const reactElement = (
                     <br />
                     <Card style={{ width: "400px" }} id="donutbody" >
                         <Card.Body >
-                            <h5 style={{ fontStyle: "italic" }}>HOW MUCH DO I NEED TO HAVE SAVED TO GET STARTED?</h5>
+                            <h5 style={{ fontStyle: "italic" }}>HOW MUCH DO I NEED TO SAVE TO GET STARTED?</h5>
                             <p>It's always good to be prepared!  Thinking through what you need to get started is a good idea.  Whether your are offering 10-20% down, here are additional costs to think about before you make an offer for your cool pad. </p></Card.Body>
                     </Card>
 
                     <br />
-
                     <h1 id="donuttext">Prep for your PAD</h1>
                     <SavingsModal />
+                    <br />
                     <BarChart />
                 </div>
                 <Image id="pool"

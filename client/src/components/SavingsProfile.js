@@ -6,12 +6,12 @@ class SavingsProfile extends Component {
         super()
         this.state = {
             userName: "",
-            savingsGoal: null,
-            downPaymentSavings: null,
-            reserveSavings: null,
-            movingExpenseSavings: null,
-            closingCostSavings: null,
-            veteran: Boolean,
+            savingsGoal: '',
+            downPaymentSavings: '',
+            reserveSavings: '',
+            movingExpenseSavings: '',
+            closingCostSavings: '',
+            veteran: false,
         }
         this.handleChange = this.handleChange.bind(this)
     }
@@ -22,6 +22,7 @@ class SavingsProfile extends Component {
             [name]: value
         })
     }
+
 
     handleClick = (e) => {
         e.preventDefault();
