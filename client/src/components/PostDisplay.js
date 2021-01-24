@@ -1,63 +1,103 @@
 import React, { useState, useEffect } from "react"
-import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns';
+import CardComponent from './CardComponent';
 import PlaceholderImage from '../images/placeholder-image.png';
-import likeImg from "../images/heart.png";
-import filledLike from "../images/filled-heart.png";
-import favImg from "../images/focus.png";
-import favedImg from "../images/eye.png";
 import "../styling/PostDisplay.css";
 import PostForm from "./PostForm";
 
+
+
+const data = [
+    {
+        image: PlaceholderImage,
+        username: "@jesscru",
+        title: "New Listing",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        likes: 0,
+        id: 1
+    },
+    {
+        image: PlaceholderImage,
+        username: "@jesscru",
+        title: "New Listing",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        likes: 0,
+        id: 2
+    },    {
+        image: PlaceholderImage,
+        username: "@jesscru",
+        title: "New Listing",
+        content: "Check out my new listing",
+        likes: 0,
+        id: 3
+    },    {
+        image: PlaceholderImage,
+        username: "@jesscru",
+        title: "New Listing",
+        content: "Just making sure that the styling still works!",
+        likes: 0,
+        id: 4
+    },    {
+        image: PlaceholderImage,
+        username: "@jesscru",
+        title: "New Listing",
+        content: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        likes: 0,
+        id: 5
+    },    {
+        image: PlaceholderImage,
+        username: "@jesscru",
+        title: "New Listing",
+        content: "Check out my new listing",
+        likes: 0,
+        id: 6
+    },    {
+        image: PlaceholderImage,
+        username: "@jesscru",
+        title: "New Listing",
+        content: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        likes: 0,
+        id: 7,
+    },    {
+        image: PlaceholderImage,
+        username: "@jesscru",
+        title: "New Listing",
+        content: "Check out my new listing",
+        likes: 0,
+        id: 8,
+    },    {
+        image: PlaceholderImage,
+        username: "@jesscru",
+        title: "New Listing",
+        content: "Just making sure that the styling still works!",
+        likes: 0,
+        id: 9,
+    },    {
+        image: PlaceholderImage,
+        username: "@jesscru",
+        title: "New Listing",
+        content: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        likes: 0,
+        id: 10,
+    },    {
+        image: PlaceholderImage,
+        username: "@jesscru",
+        title: "New Listing",
+        content: "Check out my new listing",
+        likes: 0,
+        id: 11,
+    }
+]
+
 function PostDisplay() {
-
-    const [like, setLike] = useState(false);
-    const [fav, setFav] = useState(false);
-    const [likeCounter, setLikeCounter] = useState(0);
-
+    const [APIcall, setAPIcall] = useState()
+   
     useEffect(() => {
-        setLike(true);
-        setFav(true);
+        setAPIcall(data)
       },[]);
 
+    if(!APIcall) return <h1>Loading...</h1>
 
-    const incrementLikeCounter = () => {
-        setLikeCounter(likeCounter + 1);
-        console.log(likeCounter);
-    }
-
-     const changeLikeImg = () => {
-        const likeIcon = window.document.querySelector(".like"); 
-        setLike(!like);
-        console.log(like);
-        console.log(likeIcon.src);
-
-        if (likeIcon.src){
-            likeIcon.src = `${filledLike}`;
-            likeIcon.alt = "filled heart"
-        } else {
-            likeIcon.src=`${likeImg}` 
-            likeIcon.alt="heart"
-            console.log('it\'s false');
-        }
-    }
-
-    const changeFavImg = () => {
-        const favIcon = window.document.querySelector(".fav");
-        setFav(!fav);
-        console.log(fav);
-        console.log(favIcon.src);
-
-
-        if(favIcon){
-            favIcon.src = `${favedImg}`;
-            favIcon.alt = "wide open eye";
-        } else {
-            favIcon.src= `${favImg}`
-            favIcon.alt="eye with focus bars around it"
-            console.log('it\'s false');
-        }
-    }
 
     return (
         <>
@@ -65,203 +105,19 @@ function PostDisplay() {
             <div className="row">
                 <div className="col-lg-9">
                     <CardColumns>          
-                        <div className="whole-card">
-                            <Card className="post-card">
-                                <Card.Img className="post-image" variant="top" src={PlaceholderImage} />
-                                <Card.Body className="post-body">
-                                    <Card.Title id="title-here">New Listing</Card.Title>
-                                    <Card.Subtitle id="username-here" className="mb-2 text-muted">@jesscru</Card.Subtitle>
-                                    <Card.Text id="post-content-here">
-                                        Check out my new listing! 
-                                    </Card.Text>
-                                </Card.Body>
-                                <Card.Footer className="post-footer">
-                                    <small id="likes-here">{likeCounter} LIKES
-                                        <img className="like" src={likeImg} alt="heart" onClick={() => {
-                                            changeLikeImg();
-                                            incrementLikeCounter();
-                                            }}></img>
-                                        <img className="fav" src={favImg} alt="eye with focus bars around it" onClick={() => changeFavImg()}></img>
-                                    </small>
-                                </Card.Footer>
-                            </Card>
-                        </div> 
-
-                        <div className="whole-card">
-                            <Card className="post-card">
-                                <Card.Img className="post-image" variant="top" src={PlaceholderImage} />
-                                <Card.Body className="post-body">
-                                    <Card.Title id="title-here">New Listing</Card.Title>
-                                    <Card.Subtitle id="username-here" className="mb-2 text-muted">@jesscru</Card.Subtitle>
-                                    <Card.Text id="post-content-here">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a anteLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante
-                                    </Card.Text>
-                                </Card.Body>
-                                <Card.Footer className="post-footer">
-                                    <small id="likes-here">3 LIKES
-                                        <img className="like" src={likeImg} alt="thumbs up"></img>
-                                        <img className="fav" src={favImg} alt="binoculars"></img>
-                                    </small>
-                                </Card.Footer>
-                            </Card>
-                        </div> 
-
-
-                        <div className="whole-card">
-                            <Card className="post-card">
-                                <Card.Img className="post-image" variant="top" src={PlaceholderImage} />
-                                <Card.Body className="post-body">
-                                    <Card.Title id="title-here">New Listing</Card.Title>
-                                    <Card.Subtitle id="username-here" className="mb-2 text-muted">@jesscru</Card.Subtitle>
-                                    <Card.Text id="post-content-here">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a anteLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante
-                                    </Card.Text>
-                                </Card.Body>
-                                <Card.Footer className="post-footer">
-                                    <small id="likes-here">3 LIKES
-                                        <img className="like" src={likeImg} alt="thumbs up"></img>
-                                        <img className="fav" src={favImg} alt="binoculars"></img>
-                                    </small>
-                                </Card.Footer>
-                            </Card>
-                        </div> 
-
-                        <div className="whole-card">
-                            <Card className="post-card">
-                                <Card.Img className="post-image" variant="top" src={PlaceholderImage} />
-                                <Card.Body className="post-body">
-                                    <Card.Title id="title-here">New Listing</Card.Title>
-                                    <Card.Subtitle id="username-here" className="mb-2 text-muted">@jesscru</Card.Subtitle>
-                                    <Card.Text id="post-content-here">
-                                        Check out my new listing! 
-                                    </Card.Text>
-                                </Card.Body>
-                                <Card.Footer className="post-footer">
-                                    <small id="likes-here">3 LIKES
-                                        <img className="like" src={likeImg} alt="thumbs up"></img>
-                                        <img className="fav" src={favImg} alt="binoculars"></img>
-                                    </small>
-                                </Card.Footer>
-                            </Card>
-                        </div>
-
-                        <div className="whole-card">
-                            <Card className="post-card">
-                                <Card.Img className="post-image" variant="top" src={PlaceholderImage} />
-                                <Card.Body className="post-body">
-                                    <Card.Title id="title-here">New Listing</Card.Title>
-                                    <Card.Subtitle id="username-here" className="mb-2 text-muted">@jesscru</Card.Subtitle>
-                                    <Card.Text id="post-content-here">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a anteLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante
-                                    </Card.Text>
-                                </Card.Body>
-                                <Card.Footer className="post-footer">
-                                    <small id="likes-here">3 LIKES
-                                        <img className="like" src={likeImg} alt="thumbs up"></img>
-                                        <img className="fav" src={favImg} alt="binoculars"></img>
-                                    </small>
-                                </Card.Footer>
-                            </Card>
-                        </div>
-
-                        <div className="whole-card">
-                            <Card className="post-card">
-                                <Card.Img className="post-image" variant="top" src={PlaceholderImage} />
-                                <Card.Body className="post-body">
-                                    <Card.Title id="title-here">New Listing</Card.Title>
-                                    <Card.Subtitle id="username-here" className="mb-2 text-muted">@jesscru</Card.Subtitle>
-                                    <Card.Text id="post-content-here">
-                                        Integer posuere erat a anteLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante
-                                    </Card.Text>
-                                </Card.Body>
-                                <Card.Footer className="post-footer">
-                                    <small id="likes-here">3 LIKES
-                                        <img className="like" src={likeImg} alt="thumbs up"></img>
-                                        <img className="fav" src={favImg} alt="binoculars"></img>
-                                    </small>                        
-                                </Card.Footer>
-                            </Card>
-                        </div> 
-                        
-
-                        <div className="whole-card">
-                            <Card className="post-card">
-                                <Card.Img className="post-image" variant="top" src={PlaceholderImage} />
-                                <Card.Body className="post-body">
-                                    <Card.Title id="title-here">New Listing</Card.Title>
-                                    <Card.Subtitle id="username-here" className="mb-2 text-muted">@jesscru</Card.Subtitle>
-                                    <Card.Text id="post-content-here">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a anteLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a anteLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante
-                                    </Card.Text>
-                                </Card.Body>
-                                <Card.Footer className="post-footer">
-                                    <small id="likes-here">3 LIKES
-                                        <img className="like" src={likeImg} alt="thumbs up"></img>
-                                        <img className="fav" src={favImg} alt="binoculars"></img>
-                                    </small>
-                                </Card.Footer>
-                            </Card>
-                        </div>  
-
-                        <div className="whole-card">
-                            <Card className="post-card">
-                                <Card.Img className="post-image" variant="top" src={PlaceholderImage} />
-                                <Card.Body className="post-body">
-                                    <Card.Title id="title-here">New Listing</Card.Title>
-                                    <Card.Subtitle id="username-here" className="mb-2 text-muted">@jesscru</Card.Subtitle>
-                                    <Card.Text id="post-content-here">
-                                        Integer posuere erat a anteLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante
-                                    </Card.Text>
-                                </Card.Body>
-                                <Card.Footer className="post-footer">
-                                    <small id="likes-here">3 LIKES
-                                        <img className="like" src={likeImg} alt="thumbs up"></img>
-                                        <img className="fav" src={favImg} alt="binoculars"></img>
-                                    </small>
-                                </Card.Footer>
-                            </Card>
-                        </div> 
-
-
-                        <div className="whole-card">
-                            <Card className="post-card">
-                                <Card.Img className="post-image" variant="top" src={PlaceholderImage} />
-                                <Card.Body className="post-body">
-                                    <Card.Title id="title-here">New Listing</Card.Title>
-                                    <Card.Subtitle id="username-here" className="mb-2 text-muted">@jesscru</Card.Subtitle>
-                                    <Card.Text id="post-content-here">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a anteLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a anteLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante
-                                    </Card.Text>
-                                </Card.Body>
-                                <Card.Footer className="post-footer">
-                                    <small id="likes-here">3 LIKES
-                                        <img className="like" src={likeImg} alt="thumbs up"></img>
-                                        <img className="fav" src={favImg} alt="binoculars"></img>
-                                    </small>
-                                </Card.Footer>
-                            </Card>
-                        </div> 
-
-                        <div className="whole-card">
-                            <Card className="post-card">
-                                <Card.Img className="post-image" variant="top" src={PlaceholderImage} />
-                                <Card.Body className="post-body">
-                                    <Card.Title id="title-here">New Listing</Card.Title>
-                                    <Card.Subtitle id="username-here" className="mb-2 text-muted">@jesscru</Card.Subtitle>
-                                    <Card.Text id="post-content-here">
-                                        Check out my new listing! 
-                                    </Card.Text>
-                                </Card.Body>
-                                <Card.Footer className="post-footer">
-                                    <small id="likes-here">3 LIKES
-                                        <img className="like" src={likeImg} alt="thumbs up"></img>
-                                        <img className="fav" src={favImg} alt="binoculars"></img>
-                                    </small>
-                                </Card.Footer>
-                            </Card>
-                        </div> 
+                       {APIcall.map((user) => {
+                           return (
+                           <CardComponent 
+                              username={user.username}
+                              content={user.content}
+                              title={user.title}
+                              likes={user.likes}
+                              key={user.id}
+                              id={user.id}
+                              image={user.image}
+                           />
+                           )
+                       })}
                     </CardColumns>
                 </div>
                 <div className="side-bar col-lg-3">
