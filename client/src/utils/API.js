@@ -19,7 +19,7 @@ export const createPost = (data) => {
 export const getPost = () => {
     return axios.get("/api/post/");
 };
-}
+
 export const createSavings = (data) => {
     return axios.post("/api/savings/", data)
 }
