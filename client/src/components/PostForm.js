@@ -43,6 +43,8 @@ class PostForm extends Component {
         createPost(data).then(res => {
             console.log(res);
         });
+
+        // also need to clear input fields. Vanilla js???        
     }
 
     render(){
