@@ -11,7 +11,9 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import SavingsModal from "../components/SavingsModal";
 import BarChart from "../components/BarChart";
+import Image from 'react-bootstrap/Image'
 import "../styling/Plan.css"
+import pool from "../images/pool.jpg"
 
 
 function Financial() {
@@ -30,14 +32,20 @@ function Financial() {
 
 const reactElement = (
     <div>
-        <Navigation />
-        <Container>
-            <Row>
-                <Col></Col>
-                <MortgageCalculator showPaymentSchedule />
+        <Row>
+            <Navigation />
+        </Row>
 
-                <Col></Col>
-                <div className="box">
+        <br />
+        <Row>
+            <Col>
+                <div id="calculator">
+                    <MortgageCalculator showPaymentSchedule />
+                </div>
+            </Col>
+            <Col>
+
+                <div className="chartbox">
                     <br />
 
                     <h1 id="donuttext">Things to Ponder...</h1>
@@ -52,20 +60,20 @@ const reactElement = (
                     <h1 id="donuttext">Prep for your PAD</h1>
                     <SavingsModal />
                     <BarChart />
-
-
-                    <Col></Col>
-
-
                 </div>
-            </Row>
+                <Image id="pool"
+                    alt="pool"
+                    width={500}
+                    height={350}
+                    src={pool}>
+                </Image>
+            </Col>
 
 
-            <Row>
+        </Row>
 
-            </Row>
 
-        </Container>
+
         <Footer />
 
     </div>
