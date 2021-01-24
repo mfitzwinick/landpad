@@ -5,7 +5,6 @@ const savingsSchema = new Schema({
     userName: {
         type: String,
         trim: true,
-        required: "User Name is Required"
     },
     savingsGoal: {
         type: Number,
