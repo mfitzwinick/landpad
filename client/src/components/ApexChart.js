@@ -52,11 +52,11 @@ class Donut extends Component {
           highlightDataSeries: true
         },
       },
-      colors: ['#01b26f', '#41c253', '#bde11d', '#fff100'],
-      labels: ['Down Payment', 'Closing Costs', 'Reserves', 'Inspections', 'Moving Costs']
+      colors: ['#01b26f', '#41c253', '#bde11d', '#fff100', '#00BFFF'],
+      labels: ['Down Payment', 'Closing Costs', 'Reserves', 'Moving Costs', 'Inspection Costs']
 
     },
-    series: [24, 55, 41, 17, 2],
+    series: [20, 4, 3, 2, 1],
 
   };
 

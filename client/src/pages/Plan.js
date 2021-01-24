@@ -52,7 +52,9 @@ const reactElement = (
                     <ApexChart />
                     <br />
                     <Card style={{ width: "400px" }} id="donutbody" >
-                        <Card.Body >It's always good to be prepared!If you're a first time buyer (or even if you're a little rusty!)here are some items to think about before you make an offer for your cool pad. </Card.Body>
+                        <Card.Body >
+                            <h5 style={{ fontStyle: "italic" }}>HOW MUCH DO I NEED TO HAVE SAVED TO GET STARTED?</h5>
+                            <p>It's always good to be prepared!  Thinking through what you need to get started is a good idea.  Whether your are offering 10-20% down, here are additional costs to think about before you make an offer for your cool pad. </p></Card.Body>
                     </Card>
 
                     <br />
@@ -70,13 +72,13 @@ const reactElement = (
             </Col>
 
 
-        </Row>
+        </Row >
 
 
 
         <Footer />
 
-    </div>
+    </div >
 );
 
 

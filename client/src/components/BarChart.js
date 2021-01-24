@@ -13,10 +13,13 @@ class BarChart extends Component {
                 },
                 xaxis: {
                     categories: ['Your Savings', 'Your Goal']
+                },
+                dataLabels: {
+                    enabled: false
                 }
             },
             series: [{
-                name: 'series-1',
+                name: ['yoursavings', 'yourgoal'],
                 data: [20000, 180000]
             }]
         }
