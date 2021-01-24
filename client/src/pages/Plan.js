@@ -11,7 +11,9 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import SavingsModal from "../components/SavingsModal";
 import BarChart from "../components/BarChart";
+import Image from 'react-bootstrap/Image'
 import "../styling/Plan.css"
+import pool from "../images/pool.jpg"
 
 
 function Financial() {
@@ -30,21 +32,29 @@ function Financial() {
 
 const reactElement = (
     <div>
-        <Navigation />
-        <Container>
-            <Row>
-                <Col></Col>
-                <MortgageCalculator showPaymentSchedule />
+        <Row>
+            <Navigation />
+        </Row>
 
-                <Col></Col>
-                <div className="box">
+        <br />
+        <Row>
+            <Col>
+                <div id="calculator">
+                    <MortgageCalculator showPaymentSchedule />
+                </div>
+            </Col>
+            <Col>
+
+                <div className="chartbox">
                     <br />
 
                     <h1 id="donuttext">Things to Ponder...</h1>
                     <ApexChart />
                     <br />
                     <Card style={{ width: "400px" }} id="donutbody" >
-                        <Card.Body >It's always good to be prepared!If you're a first time buyer (or even if you're a little rusty!)here are some items to think about before you make an offer for your cool pad. </Card.Body>
+                        <Card.Body >
+                            <h5 style={{ fontStyle: "italic" }}>HOW MUCH DO I NEED TO HAVE SAVED TO GET STARTED?</h5>
+                            <p>It's always good to be prepared!  Thinking through what you need to get started is a good idea.  Whether your are offering 10-20% down, here are additional costs to think about before you make an offer for your cool pad. </p></Card.Body>
                     </Card>
 
                     <br />
@@ -52,23 +62,23 @@ const reactElement = (
                     <h1 id="donuttext">Prep for your PAD</h1>
                     <SavingsModal />
                     <BarChart />
-
-
-                    <Col></Col>
-
-
                 </div>
-            </Row>
+                <Image id="pool"
+                    alt="pool"
+                    width={500}
+                    height={350}
+                    src={pool}>
+                </Image>
+            </Col>
 
 
-            <Row>
+        </Row >
 
-            </Row>
 
-        </Container>
+
         <Footer />
 
-    </div>
+    </div >
 );
 
 

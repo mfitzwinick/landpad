@@ -7,3 +7,9 @@
 #donutbody {
   width: 20;
 }
+
+#calculator {
+  padding-left: 3em;
+  width: 80%;
+  overflow: scroll;
+}
