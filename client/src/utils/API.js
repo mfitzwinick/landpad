@@ -11,3 +11,6 @@ export const logout = () => {
 export const createUser = (data) => {
     return axios.post("/api/profile/", data)
 }
+export const createSavings = (data) => {
+    return axios.post("/api/savings/", data)
+}

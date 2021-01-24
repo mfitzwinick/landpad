@@ -1,28 +1,35 @@
 import React, { Component } from "react";
 import { createUser } from '../utils/API';
+import Upload2 from "./Upload2"
 
 class UserProfile extends Component {
-   
-        state = {
-            firstName: "",
-            lastName: "",
-            userName: "",
-            email: "",
-            password: "",
-            confirmPassword: "",
-            city: "",
-            area: "",
-            agree: false,
-            profileImage: ""
-    
-        };
-    
+
+    state = {
+        firstName: "",
+        lastName: "",
+        userName: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+        city: "",
+        area: "",
+        agree: false,
+        profileImage: ""
+
+    };
 
 
     handleChange = (event) => {
         const { name, value } = event.target
         this.setState({
             [name]: value
+        });
+    }
+    handleImage = (value) => {
+        this.setState({
+            profileImage: value
+        }, () => {
+            console.log(this.state.profileImage)
         });
     }
 
@@ -37,7 +44,7 @@ class UserProfile extends Component {
             city: this.state.city,
             area: this.state.area,
             agree: this.state.agree,
-            // image: this.state.profileImage
+            image: this.state.profileImage
         }
 
         createUser(data).then(res => {
@@ -119,7 +126,7 @@ class UserProfile extends Component {
                     />
                     <br />
                     <br />
-                    <button>UPLOAD PROFILE IMAGE</button>
+                    <Upload2 profileImage={this.state.profileImage} handleImage={this.handleImage} />
                     <br />
                     <a href src="" style={{ fontStyle: "italic", color: "#4169E1" }}>TERMS AGREEMENT</a>
                     <p>Do you agree to LAND PAD terms of use?</p>
