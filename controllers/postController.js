@@ -3,7 +3,7 @@ const db = require("../models");
 module.exports = {
   findAll: function(req, res) {
     db.Post
-      .find(req.query)
+      .find()
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
@@ -21,6 +21,7 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
+    console.log("does this work")
     req.body.likes = 0;
     db.Post
       .create(req.body)
