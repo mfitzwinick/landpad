@@ -8,7 +8,6 @@ mongoose.connect("mongodb://localhost/landpad", {
 
 let postSeed = [{
 
-    id: 1000,
     username: "@fitzy",
     title: "Real Estate Agent",
     content: "Look at my great new listing!",
@@ -16,7 +15,6 @@ let postSeed = [{
     image: "image here"
 },
 {
-    id: 2000,
     username: "@jesscru",
     title: "Aspiring Homewner",
     content: "Check out this architecture!",
@@ -25,7 +23,6 @@ let postSeed = [{
 
 }, 
 {
-    id: 3000,
     username: "@franz",
     title: "Commercial Real-estate Investor",
     message: "Just bought this mall!",
