@@ -4,10 +4,10 @@ import Button from "react-bootstrap/Button";
 import { Container, Row, Col} from 'react-bootstrap';
 import "../styling/Landing.css";
 import Modal from "./Modal";
-import MainLogo from "../components/MainLogo/MainLogo";
 import PageLogo from "../images/1.png";
 import API from '../utils/API';
 import { useHistory } from 'react-router-dom'
+import MainLogo from './MainLogo'
 
 
 
