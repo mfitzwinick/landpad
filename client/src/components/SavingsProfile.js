@@ -28,17 +28,18 @@ class SavingsProfile extends Component {
         e.preventDefault();
         const data = {
             userName: this.state.userName,
-            savingsGoal: this.state.savingsGoal,
-            downPaymentSavings: this.state.downPaymentSavings,
-            reserveSavings: this.state.reserveSavings,
-            movingExpenseSavings: this.state.movingExpenseSavings,
-            closingCostSavings: this.state.closingCostSavings,
-            veteran: this.state.veteran
+            savingsGoal: parseInt(this.state.savingsGoal),
+            downPaymentSavings: parseInt(this.state.downPaymentSavings),
+            reserveSavings: parseInt(this.state.reserveSavings),
+            movingExpenseSavings: parseInt(this.state.movingExpenseSavings),
+            closingCostSavings: parseInt(this.state.closingCostSavings),
+            veteran: false
         }
+        console.log(data)
 
         API.createSavings(data).then(res => {
             this.props.setShow(false);
-            console.log(data)
+            console.log(res)
         });
     }
 

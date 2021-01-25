@@ -22,7 +22,7 @@ export default {
     },
 
     createSavings: function (data) {
-        return axios.post("https://localhost:3001/api/savings/", data)
+        return axios.post("/api/savings/create", data)
     },
     getSavings: function () {
         return axios.get("/api/savings");
