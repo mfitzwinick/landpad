@@ -1,17 +1,17 @@
 import React from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import Card from "react-bootstrap/Card";
+import { Carousel, Card, Button } from 'react-bootstrap'
 import Accordion from "react-bootstrap/Accordion";
 import "../styling/Resources.css"
-import { Carousel } from "react-bootstrap";
+import CarouselSlider from "../components/CarouselSlider";
 
 function Resources() {
     return (
 
         <div>
             <Navigation />
-            <Carousel />
+            <CarouselSlider />
                 <h1 id="title">RESOURCES</h1>
                     <p className="info">
                         Click on the category you'd like to learn a bit more about. We've provided some information
@@ -34,7 +34,27 @@ function Resources() {
                                 political views of the local population are things that can have an impact on a city's purchasing market. 
                                 The following are some reputable sources that we recommend.
                             </p>
-                            <ul>                                
+                            <ul>    
+                                <li className="resource">
+                                    <a className="res-link" href="https://https://www.dwell.com/" target="_blank" rel="noreferrer">Architecture Inspo</a>
+                                </li>        
+                                <li className="resource">
+                                    <a className="res-link" href="https://www.interiordesign.net/" target="_blank" rel="noreferrer">Interior Design Inspo</a>
+                                </li>    
+                                <li className="resource">
+                                    <a className="res-link" href="https://www.essentialhome.eu/inspirations/trends/" target="_blank" rel="noreferrer">Interior Trends</a>
+                                </li>       
+                                <li className="resource">
+                                    <a className="res-link" href="http://www.essentialhome.eu/products?utm_source=blog&utm_meio=partnersfooter&utm_content=essentialhome-inspirationsblog-product&utm_campaign=midcentury" target="_blank" rel="noreferrer">Midcentury Furniture Ideas</a>
+                                </li>    
+                                <li className="resource">
+                                    <a className="res-link" href="https://www.delightfull.eu/en/landing-page/mid-century-modern-style-partners?utm_source=website&utm_medium=partnersfooter&utm_content=essentialhome-inspirations-product&utm_campaign=midcentury" target="_blank" rel="noreferrer">Light Trends</a>
+                                </li>    
+                                <li className="resource">
+                                    <a className="res-link" href="https://www.trendesignbook.com/?utm_source=website&utm_medium=partnersfooter&utm_content=essentialhome-inspirations-product&utm_campaign=brandawareness" target="_blank" rel="noreferrer">Home Trends</a>
+                                </li>    <li className="resource">
+                                    <a className="res-link" href="https://www.essentialhome.eu/inspirations/trends/" target="_blank" rel="noreferrer">Home Essentials</a>
+                                </li>                   
                                 <li className="resource">
                                     <a className="res-link" href="https://www.data.gov/" target="_blank" rel="noreferrer">Data.gov</a>
                                 </li>

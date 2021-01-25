@@ -1,6 +1,6 @@
 .logo {
-    font-weight: 200;
-    margin: 40px
+    display: flex;
+    justify-content: flex-end;
 }
 
 #photo {
@@ -11,13 +11,14 @@
 
 .auth {
     width: 100%;
-    margin: 40px;
+    margin: 5px;
     display: inline-block;
     line-height: 3;
 }
 label{
     color: black;
     font-weight: bold;
+    font-size: 12px;
 }
 /* .container-fluid {
     padding-right: 0;
@@ -26,17 +27,14 @@ label{
 
 .img-section {
     padding-right: 0 !important;
+    padding-left: 0;
 }
 
 .form-section{
-   background: url("../images/dooropacity.png") center center rgba(255, 255, 255, .8);
+   background: url("../images/dooropacity.png") center center #ffffff;
     /* opacity: .4;
     z-index: -1; */
-}
-
-
-.col-sm-3{
-    padding-top: 300px;
+    height: 100vh;
 }
 
 .from-label{
