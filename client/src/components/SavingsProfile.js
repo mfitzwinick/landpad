@@ -105,7 +105,7 @@ class SavingsProfile extends Component {
                         <option value="yes">Yes - Click on VA loan info below</option>
                         <option value="No">No - Let's get planning</option>
                     </select>
-                    <a href src="https://www.benefits.va.gov/homeloans" style={{ fontStyle: "italic", color: "#4169E1" }}>VA loan info here</a>
+                    <a href="https://www.benefits.va.gov/homeloans" style={{ fontStyle: "italic", color: "#4169E1" }}>VA loan info here</a>
                     <br />
 
                 </form>
