@@ -1,13 +1,17 @@
 import React from "react";
-import Logo from "./primeLogo.png";
-import "./MainLogo.css"
 
+import logo from "../images/LogoL2.png";
+import "../styling/MainLogo.css"
 
 
 const MainLogo = () => {
     return (
-        <img alt="Logo" src={Logo}></img>
-    )
-};
+
+        <div className="logo">
+          <img src={logo}/>
+        </div>
+    );
+
+}
 
 export default MainLogo;

@@ -35,7 +35,7 @@ function Landing(){
         })
     }
     return (
-        <Container fluid>
+        // <Container fluid>
             
             <Row>
                 <Col sm={9} className="img-section">
@@ -60,7 +60,7 @@ function Landing(){
                 </Col>
             </Row>
                 
-        </Container>
+        // </Container>
 
     );
 }
