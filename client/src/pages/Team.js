@@ -1,6 +1,5 @@
 import React from "react";
 import Navigation from "../components/Navigation";
-import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
 
 function Team () {
@@ -9,7 +8,7 @@ function Team () {
             <div>
             <Navigation />
             <Gallery/>    
-            <Footer />
+        
         </div>
 
         </div>
