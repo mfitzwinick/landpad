@@ -1,4 +1,6 @@
-.img{
-    width: 60;
-    height: 50;
+.logo{
+    width: 180px;
+    height: 57px;
+    /* display: flex;
+    justify-content: flex-end; */
 }

@@ -1,12 +1,13 @@
 import React from "react";
-import logo from "../images/LogoL.png";
+import logo from "../images/LogoL2.png";
+import "../styling/MainLogo.css"
 
 
 function MainLogo () {
 
     return (
         <div className="logo">
-          <img src={logo} width="100" height="50" />
+          <img src={logo}/>
         </div>
     );
 
