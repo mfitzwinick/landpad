@@ -9,18 +9,15 @@
     font-weight: 200;
 }
 
-.container {
-    position: absolute;
-    margin: 0;
+.post-container {
+    margin-bottom: 50px;
     padding: 0;
     top: 0;
     right: 0;
-    height: 100%;
-    /* background-color: white; */
 }
 
 .add-post {
-    margin-top: 100px;
+    margin-bottom: 20px;
 }
 
 .form-control {
@@ -32,7 +29,6 @@
     margin-left: 10px;
     margin-top: 40px;
     font-weight: 200;
-
 }
 
 .username,
@@ -44,9 +40,17 @@
     border-radius: 20px;
 }
 
-#post-image-upload,
-#file-upload-button {
-    border: 1px solid rgb(100, 97, 97);
+.btn {
+    background-color: rgb(100, 97, 97) !important;
+    border: none;
+    background-color: var(none);
+    border-radius: 20px !important;
+}
+
+.btn:hover {
+    color: white !important;
+    border: none !important;
+    background-color: rgb(145, 141, 141) !important; 
 }
 
 .form-submit-btn {
@@ -59,3 +63,4 @@
 .form-submit-btn:hover {
     background-color: rgb(145, 141, 141);
 }
+
