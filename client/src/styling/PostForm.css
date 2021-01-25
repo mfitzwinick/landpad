@@ -1,0 +1,66 @@
+* {
+    font-family:'Quicksand', sans-serif;
+    padding: 0;
+}
+
+#add-a-post {
+    text-align: center;
+    margin: 30px 20px;
+    font-weight: 200;
+}
+
+.post-container {
+    margin-bottom: 50px;
+    padding: 0;
+    top: 0;
+    right: 0;
+}
+
+.add-post {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    margin-bottom: 40px;
+    text-indent: 0.2rem;
+}
+
+.post-label {
+    margin-left: 10px;
+    margin-top: 40px;
+    font-weight: 200;
+}
+
+.username,
+.headline,
+.content,
+.image {
+    margin: 5px 10px 10px;
+    width: 90%;
+    border-radius: 20px;
+}
+
+.btn {
+    background-color: rgb(100, 97, 97) !important;
+    border: none;
+    background-color: var(none);
+    border-radius: 20px !important;
+}
+
+.btn:hover {
+    color: white !important;
+    border: none !important;
+    background-color: rgb(145, 141, 141) !important; 
+}
+
+.form-submit-btn {
+    border-radius: 20px;
+    background-color: rgb(100, 97, 97);
+    margin: 50px 20px;
+    float: right;
+}
+
+.form-submit-btn:hover {
+    background-color: rgb(145, 141, 141);
+}
+

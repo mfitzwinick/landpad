@@ -5,7 +5,6 @@ const savingsSchema = new Schema({
     userName: {
         type: String,
         trim: true,
-        required: "User Name is Required"
     },
     savingsGoal: {
         type: Number,
@@ -19,17 +18,19 @@ const savingsSchema = new Schema({
         type: Number,
         trim: true,
     },
+    movingExpenseSavings: {
+        type: Number,
+        trim: true,
+    },
+
     closingCostSavings: {
         type: Number,
         trim: true,
     },
-    reserveSavings: {
-        type: Number,
-        trim: true,
-    },
+
     veteran: {
         type: Boolean
-    },
+    }
 
 });
 

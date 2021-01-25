@@ -1,3 +1,7 @@
+.res-container {
+    position: relative;
+}
+
 #title {
     text-align: center;
     font-weight: 400;
@@ -16,11 +20,11 @@
 }
 
 .color {
-    background-color: rgb(199, 194, 194);
+    background-color: white;
 }
 
 .new-color {
-    background-color: rgb(245, 245, 245)
+    background-color:white;
 }
 
 .card-header {
@@ -34,7 +38,7 @@
 }
 
 .res-link {
-    color: rgb(9, 0, 128);
+    color: rgb(0, 0, 0);
 }
 
 .res-link:hover {
