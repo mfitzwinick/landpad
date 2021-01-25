@@ -11,7 +11,7 @@ function Resources() {
 
         <div>
             <Navigation />
-            <Carousel />
+            <CarouselSlider />
 
         <div className="res-container">
             <h1 id="title">RESOURCES</h1>

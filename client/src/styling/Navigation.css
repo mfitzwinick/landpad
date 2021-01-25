@@ -1,6 +1,6 @@
 .nav-area {
     text-align: right;
-    background-color: rgb(229, 226, 226);
+    background-color: rgb(199, 194, 194);
     height: 5rem;
     width: 100%;
     letter-spacing: 3px;
@@ -11,8 +11,4 @@
 }
 .location {
     padding: 8px 20px;
-}
-.image{
-    height: 10px;
-    widows: 10px;
 }
