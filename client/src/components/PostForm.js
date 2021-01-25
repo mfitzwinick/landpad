@@ -63,7 +63,7 @@ class PostForm extends Component {
                             <h1 id="add-a-post">ADD A POST</h1>
 
                     {/* if we need them to input their username: */}
-                            <label className="post-label" htmlFor="basic-url">ENTER USERNAME</label>
+                            {/* <label className="post-label" htmlFor="basic-url">ENTER USERNAME</label>
 
                             <InputGroup className="mb-3 username">
                                 <InputGroup.Prepend>
@@ -78,7 +78,7 @@ class PostForm extends Component {
                                     aria-describedby="basic-addon1">
                                 </FormControl>
 
-                            </InputGroup>
+                            </InputGroup> */}
 
                             <label className="post-label">ENTER TITLE</label>
                             <InputGroup className="mb-3 headline">

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from '../utils/API';
-import Upload2 from "./Upload2"
+import Upload2 from "./Upload2";
 
 
 class UserProfile extends Component {

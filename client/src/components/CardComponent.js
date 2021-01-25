@@ -5,6 +5,7 @@ import filledLike from "../images/filled-heart.png";
 import favImg from "../images/focus.png";
 import favedImg from "../images/eye.png";
 import API from "../utils/API";
+import PostProfileImage from "./PostProfileImage";
 
 
 const CardComponent = (props) => {
@@ -34,11 +35,13 @@ const CardComponent = (props) => {
 
     return (
         <div className="whole-card">
+
         <Card className="post-card">
             <Card.Img className="post-image" variant="top" src={props.image} />
             <Card.Body className="post-body">
                 <Card.Title id="title-here">{props.title}</Card.Title>
-                <Card.Subtitle id="username-here" className="mb-2 text-muted">{props.username}</Card.Subtitle>
+                {/* <Card.Subtitle id="username-here" className="mb-2 text-muted"> @{props.username}</Card.Subtitle>             */}
+                <PostProfileImage />
                 <Card.Text id="post-content-here">
                     {props.content}
                 </Card.Text>
