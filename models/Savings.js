@@ -18,17 +18,19 @@ const savingsSchema = new Schema({
         type: Number,
         trim: true,
     },
+    movingExpenseSavings: {
+        type: Number,
+        trim: true,
+    },
+
     closingCostSavings: {
         type: Number,
         trim: true,
     },
-    reserveSavings: {
-        type: Number,
-        trim: true,
-    },
+
     veteran: {
         type: Boolean
-    },
+    }
 
 });
 

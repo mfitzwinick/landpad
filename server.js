@@ -2,7 +2,7 @@ const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
 const passport = require("passport");
-const apiRoutes = require("./routes");
+const apiRoutes = require("./routes/api");
 require("dotenv").config();
 
 const db = require("./models");
@@ -18,7 +18,7 @@ app.use(passport.session());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/landpad", { useNewUrlParser: true , useFindAndModify: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/landpad", { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 app.use("/", apiRoutes);

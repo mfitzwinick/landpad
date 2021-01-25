@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import { useHistory } from 'react-router-dom'
 import Card from 'react-bootstrap/Card';
-import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import MortgageCalculator from "mortgage-calculator-react";
