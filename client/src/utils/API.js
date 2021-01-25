@@ -24,6 +24,7 @@ export default {
     createSavings: function (data) {
         return axios.post("/api/savings/create", data)
     },
+    
     getSavings: function () {
         return axios.get("/api/savings");
     },
@@ -34,6 +35,10 @@ export default {
 
     getRemovedLikes: function (id) {
         return axios.get("/api/posts/removelike/" + id);
+    },
+
+    getProfileImage: function (id) {
+        return axios.get("/api/profile/" + id);
     }
 }
 
