@@ -1,28 +1,36 @@
 import React, { Component } from "react";
-import { createUser } from '../utils/API';
+import API from '../utils/API';
+import Upload2 from "./Upload2"
+
 
 class UserProfile extends Component {
-   
-        state = {
-            firstName: "",
-            lastName: "",
-            userName: "",
-            email: "",
-            password: "",
-            confirmPassword: "",
-            city: "",
-            area: "",
-            agree: false,
-            profileImage: ""
-    
-        };
-    
+
+    state = {
+        firstName: "",
+        lastName: "",
+        userName: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+        city: "",
+        area: "",
+        agree: false,
+        profileImage: ""
+
+    };
 
 
     handleChange = (event) => {
         const { name, value } = event.target
         this.setState({
             [name]: value
+        });
+    }
+    handleImage = (value) => {
+        this.setState({
+            profileImage: value
+        }, () => {
+            console.log(this.state.profileImage)
         });
     }
 
@@ -37,10 +45,10 @@ class UserProfile extends Component {
             city: this.state.city,
             area: this.state.area,
             agree: this.state.agree,
-            // image: this.state.profileImage
+            image: this.state.profileImage
         }
 
-        createUser(data).then(res => {
+        API.createUser(data).then(res => {
             this.props.setShow(false);
         });
     }
@@ -118,10 +126,11 @@ class UserProfile extends Component {
                         placeholder="area"
                     />
                     <br />
+                    <p>Upload your Profile Image:</p>
+                    <Upload2 profileImage={this.state.profileImage} handleImage={this.handleImage} />
                     <br />
-                    <button>UPLOAD PROFILE IMAGE</button>
-                    <br />
-                    <a href src="" style={{ fontStyle: "italic", color: "#4169E1" }}>TERMS AGREEMENT</a>
+                    <a href="https://docs.google.com/document/d/1kz4CCnEcNbSrN1CystPFAfHhHb7UqS3OhHabBTONJO8/edit?usp=sharing"
+                        style={{ fontStyle: "italic", color: "#4169E1", hover: "color:yellow" }}>TERMS AGREEMENT</a>
                     <p>Do you agree to LAND PAD terms of use?</p>
                     <select
                         value={this.state.agree}

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import UserPost from "../components/UserPost";
+import PostDisplay from "../components/PostDisplay";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import "../styling/Share.css";
@@ -31,7 +31,7 @@ class Share extends Component {
         return (
             <>
                 <Navigation />
-                <UserPost />
+                    <PostDisplay />
                 <Footer />
             </>
         );

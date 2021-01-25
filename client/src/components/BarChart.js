@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, UseEffect } from 'react';
 import Chart from 'react-apexcharts'
 import "../styling/Plan.css"
+import API from "../utils/API";
+
 
 class BarChart extends Component {
     constructor(props) {
@@ -9,16 +11,26 @@ class BarChart extends Component {
         this.state = {
             options: {
                 chart: {
-                    id: 'apexchart-example'
+                    id: 'apexchart-example',
+                    fontFamily: 'Quicksand, sans-serif;'
                 },
                 xaxis: {
-                    categories: ['Saved', 'Goal']
+                    categories: ['Your Savings', 'Your Goal']
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                title: {
+                    align: 'center',
+                    text: 'You are on your way!',
+                    style: { fontSize: '20px' }
                 }
             },
             series: [{
-                name: 'series-1',
+                name: ['yoursavings', 'yourgoal'],
                 data: [20000, 180000]
-            }]
+            }],
+
         }
     }
     render() {
@@ -28,4 +40,27 @@ class BarChart extends Component {
     }
 }
 
+// function updateInputs() {
+//     const chart = new ApexCharts(el, options);
+//     chart.updateOptions({
+//         series: [{
+//             name: ['yoursavings', 'yourgoal'],
+//             data: [x, y]
+//         }],
+//     })
+// }
+
+// function grabSavingsData() {
+//     const [APIcall, setAPIcall] = useState()
+
+//     useEffect(() => {
+//         API.getSavings().then(res => {
+//             setAPIcall(res.data)
+//             console.log(res.data);
+//         })
+//     }, []);
+//     let totalSaved = {};
+//     function addInputs() {
+//         console.log(res.data)
+//     }
 export default BarChart;

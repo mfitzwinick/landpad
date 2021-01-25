@@ -1,30 +1,45 @@
 import React, { Component } from "react"
+import API from '../utils/API';
 
 class SavingsProfile extends Component {
     constructor() {
         super()
         this.state = {
             userName: "",
-            savingsGoal: null,
-            downPaymentSavings: null,
-            reserveSavings: null,
-            movingExpenseSavings: null,
-            closingCostSavings: null,
-            veteran: Boolean,
+            savingsGoal: '',
+            downPaymentSavings: '',
+            reserveSavings: '',
+            movingExpenseSavings: '',
+            closingCostSavings: '',
+            veteran: false,
         }
         this.handleChange = this.handleChange.bind(this)
     }
 
     handleChange(event) {
-        const { name, value, type, checked } = event.target
-        type === "checkbox" ?
-            this.setState({
-                [name]: checked
-            })
-            :
-            this.setState({
-                [name]: value
-            })
+        const { name, value } = event.target
+        this.setState({
+            [name]: value
+        })
+    }
+
+
+    handleClick = (e) => {
+        e.preventDefault();
+        const data = {
+            userName: this.state.userName,
+            savingsGoal: this.state.savingsGoal,
+            downPaymentSavings: this.state.downPaymentSavings,
+            reserveSavings: this.state.reserveSavings,
+            movingExpenseSavings: this.state.movingExpenseSavings,
+            closingCostSavings: this.state.closingCostSavings,
+            veteran: this.state.veteran
+        }
+
+        API.createSavings(data).then(res => {
+            this.props.setShow(false);
+            console.log(data)
+        });
     }
 
     render() {
@@ -98,7 +113,7 @@ class SavingsProfile extends Component {
                 <h2>Get excited about your goal!</h2>
                 <h2>You got this!</h2>
                 <p>Your savings goal:{this.state.savingsGoal} </p>
-                <button>Update Your Progress</button>
+                <button type="button" onClick={this.handleClick}>Update Your Progress</button>
             </main>
         )
     }

@@ -11,8 +11,8 @@ function SavingsModal() {
         <div>
             <br />
             <br />
-            <Button style={{ backgroundColor: "black", color: "white" }} variant="primary" onClick={() => setShow(true)}>
-                Update your Plan
+            <Button id="progressbtn" style={{ backgroundColor: "#FFD700", color: "green" }} variant="primary" onClick={() => setShow(true)}>
+                Update your Progress
                 </Button>
 
             <Modal

@@ -19,19 +19,19 @@ function Resources() {
                         journey with.
                     </p>
 
-                <Accordion id="accordian" defaultActiveKey="0">
-                   
-                    <Card className="color">
-                        <Accordion.Toggle as={Card.Header} eventKey="2">
-                            DATA SOURCING
+            <Accordion id="accordian" defaultActiveKey="0">
+
+                <Card className="color">
+                    <Accordion.Toggle as={Card.Header} eventKey="2">
+                        BUYERS
                         </Accordion.Toggle>
-                        <Accordion.Collapse eventKey="2">
+                    <Accordion.Collapse eventKey="2">
                         <Card.Body className="new-color">
                             <p>
                                 Data sources are good for those willing to put in the research to ensure the investment they are
                                 making in both the location and home they choose are worth the time, effort, and money. Small things such as
-                                living in an area that has a university nearby, having a major highway run through a city, or the 
-                                political views of the local population are things that can have an impact on a city's purchasing market. 
+                                living in an area that has a university nearby, having a major highway run through a city, or the
+                                political views of the local population are things that can have an impact on a city's purchasing market.
                                 The following are some reputable sources that we recommend.
                             </p>
                             <ul>    
@@ -66,21 +66,21 @@ function Resources() {
                                 </li>
                             </ul>
                         </Card.Body>
-                        </Accordion.Collapse>
-                    </Card>
+                    </Accordion.Collapse>
+                </Card>
 
-                    <Card className="color">
-                        <Accordion.Toggle as={Card.Header} eventKey="1">
-                            INVESTING
+                <Card className="color">
+                    <Accordion.Toggle as={Card.Header} eventKey="1">
+                        SELLERS
                         </Accordion.Toggle>
-                        <Accordion.Collapse eventKey="1">
+                    <Accordion.Collapse eventKey="1">
                         <Card.Body className="new-color">
                             <p>
                                 While investing is not at the forefront of most future homeowner's minds, it's a great way to
-                                generate passive income and work toward the home or investment you're seeking. The following are 
+                                generate passive income and work toward the home or investment you're seeking. The following are
                                 some great starting points for investing.
                             </p>
-                            <ul>                                
+                            <ul>
                                 <li className="resource">
                                     <a className="res-link" href="https://robinhood.com/us/en/" target="_blank" rel="noreferrer">RobinHood</a>
                                 </li>
@@ -94,23 +94,47 @@ function Resources() {
                                 </li>
                             </ul>
                         </Card.Body>
-                        </Accordion.Collapse>
-                    </Card>
+                    </Accordion.Collapse>
+                </Card>
 
-                    <Card className="color">
-                        <Accordion.Toggle as={Card.Header} eventKey="0">
-                            ???MORTGAGE OR SOMETHING HELP???
+                <Card className="color">
+                    <Accordion.Toggle as={Card.Header} eventKey="0">
+                        REAL ESTATE AGENTS AND BROKERS
                         </Accordion.Toggle>
-                        <Accordion.Collapse eventKey="0">
+                    <Accordion.Collapse eventKey="0">
                         <Card.Body className="new-color">
                             <ul>
                                 <li className="resource"></li>
                             </ul>
                         </Card.Body>
-                        </Accordion.Collapse>
-                    </Card>
+                    </Accordion.Collapse>
+                </Card>
+                <Card className="color">
+                    <Accordion.Toggle as={Card.Header} eventKey="0">
+                        DESIGNERS
+                        </Accordion.Toggle>
+                    <Accordion.Collapse eventKey="0">
+                        <Card.Body className="new-color">
+                            <ul>
+                                <li className="resource"></li>
+                            </ul>
+                        </Card.Body>
+                    </Accordion.Collapse>
+                </Card>
+                <Card className="color">
+                    <Accordion.Toggle as={Card.Header} eventKey="0">
+                        DEVELOPERS and CONTRACTORS
+                        </Accordion.Toggle>
+                    <Accordion.Collapse eventKey="0">
+                        <Card.Body className="new-color">
+                            <ul>
+                                <li className="resource"></li>
+                            </ul>
+                        </Card.Body>
+                    </Accordion.Collapse>
+                </Card>
 
-                </Accordion>
+            </Accordion>
             <Footer />
         </div>
     )
