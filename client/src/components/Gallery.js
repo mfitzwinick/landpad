@@ -1,46 +1,44 @@
 import React from 'react';
+import Michelle from "../images/michelle-profile.jpg";
+import Yess from "../images/yess-profile.jpg";
+import Jessica from "../images/jess-profile.jpg";
+import Angelo from "../images/angelo-profile.jpg";
 
 function Gallery (){
     return (
         <div>
-            <div className="col-md-4">
+    <div className="col-md-4">
     <div className="thumbnail">
-      <a href="/w3images/lights.jpg">
-        <img src="/w3images/lights.jpg" alt="Lights" style={{width: '100%'}} />
+       <img src={Michelle} alt="Michelle" style={{width: '100%'}} />
         <div className="caption">
           <p>Michelle</p>
         </div>
-      </a>
-    </div>
+       </div>
   </div>
   <div className="col-md-4">
     <div className="thumbnail">
-      <a href="/w3images/lights.jpg">
-        <img src="/w3images/lights.jpg" alt="Lights" style={{width: '100%'}} />
+       <img src={Yess} alt="Yess" style={{width: '100%'}} />
         <div className="caption">
           <p>Yess</p>
         </div>
-      </a>
+     
     </div>
   </div>
   <div className="col-md-4">
     <div className="thumbnail">
-      <a href="/w3images/lights.jpg">
-        <img src="/w3images/lights.jpg" alt="Lights" style={{width: '100%'}} />
+       <img src={Jessica} alt="Jessica" style={{width: '100%'}} />
         <div className="caption">
           <p>Jessica</p>
         </div>
-      </a>
-    </div>
+      </div>
   </div>
   <div className="col-md-4">
     <div className="thumbnail">
-      <a href="/w3images/lights.jpg">
-        <img src="/w3images/lights.jpg" alt="Lights" style={{width: '100%'}} />
+      <img src={Angelo} alt="Angelo" style={{width: '100%'}} />
         <div className="caption">
           <p>Angelo</p>
         </div>
-      </a>
+     
     </div>
   </div>
         </div>
