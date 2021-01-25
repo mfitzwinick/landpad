@@ -11,12 +11,14 @@ function Resources() {
 
         <div>
             <Navigation />
-            <CarouselSlider />
-                <h1 id="title">RESOURCES</h1>
-                    <p className="info">
-                        Click on the category you'd like to learn a bit more about. We've provided some information
-                        as to why the information might be of value to you as well as some resources you can start your
-                        journey with.
+            <Carousel />
+
+        <div className="res-container">
+            <h1 id="title">RESOURCES</h1>
+            <p className="info">
+                Click on the category you'd like to learn a bit more about. We've provided some information
+                as to why the information might be of value to you as well as some resources you can start your
+                journey with.
                     </p>
 
             <Accordion id="accordian" defaultActiveKey="0">
@@ -135,6 +137,7 @@ function Resources() {
                 </Card>
 
             </Accordion>
+            </div>
             <Footer />
         </div>
     )

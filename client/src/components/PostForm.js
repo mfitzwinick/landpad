@@ -3,7 +3,7 @@ import "../styling/PostForm.css";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 import API from '../utils/API';
-import Upload from "../components/Upload2";
+import UploadPost from "./UploadPost";
 
 
 class PostForm extends Component {
@@ -25,6 +25,14 @@ class PostForm extends Component {
         const { name, value } = e.target
         this.setState({
             [name]: value
+        });
+    }
+
+    handleImage = (value) => {
+        this.setState({
+            image: value
+        }, () => {
+            console.log(this.state.image)
         });
     }
 
@@ -99,7 +107,7 @@ class PostForm extends Component {
                             <label className="post-label">UPLOAD IMAGE</label>
                             <InputGroup className="mb-3 image">
                                 <InputGroup.Prepend>
-                                   <Upload />
+                                   <UploadPost profileImage={this.state.image} handleImage={this.handleImage}/>
                                 </InputGroup.Prepend>
                                  {/* <form {...this.props.onSubmit} className="form">
                                         <input onChange={this.handleInputChange} value={this.state.image} type="file" name="image"
