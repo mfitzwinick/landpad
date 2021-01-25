@@ -3,7 +3,7 @@ import "../styling/PostForm.css";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 import API from '../utils/API';
-
+import Upload from "../components/Upload2";
 
 
 class PostForm extends Component {
@@ -49,7 +49,7 @@ class PostForm extends Component {
 
     render(){
         return (
-                <div className="container">
+                <div className="post-container">
                     <div className="add-post">
                         {/* <Card.Body> */}
                             <h1 id="add-a-post">ADD A POST</h1>
@@ -99,11 +99,11 @@ class PostForm extends Component {
                             <label className="post-label">UPLOAD IMAGE</label>
                             <InputGroup className="mb-3 image">
                                 <InputGroup.Prepend>
-                                   
+                                   <Upload />
                                 </InputGroup.Prepend>
-                                 <form {...this.props.onSubmit} className="form">
+                                 {/* <form {...this.props.onSubmit} className="form">
                                         <input onChange={this.handleInputChange} value={this.state.image} type="file" name="image"
-                                            {...this.props.onChange} {...this.props.value} id="post-image-upload" className="form-input" />
+                                            {...this.props.onChange} {...this.props.value} id="post-image-upload" className="form-input" /> */}
                                         {/* <button className="btn" type="submit">Submit</button> */}
                                     
             {/* ----------------->> ????? what is this? Do I need it????? */}
@@ -112,7 +112,7 @@ class PostForm extends Component {
                                             style={{ height: '300px' }} />
                                     )} */}
 
-                                    </form>
+                                    {/* </form> */}
 
                             </InputGroup>
 
