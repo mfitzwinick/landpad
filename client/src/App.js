@@ -8,6 +8,8 @@ import Share from "./pages/Share";
 import Resources from "./pages/Resources";
 import Modal from "./pages/Modal";
 import Landing from './components/Landing';
+import Team from './pages/Team';
+
 import UploadWidget from './components/UploadWidget'
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
           <Route exact path="/share" component={Share} />
           <Route exact path="/vision-board" component={VisionBoard} />
           <Route exact path="/learn" component={Resources} />
+          <Route exact path="/team" component={Team} />    
           <Route exact path="/upload" component={UploadWidget} />
 
 
