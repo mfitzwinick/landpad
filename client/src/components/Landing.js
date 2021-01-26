@@ -46,7 +46,7 @@ function Landing(){
                 <MainLogo />
                 <Form className="auth">
                     <Form.Group size="lg" controlId="email">
-                        <Form.Label>EMAIL</Form.Label>
+                        <Form.Label>USERNAME</Form.Label>
                         <Form.Control onChange={e =>  setUsername(e.target.value)}/>
                     </Form.Group>
                     <Form.Group size="lg" controlId="password">
