@@ -1,6 +1,6 @@
 #side-margins {
    margin-left: 20px;
-   /* position: relative; */
+   margin-top: 25px;
 }
 
 
@@ -24,6 +24,10 @@
 
 .post-image {
     border-radius: 20px 20px 0 0;
+}
+
+#post-content {
+    margin-top: 10px;
 }
 
 .post-footer {

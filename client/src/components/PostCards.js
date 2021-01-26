@@ -1,36 +1,37 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import likeImg from "../images/heart.png";
 import filledLike from "../images/filled-heart.png";
 import favImg from "../images/focus.png";
 import favedImg from "../images/eye.png";
 import API from "../utils/API";
-import PostProfileImage from "./PostProfileImage";
+// import PostProfileImage from "./PostProfileImage";
 
 
-const CardComponent = (props) => {
+const PostCards = (props) => {
     const [isLiked, setIsLiked] = useState(false);
     const [isFaved, setIsFaved] = useState(false);
 
-    useEffect(() => {
-        console.log(props.id);
-        // if(isLiked){
-        //     API.getRemovedLikes(props.id);
-        // } else {
-        //     API.getAddedLikes(props.id);
-        // }
-
-    }, [])
-
     function addLike(){
-        setIsLiked(true)
-        API.getAddedLikes(props.id).then(res => {console.log(res)})
+        setIsLiked(true);
+        API.getAddedLikes(props.id).then(res => {console.log(res.data)});
     }
 
     function removelike(){
-        setIsLiked(false)
-        API.getRemovedLikes(props.id).then(res => {console.log(res)})
+        setIsLiked(false);
+        API.getRemovedLikes(props.id).then(res => {console.log(res.data)});
+    }
 
+    function addFav(){
+        setIsFaved(true);
+        API.getAddedFavorites(props.id).then(res => {console.log(res.data)});
+        console.log(isFaved);
+    }
+
+    function removeFav(){
+        setIsFaved(false);
+        API.getRemovedFavorites(props.id).then(res => {console.log(res.data)});
+        console.log(isFaved);
     }
 
     return (
@@ -40,9 +41,11 @@ const CardComponent = (props) => {
             <Card.Img className="post-image" variant="top" src={props.image} />
             <Card.Body className="post-body">
                 <Card.Title id="title-here">{props.title}</Card.Title>
-                {/* <Card.Subtitle id="username-here" className="mb-2 text-muted"> @{props.username}</Card.Subtitle>             */}
-                <PostProfileImage />
-                <Card.Text id="post-content-here">
+                    {/* <PostProfileImage /> */}
+
+                    <img id="prof-icon" src={props.profileImage}></img>
+                    <p id="username">@{props.username}</p>
+                <Card.Text id="post-content">
                     {props.content}
                 </Card.Text>
             </Card.Body>
@@ -51,8 +54,8 @@ const CardComponent = (props) => {
                 { isLiked ? (<img className="like" src={filledLike} alt="heart" onClick={() => removelike()} />) : 
                 (<img className="like" src={likeImg} alt="heart" onClick={() => addLike()} />)}
 
-                { isFaved ? (<img className="fav" src={favedImg} alt="wide open eye with lines above" onClick={() => setIsFaved(false)} />) : 
-                (<img className="fav" src={favImg} alt="eye with focus bars around it" onClick={() => setIsFaved(true)} />)}
+                { isFaved ? (<img className="fav" src={favedImg} alt="wide open eye with lines above" onClick={() => addFav()} />) : 
+                (<img className="fav" src={favImg} alt="eye with focus bars around it" onClick={() => removeFav()} />)}
                 </small>
             </Card.Footer>
         </Card>
@@ -60,4 +63,4 @@ const CardComponent = (props) => {
     )
 };
 
-export default CardComponent;
+export default PostCards;
