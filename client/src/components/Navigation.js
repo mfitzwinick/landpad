@@ -9,7 +9,6 @@ const Navigation = () => {
         <>
             <Navbar className="nav-area">
                 <Navbar.Brand href="/">
-                    {/* <img src={LoginPhoto2} alt="logo"></img> */}
                     <MainLogo />
                 </Navbar.Brand>
                 <Nav className="justify-content-end" activeKey="/home">

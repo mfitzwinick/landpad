@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import API from '../utils/API';
 import Upload2 from "./Upload2";
-
+import '../styling/UserProfile.css';
 
 class UserProfile extends Component {
 
@@ -129,8 +129,12 @@ class UserProfile extends Component {
                     <p>Upload your Profile Image:</p>
                     <Upload2 profileImage={this.state.profileImage} handleImage={this.handleImage} />
                     <br />
-                    <a href="https://docs.google.com/document/d/1kz4CCnEcNbSrN1CystPFAfHhHb7UqS3OhHabBTONJO8/edit?usp=sharing"
-                        style={{ fontStyle: "italic", color: "#4169E1", hover: "color:yellow" }}>TERMS AGREEMENT</a>
+                    <div class="download">
+                      <h6 class="pdf">Terms of Agreement</h6>
+                      <a href="../images/Terms.pdf" download="PDF"> Downloadable PDF
+                      </a>
+                      <img src="" class="download-pdf" alt=""></img>
+                    </div>
                     <p>Do you agree to LAND PAD terms of use?</p>
                     <select
                         value={this.state.agree}
