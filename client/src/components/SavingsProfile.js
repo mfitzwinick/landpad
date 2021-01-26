@@ -37,7 +37,7 @@ class SavingsProfile extends Component {
         }
         console.log(data)
 
-        API.createSavings(data).then(res => {
+        API.createSavings(data, localStorage.getItem("id")).then(res => {
             // this.props.setShow(false);
             console.log(res)
             window.location.reload();
