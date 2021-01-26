@@ -25,8 +25,8 @@ export default {
         return axios.post("/api/savings/create", data)
     },
     
-    getSavings: function () {
-        return axios.get("/api/savings");
+    getSavings: function (id) {
+        return axios.get("/api/savings/" + id);
     },
 
     getAddedLikes: function (id) {

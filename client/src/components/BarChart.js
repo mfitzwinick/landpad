@@ -28,13 +28,30 @@ class BarChart extends Component {
             },
             series: [{
                 name: ['yoursavings', 'yourgoal'],
-                data: [20000, 180000]
-            }],
+                data: [300, 600]
+            }
+            ]
+
 
         }
     }
+
+    componentDidMount() {
+        API.getSavings(localStorage.getItem("id"))
+            .then(res => {
+                console.log(res)
+                const totalSaved = res.data.downPaymentSavings + res.data.reserveSavings + res.data.movingExpenseSavings + res.data.closingCostSavings;
+                console.log(res.data.downPaymentSavings)
+
+                this.setState({
+                    series: [{ name: ['yoursavings', 'yourgoal'], data: [totalSaved, res.data.savingsGoal] }]
+                })
+            })
+    }
+
     render() {
         return (
+
             <Chart options={this.state.options} series={this.state.series} type="bar" width={500} height={320} />
         )
     }
