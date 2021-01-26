@@ -18,6 +18,11 @@
   padding: 0 0 1em 0;
 }
 
+#calculator {
+  overflow: scroll;
+  height: 1600px;
+}
+
 :local(label) {
   display: block;
   color: black;
