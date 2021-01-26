@@ -53,5 +53,23 @@ export default {
     getFavorites: function () {
         return axios.get("/api/posts/favorites");
     },
+
+    getAddedLiked: function (id) {
+        return axios.get("api/posts/addliked/" + id);
+    }, 
+
+    getRemovedLiked: function (id) {
+        return axios.get("api/posts/removeliked/" + id);
+    }, 
+
+    getPosterUsername: function(id, data) {
+        return axios.post("api/posts/username/" + id, data);
+    },
+
+    getPosterProfile: function(id, data) {
+        return axios.post("api/posts/profile/" + id, data);
+    },
 }
+
+  
 

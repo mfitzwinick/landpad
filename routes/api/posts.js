@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const postController = require("../../controllers/postController");
 
-// Matches with "api/share/create"
+// Matches with "api/posts/share/create"
 router.route("/share/create")
   .post(postController.create);
 
@@ -29,5 +29,20 @@ router.route("/removefavorite/:id")
 router.route("/favorites")
   .get(postController.findAll)
 
+// api/posts/addliked
+router.route("/addliked/:id")
+  .get(postController.addLiked)
+
+// api/posts/removeliked
+router.route("/removeliked/:id")
+  .get(postController.removeLiked)
+
+// api/posts/username
+router.route("/username/:id")
+  .post(postController.addPosterUsername)
+
+// api/posts/profile
+router.route("/profile/:id")
+  .post(postController.addPosterProfile)
 
 module.exports = router;

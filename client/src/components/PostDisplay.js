@@ -17,7 +17,7 @@ function PostDisplay() {
         //    console.log(res.data);
 
         API.getProfileImage(localStorage.getItem("id")).then(res => {
-            console.log(res.data);
+            // console.log(res.data);
  
             setProfileImage({ profileImage: res.data.profileImage});
             setUserName({ username: res.data.userName});
@@ -36,7 +36,8 @@ function PostDisplay() {
                     <CardColumns>          
                        {APIcall.map((user) => {
                            return (
-                           <PostCards 
+                           <PostCards
+                              liked={user.liked}
                               content={user.content}
                               profileImage={user.profileImage}
                               username={user.username}

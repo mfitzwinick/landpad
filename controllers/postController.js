@@ -22,6 +22,9 @@ module.exports = {
   },
   create: function(req, res) {
     req.body.likes = 0;
+    req.body.favorited = false;
+    req.body.liked = false;
+    console.log(req.body);
     // req.body.favorited = false;
     db.Post
       .create(req.body)
@@ -68,7 +71,38 @@ module.exports = {
       .findOneAndUpdate({ _id: req.params.id }, { $set: { favorited: false }}, { useFindAndModify: false })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+  addLiked: function(req, res) {
+    console.log(req.params.id)
+    db.Post
+      .findOneAndUpdate({ _id: req.params.id }, { $set: { liked: true }}, { useFindAndModify: false })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  removeLiked: function(req, res) {    
+    console.log(req.params.id);
+    db.Post
+      .findOneAndUpdate({ _id: req.params.id }, { $set: { liked: false }}, { useFindAndModify: false })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  addPosterProfile: function(req, res) {
+    console.log(req.params.id);
+    console.log(req.body);
+    db.Post
+      .findOneAndUpdate({ _id: req.params.id }, { $set: { profileImage: req.body.profileImage }}, { useFindAndModify: false })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  addPosterUsername: function(req, res) {    
+    console.log(req.params.id);
+    console.log(req.body);
+    db.Post
+      .findOneAndUpdate({ _id: req.params.id }, { $set: { username: req.body.username }}, { useFindAndModify: false })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
   }
+
 
 };
 

@@ -14,6 +14,7 @@ class PostForm extends Component {
         title: "",
         content: "",
         likes: "",
+        liked: "",
         image: "", 
         favorited: "",
     };
@@ -41,22 +42,47 @@ class PostForm extends Component {
         e.preventDefault();
         
         const data = {
+
             profileImage: this.state.profileImage,
             username: this.state.username,
             title: this.state.title,
             content: this.state.content,
+            liked: this.state.liked,
             likes: this.state.likes,
             image: this.state.image,
             favorited: this.state.favorited
         }
 
         API.createPost(data).then(res => {
-            console.log(res);
+            document.querySelector(".headline").value = "";
+            document.querySelector(".content").value = "";
+            console.log(res.data);
+            const postID = res.data._id;
+
+            
+
+            API.getProfileImage(localStorage.getItem("id")).then(res => {
+                console.log(res.data);
+     
+                this.setState({ profileImage: res.data.profileImage}, () => { 
+                    API.getPosterProfile(postID, { profileImage: this.state.profileImage }).then(res => {
+                        console.log(res.data);
+                    });
+                });
+                this.setState({ username: res.data.userName} , () => {
+                    API.getPosterUsername(postID, { username: this.state.username }).then(res => {
+                        console.log(res.data);
+                    });
+                })
+                       window.location.reload();
+            });
+
+             console.log(res);
+
         });
 
-        document.querySelector(".headline").value = "";
-        document.querySelector(".content").value = "";
     }
+   
 
     render(){
         return (
