@@ -21,10 +21,11 @@ export default {
         return axios.get("/api/posts/share");
     },
 
-    createSavings: function (data) {
-        return axios.post("/api/savings/create", data)
+    createSavings: function (data, id) {
+        return axios.put("/api/savings/create/" + id, data)
+
     },
-    
+
     getSavings: function (id) {
         return axios.get("/api/savings/" + id);
     },
@@ -39,15 +40,15 @@ export default {
 
     getProfileImage: function (id) {
         return axios.get("/api/profile/" + id);
-    }, 
+    },
 
     getAddedFavorites: function (id) {
         return axios.get("api/posts/addfavorite/" + id);
-    }, 
+    },
 
     getRemovedFavorites: function (id) {
         return axios.get("api/posts/removefavorite/" + id);
-    }, 
+    },
 
     getFavorites: function () {
         return axios.get("/api/posts/favorites");
