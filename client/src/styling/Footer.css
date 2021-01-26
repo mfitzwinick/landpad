@@ -9,13 +9,24 @@
     /* margin-bottom: 50px; */
 }
 
-.footer-text {
+.footer-text{
     margin-top: 0.3rem;
     margin-right: 10px;
     display: inline;
     text-align: right;
     font-size: 12px;
     font-weight: bold;
+    
+}
+
+a, 
+.footer-text {
+    color: black !important;
+}
+
+a:hover, 
+.footer-text:hover {
+    color:rgb(97, 95, 95) !important;
 }
 
 .footer-text:hover {

@@ -43,7 +43,7 @@ function Landing(){
         <img id="photo" variant="top" alt="award winning, modern-looking home" src={PageLogo}></img>
                 </Col>
                 <Col sm={3} className="form-section">
-                <MainLogo />
+                <MainLogo origin="login" />
                 <Form className="auth">
                     <Form.Group size="lg" controlId="email">
                         <Form.Label>USERNAME</Form.Label>

@@ -8,7 +8,7 @@ import Angelo from "../images/angeloOk.jpg";
 function Gallery (){
     return (
         <div className="main-card">
-          <div><div class="card-body">
+          <div><div class="card-body about-text">
     <h1 class="card-title">Michele Fitzgerald-Winick</h1>
     <img src={Michelle} alt="Michelle" style={{width: '36%'}} />
     <br></br>
@@ -20,7 +20,7 @@ function Gallery (){
     <a href="#" class="btn btn-primary">Portfolio</a> <a href="#" class="btn btn-primary">Github</a> <a href="#" class="btn btn-primary">LinkedIn</a>
   </div></div>
   <hr></hr>
-  <div><div class="card-body">
+  <div><div class="card-body about-text">
     <h1 class="card-title">Yess Samuels</h1>
     <img src={Yess} alt="Michelle" style={{width: '36%'}} />
     <br></br>
@@ -33,7 +33,7 @@ function Gallery (){
        <a href="#" class="btn btn-primary">Portfolio</a> <a href="#" class="btn btn-primary">Github</a> <a href="#" class="btn btn-primary">LinkedIn</a>
   </div></div>
    <hr></hr>
-   <div><div class="card-body">
+   <div><div class="card-body about-text">
     <h1 class="card-title">Jessica Crump</h1>
     <img src={Jessica} alt="Michelle" style={{width: '36%'}} />
     <br></br>
@@ -45,7 +45,7 @@ function Gallery (){
        <a href="#" class="btn btn-primary">Portfolio</a> <a href="#" class="btn btn-primary">Github</a> <a href="#" class="btn btn-primary">LinkedIn</a>
   </div></div>
   <hr></hr>
-  <div><div class="card-body">
+  <div><div class="card-body about-text">
     <h1 class="card-title">Angelo Rocky Dibello</h1>
     <img src={Angelo} alt="Michelle" style={{width: '36%'}} />
     <br></br>

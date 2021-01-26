@@ -27,8 +27,11 @@
     background-color:white;
 }
 
-.card-header {
+.accordian-header,
+.card-header,
+#accordian {
     cursor: pointer;
+    border-radius: 10px !important;
 }
 
 .resource {

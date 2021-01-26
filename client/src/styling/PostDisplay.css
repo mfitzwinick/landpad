@@ -19,11 +19,11 @@
 }
 
 .card {
-    border-radius: 20px;
+    border-radius: 20px !important;
 }
 
 .post-image {
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 0 0 !important;
 }
 
 #username {
@@ -44,8 +44,8 @@
 }
 
 .post-footer {
-    border-radius: 20px;
-    padding-bottom: 20px;
+    border-radius: 20px !important;
+    padding-bottom: 20px !important;
 }  
 
 .like, 
