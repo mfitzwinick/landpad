@@ -6,11 +6,11 @@ class SavingsProfile extends Component {
         super()
         this.state = {
             userName: localStorage.getItem("id"),
-            savingsGoal: '',
-            downPaymentSavings: '',
-            reserveSavings: '',
-            movingExpenseSavings: '',
-            closingCostSavings: '',
+            savingsGoal: 0,
+            downPaymentSavings: 0,
+            reserveSavings: 0,
+            movingExpenseSavings: 0,
+            closingCostSavings: 0,
             veteran: false,
         }
         this.handleChange = this.handleChange.bind(this)
@@ -40,6 +40,7 @@ class SavingsProfile extends Component {
         API.createSavings(data).then(res => {
             // this.props.setShow(false);
             console.log(res)
+            window.location.reload();
         });
     }
 
@@ -47,7 +48,7 @@ class SavingsProfile extends Component {
         return (
             <main>
                 <form>
-                
+
                     <input
                         name="savingsGoal"
                         value={this.state.savingsGoal}

@@ -28,7 +28,7 @@ class BarChart extends Component {
             },
             series: [{
                 name: ['yoursavings', 'yourgoal'],
-                data: [300, 600]
+                data: [5, 10]
             }
             ]
 
@@ -39,13 +39,16 @@ class BarChart extends Component {
     componentDidMount() {
         API.getSavings(localStorage.getItem("id"))
             .then(res => {
-                console.log(res)
-                const totalSaved = res.data.downPaymentSavings + res.data.reserveSavings + res.data.movingExpenseSavings + res.data.closingCostSavings;
-                console.log(res.data.downPaymentSavings)
+                if (res.data !== null) {
+                    console.log(res)
+                    const totalSaved = res.data.downPaymentSavings + res.data.reserveSavings + res.data.movingExpenseSavings + res.data.closingCostSavings;
+                    console.log(res.data.downPaymentSavings)
 
-                this.setState({
-                    series: [{ name: ['yoursavings', 'yourgoal'], data: [totalSaved, res.data.savingsGoal] }]
-                })
+                    this.setState({
+                        series: [{ name: ['yoursavings', 'yourgoal'], data: [totalSaved, res.data.savingsGoal] }]
+                    })
+                }
+
             })
     }
 
@@ -57,27 +60,6 @@ class BarChart extends Component {
     }
 }
 
-// function updateInputs() {
-//     const chart = new ApexCharts(el, options);
-//     chart.updateOptions({
-//         series: [{
-//             name: ['yoursavings', 'yourgoal'],
-//             data: [x, y]
-//         }],
-//     })
-// }
 
-// function grabSavingsData() {
-//     const [APIcall, setAPIcall] = useState()
 
-//     useEffect(() => {
-//         API.getSavings().then(res => {
-//             setAPIcall(res.data)
-//             console.log(res.data);
-//         })
-//     }, []);
-//     let totalSaved = {};
-//     function addInputs() {
-//         console.log(res.data)
-//     }
 export default BarChart;

@@ -31,7 +31,7 @@ class Share extends Component {
         return (
             <>
                 <Navigation />
-                    <PostDisplay />
+                <PostDisplay />
                 <Footer />
             </>
         );
