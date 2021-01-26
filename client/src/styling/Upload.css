@@ -10,7 +10,7 @@
 
 * {
   box-sizing: border-box;
-  color: var(--text-color);
+  /* color: var(--text-color); */
 }
 .container {
   margin: 0 auto;
@@ -63,7 +63,7 @@ img-upload {
   border-radius: 5px;
   transition: 250ms;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .btn:hover {

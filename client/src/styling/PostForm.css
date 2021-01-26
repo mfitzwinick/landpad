@@ -45,6 +45,7 @@
     border: none !important;
     background-color: var(none);
     border-radius: 20px !important;
+    color: white !important;
 }
 
 .btn:hover {
