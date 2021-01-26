@@ -29,8 +29,9 @@ function Landing(){
             password: password
         };
         API.login(data).then(res => {
-            const { token } = res.data;
+            const { token, id  } = res.data;
             localStorage.setItem("token", token);
+            localStorage.setItem("id", id);
             history.push("/share")
         })
     }
