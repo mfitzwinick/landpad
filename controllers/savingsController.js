@@ -10,7 +10,7 @@ module.exports = {
     },
     findById: function (req, res) {
         db.Savings
-            .findById(req.params.id)
+            .findOne({ userName: req.params.id }, {}, { sort: { "created_at": 1 } })
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
