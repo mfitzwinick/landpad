@@ -33,8 +33,8 @@ function Resources() {
 
                 <Accordion id="accordian" defaultActiveKey="0">
 
-                <Card className="color">
-                    <Accordion.Toggle as={Card.Header} eventKey="1">
+                <Card className="color accordian-header">
+                    <Accordion.Toggle className="accordian-header" as={Card.Header} eventKey="1">
                         BUYERS
                         </Accordion.Toggle>
                     <Accordion.Collapse eventKey="1">
@@ -61,8 +61,8 @@ function Resources() {
                     </Accordion.Collapse>
                 </Card>
 
-                <Card className="color">
-                    <Accordion.Toggle as={Card.Header} eventKey="2">
+                <Card className="color accordian-header">
+                    <Accordion.Toggle  className="accordian-header" as={Card.Header} eventKey="2">
                         SELLERS
                         </Accordion.Toggle>
                     <Accordion.Collapse eventKey="2">
@@ -91,8 +91,8 @@ function Resources() {
                     </Card>
 
 
-                <Card className="color">
-                    <Accordion.Toggle as={Card.Header} eventKey="3">
+                <Card className="color accordian-header">
+                    <Accordion.Toggle className="accordian-header" as={Card.Header} eventKey="3">
                         REAL ESTATE AGENTS AND BROKERS
                         </Accordion.Toggle>
                     <Accordion.Collapse eventKey="3">
@@ -118,8 +118,8 @@ function Resources() {
                         </Card.Body>
                     </Accordion.Collapse>
                 </Card>
-                <Card className="color">
-                    <Accordion.Toggle as={Card.Header} eventKey="4">
+                <Card className="color accordian-header">
+                    <Accordion.Toggle className="accordian-header" as={Card.Header} eventKey="4">
                         DESIGNERS
                         </Accordion.Toggle>
                     <Accordion.Collapse eventKey="4">
@@ -153,8 +153,8 @@ function Resources() {
                         </Card.Body>
                     </Accordion.Collapse>
                 </Card>
-                <Card className="color">
-                    <Accordion.Toggle as={Card.Header} eventKey="5">
+                <Card className="accordian-header color">
+                    <Accordion.Toggle  className="accordian-header"as={Card.Header} eventKey="5">
                         DEVELOPERS AND CONTRACTORS
                         </Accordion.Toggle>
                     <Accordion.Collapse eventKey="5">
