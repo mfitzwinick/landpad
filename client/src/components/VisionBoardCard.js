@@ -26,6 +26,7 @@ const VisionBoardCards = () => {
                         if(favorite.favorited) {
                             return (
                             <PostCards 
+                                liked={favorite.liked}
                                 profileImage={favorite.profileImage}
                                 username={favorite.username}
                                 content={favorite.content}
