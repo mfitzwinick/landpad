@@ -24,7 +24,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This project also used [React Bootstrap](https://react-bootstrap.github.io/) to easily add and style many of its components. 
 
-For the icons on the page [Flaticon]("https://www.flaticon.com/") - Icons made by [Freepik]("https://www.freepik.com")
+For the icons on the page [Flaticon]("https://www.flaticon.com/") - Icons made by [Freepik]("https://www.freepik.com").
+
+The data for user profiles and post storage are stored using [Mongoose ODM](https://mongoosejs.com/).
 
 Development Team: 
 
@@ -42,7 +44,7 @@ Development Team:
 
 * Angelo Dibello
     * Github: @Dibello80
-    * Email: 
+    * Email: angelodibellomusic@gmail.com
 
 ## License
 

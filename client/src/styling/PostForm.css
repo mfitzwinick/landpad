@@ -22,7 +22,7 @@
 
 .form-control {
     margin-bottom: 40px;
-    text-indent: 0.2rem;
+    text-indent: 0.3rem;
 }
 
 .post-label {
@@ -33,11 +33,11 @@
 
 .username,
 .headline,
-.content,
-.image {
+.content {
     margin: 5px 10px 10px;
     width: 90%;
     border-radius: 20px;
+    background-color: #c7c2c23f;
 }
 
 .btn {
@@ -45,6 +45,7 @@
     border: none !important;
     background-color: var(none);
     border-radius: 20px !important;
+    margin-left: 10px;
     color: white !important;
 
 }
@@ -56,9 +57,10 @@
 }
 
 .form-submit-btn {
+    width: 35%;
     border-radius: 20px;
     background-color: rgb(100, 97, 97);
-    margin: 50px 20px;
+    margin: 20px 20px;
     float: right;
 }
 

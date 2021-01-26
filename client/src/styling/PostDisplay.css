@@ -1,6 +1,6 @@
 #side-margins {
    margin-left: 20px;
-   /* position: relative; */
+   margin-top: 25px;
 }
 
 
@@ -24,6 +24,23 @@
 
 .post-image {
     border-radius: 20px 20px 0 0;
+}
+
+#username {
+    display: inline;
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+#prof-icon {
+    width: 37px;
+    height: 40px;
+    border-radius: 20px;
+    display: inline;
+}
+
+#post-content {
+    margin-top: 10px;
 }
 
 .post-footer {

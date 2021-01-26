@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const postController = require("../../controllers/postController");
 
-// Matches with "api/share/create"
+// Matches with "api/posts/share/create"
 router.route("/share/create")
   .post(postController.create);
 
@@ -13,23 +13,36 @@ router.route("/share")
 router.route("/addlike/:id")
   .get(postController.addlike)
 
-
+// api/posts/removelike
 router.route("/removelike/:id")
   .get(postController.removelike)
 
-// Matches with "/share/:username"
-// router
-//   .route("share/:username")
-//   .get(postController.findByUsername)
-//   .put(postController.update)
-//   .delete(postController.remove);
+// api/posts/addfavorite
+router.route("/addfavorite/:id")
+  .get(postController.addFavorite)
 
-// // Matches with "/share/:id"
-//   router
-//   .route("share/:id")
-//   .get(postController.findById)
-//   .put(postController.update)
-//   .delete(postController.remove);
+// api/posts/removefavorite
+router.route("/removefavorite/:id")
+  .get(postController.removeFavorite)
 
+// api/posts/favorites
+router.route("/favorites")
+  .get(postController.findAll)
+
+// api/posts/addliked
+router.route("/addliked/:id")
+  .get(postController.addLiked)
+
+// api/posts/removeliked
+router.route("/removeliked/:id")
+  .get(postController.removeLiked)
+
+// api/posts/username
+router.route("/username/:id")
+  .post(postController.addPosterUsername)
+
+// api/posts/profile
+router.route("/profile/:id")
+  .post(postController.addPosterProfile)
 
 module.exports = router;

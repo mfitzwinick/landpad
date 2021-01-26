@@ -60,13 +60,7 @@ class Donut extends Component {
 
   };
 
-  //  
-  componentDidMount() {
-    // API call goes here
-    // Once data is retrieved you need to format the data to look like initial state
-    // Construct a new ojbect with values = to each keys data point
-    // set state to the new object
-  }
+
 
   render() {
 

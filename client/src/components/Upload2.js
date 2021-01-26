@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "../styling/Upload.css";
-import CardComponent from "./CardComponent";
+import PostCards from "./PostCards";
 
 class Upload2 extends React.Component {
     constructor(props) {

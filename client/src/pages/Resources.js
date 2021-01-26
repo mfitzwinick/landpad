@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useHistory } from 'react-router-dom'
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Carousel, Card, Button } from 'react-bootstrap'
@@ -7,21 +8,30 @@ import "../styling/Resources.css"
 import CarouselSlider from "../components/CarouselSlider";
 
 function Resources() {
+    const [user, setUser] = useState();
+    const history = useHistory();
+    useEffect(() => {
+        if (localStorage.getItem("token")) {
+            setUser(localStorage.getItem("token"))
+        } else {
+            history.push("/")
+        }
+    }, [])
     return (
 
         <div>
             <Navigation />
             <CarouselSlider />
 
-        <div className="res-container">
-            <h1 id="title">RESOURCES</h1>
-            <p className="info">
-                Click on the category you'd like to learn a bit more about. We've provided some information
-                as to why the information might be of value to you as well as some resources you can start your
-                journey with.
+            <div className="res-container">
+                <h1 id="title">RESOURCES</h1>
+                <p className="info">
+                    Click on the category you'd like to learn a bit more about. We've provided some information
+                    as to why the information might be of value to you as well as some resources you can start your
+                    journey with.
                     </p>
 
-            <Accordion id="accordian" defaultActiveKey="0">
+                <Accordion id="accordian" defaultActiveKey="0">
 
                 <Card className="color">
                     <Accordion.Toggle as={Card.Header} eventKey="1">
@@ -61,23 +71,25 @@ function Resources() {
                                 While investing is not at the forefront of most future homeowner's minds, it's a great way to
                                 generate passive income and work toward the home or investment you're seeking. The following are
                                 some great starting points for investing.
+
                             </p>
-                            <ul>
-                                <li className="resource">
-                                    <a className="res-link" href="https://robinhood.com/us/en/" target="_blank" rel="noreferrer">RobinHood</a>
-                                </li>
-                                <li className="resource">
-                                    <a className="res-link" href="https://www.nerdwallet.com/article/investing/401k-asset-allocation" target="_blank" rel="noreferrer">Invest in your 401K</a>
-                                </li>
-                                <li className="resource">
-                                    Invest in <a className="res-link" href="https://www.nerdwallet.com/article/investing/how-to-invest-in-index-funds" target="_blank" rel="noreferrer">Index Funds </a>
+                                <ul>
+                                    <li className="resource">
+                                        <a className="res-link" href="https://robinhood.com/us/en/" target="_blank" rel="noreferrer">RobinHood</a>
+                                    </li>
+                                    <li className="resource">
+                                        <a className="res-link" href="https://www.nerdwallet.com/article/investing/401k-asset-allocation" target="_blank" rel="noreferrer">Invest in your 401K</a>
+                                    </li>
+                                    <li className="resource">
+                                        Invest in <a className="res-link" href="https://www.nerdwallet.com/article/investing/how-to-invest-in-index-funds" target="_blank" rel="noreferrer">Index Funds </a>
                                      or<a className="res-link" href="https://www.nerdwallet.com/article/investing/what-is-an-etf" target="_blank" rel="noreferrer"> ETF's</a>
 
-                                </li>
-                            </ul>
-                        </Card.Body>
-                    </Accordion.Collapse>
-                </Card>
+                                    </li>
+                                </ul>
+                            </Card.Body>
+                        </Accordion.Collapse>
+                    </Card>
+
 
                 <Card className="color">
                     <Accordion.Toggle as={Card.Header} eventKey="3">
@@ -160,7 +172,7 @@ function Resources() {
                     </Accordion.Collapse>
                 </Card>
 
-            </Accordion>
+                </Accordion>
             </div>
             <Footer />
         </div>

@@ -9,12 +9,14 @@ import UploadPost from "./UploadPost";
 class PostForm extends Component {
    
     state = {
+        profileImage: "",
         username: "",
         title: "",
         content: "",
         likes: "",
-        // id: "",
-        image: ""
+        liked: "",
+        image: "", 
+        favorited: "",
     };
 
     componentDidMount() {
@@ -40,49 +42,58 @@ class PostForm extends Component {
         e.preventDefault();
         
         const data = {
+
+            profileImage: this.state.profileImage,
             username: this.state.username,
             title: this.state.title,
             content: this.state.content,
+            liked: this.state.liked,
             likes: this.state.likes,
-            // id: this.state.id,
             image: this.state.image,
+            favorited: this.state.favorited
         }
 
         API.createPost(data).then(res => {
-            console.log(res);
+            document.querySelector(".headline").value = "";
+            document.querySelector(".content").value = "";
+            console.log(res.data);
+            const postID = res.data._id;
+
+            
+
+            API.getProfileImage(localStorage.getItem("id")).then(res => {
+                console.log(res.data);
+     
+                this.setState({ profileImage: res.data.profileImage}, () => { 
+                    API.getPosterProfile(postID, { profileImage: this.state.profileImage }).then(res => {
+                        console.log(res.data);
+                    });
+                });
+                this.setState({ username: res.data.userName} , () => {
+                    API.getPosterUsername(postID, { username: this.state.username }).then(res => {
+                        console.log(res.data);
+                    });
+                })
+                       window.location.reload();
+            });
+
+             console.log(res);
+
         });
 
-        // also need to clear input fields. Vanilla js???        
     }
+   
 
     render(){
         return (
                 <div className="post-container">
                     <div className="add-post">
-                        {/* <Card.Body> */}
+                       
                             <h1 id="add-a-post">ADD A POST</h1>
 
-                    {/* if we need them to input their username: */}
-                            {/* <label className="post-label" htmlFor="basic-url">ENTER USERNAME</label>
-
-                            <InputGroup className="mb-3 username">
-                                <InputGroup.Prepend>
-                                    <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
-                                </InputGroup.Prepend>
-                                <FormControl
-                                    name="username"
-                                    onChange={this.handleInputChange}
-                                    value={this.state.username}
-                                    placeholder="Username"
-                                    aria-label="Username"
-                                    aria-describedby="basic-addon1">
-                                </FormControl>
-
-                            </InputGroup> */}
-
                             <label className="post-label">ENTER TITLE</label>
-                            <InputGroup className="mb-3 headline">
-                                <FormControl
+                            <InputGroup className="mb-3">
+                                <FormControl className="headline"
                                     name="title"
                                     onChange={this.handleInputChange}
                                     value={this.state.title}
@@ -92,8 +103,8 @@ class PostForm extends Component {
                             </InputGroup>
 
                             <label className="post-label">ENTER POST</label>
-                            <InputGroup className="mb-3 content">
-                                <FormControl as="textarea"
+                            <InputGroup className="mb-3 ">
+                                <FormControl as="textarea" className="content"
                                     name="content"
                                     onChange={this.handleInputChange}
                                     value={this.state.content}
@@ -107,24 +118,10 @@ class PostForm extends Component {
                             <label className="post-label">UPLOAD IMAGE</label>
                             <InputGroup className="mb-3 image">
                                 <InputGroup.Prepend>
-                                   <UploadPost profileImage={this.state.image} handleImage={this.handleImage}/>
+                                   <UploadPost image={this.state.image} handleImage={this.handleImage}/>
                                 </InputGroup.Prepend>
-                                 {/* <form {...this.props.onSubmit} className="form">
-                                        <input onChange={this.handleInputChange} value={this.state.image} type="file" name="image"
-                                            {...this.props.onChange} {...this.props.value} id="post-image-upload" className="form-input" /> */}
-                                        {/* <button className="btn" type="submit">Submit</button> */}
-                                    
-            {/* ----------------->> ????? what is this? Do I need it????? */}
-                                {/* {{...this.props.src} && (
-                                        <img {...this.props.src} alt="chosen"
-                                            style={{ height: '300px' }} />
-                                    )} */}
-
-                                    {/* </form> */}
-
                             </InputGroup>
 
-                        {/* </Card.Body> */}
                     </div>
                     
                     <button type="button" className="form-submit-btn" onClick={this.handleClick}>Submit</button>
