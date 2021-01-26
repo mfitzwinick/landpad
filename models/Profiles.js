@@ -49,6 +49,7 @@ profileSchema.pre("save", function () {
     if (!this.isModified("password")) {
       return Promise.resolve();
     }
+
     if (this.password.length < 6) {
       return Promise.reject(
         new Error("Password must have at least 6 characters")

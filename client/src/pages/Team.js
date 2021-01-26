@@ -9,7 +9,7 @@ function Team () {
             <Navigation />
             <Gallery/>    
         
-        </div>
+            </div>
 
         </div>
     )

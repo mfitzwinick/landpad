@@ -44,7 +44,7 @@ Development Team:
 
 * Angelo Dibello
     * Github: @Dibello80
-    * Email: 
+    * Email: angelodibellomusic@gmail.com
 
 ## License
 
