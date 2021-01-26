@@ -6,11 +6,11 @@ class SavingsProfile extends Component {
         super()
         this.state = {
             userName: localStorage.getItem("id"),
-            savingsGoal: 0,
-            downPaymentSavings: 0,
-            reserveSavings: 0,
-            movingExpenseSavings: 0,
-            closingCostSavings: 0,
+            savingsGoal: '',
+            downPaymentSavings: '',
+            reserveSavings: '',
+            movingExpenseSavings: '',
+            closingCostSavings: '',
             veteran: false,
         }
         this.handleChange = this.handleChange.bind(this)
