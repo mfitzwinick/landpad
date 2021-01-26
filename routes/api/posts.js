@@ -13,9 +13,17 @@ router.route("/share")
 router.route("/addlike/:id")
   .get(postController.addlike)
 
-
+// api/posts/removelike
 router.route("/removelike/:id")
   .get(postController.removelike)
+
+// api/posts/addfavorite
+router.route("/addfavorite/:id")
+.get(postController.addFavorite)
+
+// api/posts/removefavorite
+router.route("/removefavorite/:id")
+.get(postController.removeFavorite)
 
 // Matches with "/share/:username"
 // router

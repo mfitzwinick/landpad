@@ -39,6 +39,14 @@ export default {
 
     getProfileImage: function (id) {
         return axios.get("/api/profile/" + id);
+    }, 
+
+    getAddedFavorites: function (id) {
+        return axios.get("api/posts/addfavorite/" + id);
+    }, 
+
+    getRemovedFavorites: function (id) {
+        return axios.get("api/posts/removefavorite/" + id);
     }
 }
 

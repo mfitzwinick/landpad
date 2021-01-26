@@ -55,6 +55,20 @@ module.exports = {
     .findOneAndUpdate({ _id: req.params.id }, { $inc:{likes: -1}}, { useFindAndModify: false })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+  addFavorite: function(req, res) {
+    console.log(req.params.id)
+    db.Post
+      .findOneAndUpdate({ _id: req.params.id })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  removeFavorite: function(req, res) {    
+    console.log(req.params.id)
+    db.Post
+      .findOneAndUpdate({ _id: req.params.id })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
   }
   
 };

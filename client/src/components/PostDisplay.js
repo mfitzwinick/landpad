@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import CardColumns from 'react-bootstrap/CardColumns';
-import CardComponent from './CardComponent';
+import PostCards from './PostCards';
 import PlaceholderImage from '../images/placeholder-image.png';
 import "../styling/PostDisplay.css";
 import PostForm from "./PostForm";
@@ -16,7 +16,7 @@ function PostDisplay() {
     useEffect(() => {
        API.getPost().then(res => {
            setAPIcall(res.data)
-           console.log(res.data);
+        //    console.log(res.data);
         })
       },[]);
 
@@ -31,8 +31,7 @@ function PostDisplay() {
                     <CardColumns>          
                        {APIcall.map((user) => {
                            return (
-                           <CardComponent 
-                            //   username={user.username}
+                           <PostCards 
                               content={user.content}
                               title={user.title}
                               likes={user.likes}

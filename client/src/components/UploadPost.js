@@ -4,7 +4,6 @@ import "../styling/Upload.css"
 class UploadPost extends React.Component {
     constructor(props) {
         super(props)
-        console.log(props)
     }
     state = {
         imageUrl: undefined,
@@ -41,7 +40,6 @@ class UploadPost extends React.Component {
                         imageUrl: info.secure_url,
                         imageAlt: `An image of ${info.original_filename}`
                     }, () => {
-                        // console.log(this.state.imageUrl)
                         this.props.handleImage(this.state.imageUrl)
                     })
                 }
@@ -51,23 +49,17 @@ class UploadPost extends React.Component {
     render() {
         const { imageUrl, imageAlt } = this.state;
         return (
-            // <main className="App">
-            //     <section className="left-side">
-            //         <form>
-            //             <div className="form-group">
-            //                 <input type="file" />
-            //             </div>
-            //             <button type="button" className="btn" onClick={this.handleImageUpload}>Submit</button>
+            <>
             <button type="button" className="btn widget-btn" onClick={this.openWidget}>Upload Via Widget</button>
-            //     </form>
-            // </section>
-            // <section className="right-side">
-            //     <p>The resulting image will be displayed here</p>
-            //     {imageUrl && (
-            //         <img src={imageUrl} alt={imageAlt} className="displayed-image" />
-            //     )}
-            // </section>
-            // </main>
+
+            {/* <form {...this.props.onSubmit} className="form">
+                <input onChange={this.handleInputChange} value={this.state.image} type="file" name="image"
+                {...this.props.onChange} {...this.props.value} id="post-image-upload" className="form-input" /> */}
+                    {/* {{...this.props.src} && (
+                    <img {...this.props.src} alt="chosen"></img>
+                         )} 
+            </form> */}
+            </>
         );
     }
 }
