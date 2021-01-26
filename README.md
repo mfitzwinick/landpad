@@ -34,7 +34,7 @@ Development Team:
 
 * Yessica Samuels
     * Github: @yessSamuels
-    * Email: 
+    * Email: yesssamuels@me.com
 
 * Jessica Crump
     * Github: @jesscru

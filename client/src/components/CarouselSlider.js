@@ -9,40 +9,32 @@ import LoginPhoto3 from "../images/15.png";
 const CarouselSlider = () => {
     return (
 <Carousel>
-  <Carousel.Item interval={200}>
+  <Carousel.Item interval={5000}>
     <img
-      className="d-block w-100"   alt="Third slide"
+      className="d-block w-100"   alt="Frist slide"
       src={LoginPhoto} />
     <Carousel.Caption>
-      {/* <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
     </Carousel.Caption>
   </Carousel.Item>
-  <Carousel.Item interval={200}>
+  <Carousel.Item interval={5000}>
     <img
-      className="d-block w-100"   alt="Third slide"
+      className="d-block w-100"   alt="Second slide"
       src={LoginPhoto1} />
     <Carousel.Caption>
-      {/* <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
     </Carousel.Caption>
   </Carousel.Item>
-  <Carousel.Item interval={200}>
+  <Carousel.Item interval={5000}>
     <img
       className="d-block w-100"   alt="Third slide"
       src={LoginPhoto2} />
     <Carousel.Caption>
-      {/* <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
     <img
-    className="d-block w-100"   alt="Third slide"
+    className="d-block w-100"   alt="Forth slide"
     src={LoginPhoto3} />
     <Carousel.Caption>
-      {/* <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
