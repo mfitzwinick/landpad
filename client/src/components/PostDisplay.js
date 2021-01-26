@@ -7,12 +7,21 @@ import API from "../utils/API";
 
 
 function PostDisplay() {
-    const [APIcall, setAPIcall] = useState()
+    const [APIcall, setAPIcall] = useState();
+    const [profileImage, setProfileImage] = useState("");
+    const [username, setUserName] = useState("");
    
     useEffect(() => {
        API.getPost().then(res => {
            setAPIcall(res.data)
         //    console.log(res.data);
+
+        API.getProfileImage(localStorage.getItem("id")).then(res => {
+            console.log(res.data);
+ 
+            setProfileImage({ profileImage: res.data.profileImage});
+            setUserName({ username: res.data.userName});
+         })
         })
       },[]);
 
@@ -29,6 +38,8 @@ function PostDisplay() {
                            return (
                            <PostCards 
                               content={user.content}
+                              profileImage={user.profileImage}
+                              username={user.username}
                               title={user.title}
                               likes={user.likes}
                               favorited={user.favorited}

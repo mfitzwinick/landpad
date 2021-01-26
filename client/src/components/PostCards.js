@@ -10,7 +10,7 @@ import API from "../utils/API";
 
 const PostCards = (props) => {
     const [isLiked, setIsLiked] = useState(false);
-    const [isFaved, setIsFaved] = useState(true);
+    const [isFaved, setIsFaved] = useState(false);
 
     function addLike(){
         setIsLiked(true);

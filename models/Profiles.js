@@ -40,7 +40,7 @@ const profileSchema = new Schema({
     agree: {
         type: Boolean
     },
-    image: {
+    profileImage: {
         type: String
     }
 });
