@@ -1,4 +1,7 @@
-.card-body {
-  background-color: black;
-
+.text-secondary {
+    float: center;
+    text-align:left;
+    padding: 40px;
+    word-break: break-all;
 }
+
