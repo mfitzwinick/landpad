@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from "react"
 import CardColumns from 'react-bootstrap/CardColumns';
 import PostCards from './PostCards';
-import PlaceholderImage from '../images/placeholder-image.png';
 import "../styling/PostDisplay.css";
 import PostForm from "./PostForm";
 import API from "../utils/API";
-
-
-
 
 
 function PostDisplay() {
@@ -35,6 +31,7 @@ function PostDisplay() {
                               content={user.content}
                               title={user.title}
                               likes={user.likes}
+                              favorited={user.favorited}
                               key={user._id}
                               id={user._id}
                               image={user.image}

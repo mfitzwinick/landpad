@@ -4,20 +4,30 @@ import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 import API from '../utils/API';
 import UploadPost from "./UploadPost";
+import { set } from "mongoose";
 
 
 class PostForm extends Component {
    
     state = {
+        profileImage: "",
         username: "",
         title: "",
         content: "",
         likes: "",
-        image: ""
+        image: "", 
+        favorited: "",
     };
 
     componentDidMount() {
         API.getPost();
+
+        API.getProfileImage(localStorage.getItem("id")).then(res => {
+            console.log(res.data);
+ 
+            this.setState({ profileImage: res.data.image});
+            this.setState({ username: res.data.userName});
+         })
     };
 
     handleInputChange = (e) => {
@@ -39,11 +49,13 @@ class PostForm extends Component {
         e.preventDefault();
         
         const data = {
+            profileImage: this.state.profileImage,
             username: this.state.username,
             title: this.state.title,
             content: this.state.content,
             likes: this.state.likes,
             image: this.state.image,
+            favorited: this.state.favorited
         }
 
         API.createPost(data).then(res => {
@@ -88,7 +100,7 @@ class PostForm extends Component {
                             <label className="post-label">UPLOAD IMAGE</label>
                             <InputGroup className="mb-3 image">
                                 <InputGroup.Prepend>
-                                   <UploadPost profileImage={this.state.image} handleImage={this.handleImage}/>
+                                   <UploadPost profileImage={this.state.profileImage} handleImage={this.handleImage}/>
                                 </InputGroup.Prepend>
                             </InputGroup>
 

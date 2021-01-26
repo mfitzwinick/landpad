@@ -21,8 +21,8 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
-    console.log("does this work")
     req.body.likes = 0;
+    // req.body.favorited = false;
     db.Post
       .create(req.body)
       .then(dbModel => res.json(dbModel))
@@ -44,33 +44,32 @@ module.exports = {
   addlike: function(req, res) {
     console.log(req.params.id)
     db.Post
-      .findOneAndUpdate({ _id: req.params.id }, { $inc:{likes: 1}}, { useFindAndModify: false })
+      .findOneAndUpdate({ _id: req.params.id }, { $inc: { likes: 1 }}, { useFindAndModify: false })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   removelike: function(req, res) {    
     console.log(req.params.id)
-
     db.Post
-    .findOneAndUpdate({ _id: req.params.id }, { $inc:{likes: -1}}, { useFindAndModify: false })
+      .findOneAndUpdate({ _id: req.params.id }, { $inc: { likes: -1 }}, { useFindAndModify: false })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   addFavorite: function(req, res) {
     console.log(req.params.id)
     db.Post
-      .findOneAndUpdate({ _id: req.params.id })
+      .findOneAndUpdate({ _id: req.params.id }, { $set: { favorited: true }}, { useFindAndModify: false })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   removeFavorite: function(req, res) {    
     console.log(req.params.id)
     db.Post
-      .findOneAndUpdate({ _id: req.params.id })
+      .findOneAndUpdate({ _id: req.params.id }, { $set: { favorited: false }}, { useFindAndModify: false })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   }
-  
+
 };
 
 

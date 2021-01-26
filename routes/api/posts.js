@@ -19,25 +19,15 @@ router.route("/removelike/:id")
 
 // api/posts/addfavorite
 router.route("/addfavorite/:id")
-.get(postController.addFavorite)
+  .get(postController.addFavorite)
 
 // api/posts/removefavorite
 router.route("/removefavorite/:id")
-.get(postController.removeFavorite)
+  .get(postController.removeFavorite)
 
-// Matches with "/share/:username"
-// router
-//   .route("share/:username")
-//   .get(postController.findByUsername)
-//   .put(postController.update)
-//   .delete(postController.remove);
-
-// // Matches with "/share/:id"
-//   router
-//   .route("share/:id")
-//   .get(postController.findById)
-//   .put(postController.update)
-//   .delete(postController.remove);
+// api/posts/favorites
+router.route("/favorites")
+  .get(postController.findAll)
 
 
 module.exports = router;

@@ -7,6 +7,7 @@ const postSchema = new Schema({
     title: { type: String },
     content: { type: String },
     likes: { type: Number },
+    favorited: { type: Boolean, default: false },
     image: { type: String },
 });
 const Post = mongoose.model("Post", postSchema);

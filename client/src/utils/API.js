@@ -47,6 +47,10 @@ export default {
 
     getRemovedFavorites: function (id) {
         return axios.get("api/posts/removefavorite/" + id);
-    }
+    }, 
+
+    getFavorites: function () {
+        return axios.get("/api/posts/favorites");
+    },
 }
 

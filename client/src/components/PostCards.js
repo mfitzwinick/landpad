@@ -5,33 +5,33 @@ import filledLike from "../images/filled-heart.png";
 import favImg from "../images/focus.png";
 import favedImg from "../images/eye.png";
 import API from "../utils/API";
-import PostProfileImage from "./PostProfileImage";
+// import PostProfileImage from "./PostProfileImage";
 
 
 const PostCards = (props) => {
     const [isLiked, setIsLiked] = useState(false);
-    const [isFaved, setIsFaved] = useState(false);
+    const [isFaved, setIsFaved] = useState(true);
 
     function addLike(){
         setIsLiked(true);
-        API.getAddedLikes(props.id).then(res => {console.log(res)});
+        API.getAddedLikes(props.id).then(res => {console.log(res.data)});
     }
 
     function removelike(){
         setIsLiked(false);
-        API.getRemovedLikes(props.id).then(res => {console.log(res)});
-
+        API.getRemovedLikes(props.id).then(res => {console.log(res.data)});
     }
 
     function addFav(){
         setIsFaved(true);
-        API.getAddedFavorites(props.id).then(res => {console.log(res)});
+        API.getAddedFavorites(props.id).then(res => {console.log(res.data)});
+        console.log(isFaved);
     }
 
     function removeFav(){
         setIsFaved(false);
-        API.getRemovedFavorites(props.id).then(res => {console.log(res)});
-
+        API.getRemovedFavorites(props.id).then(res => {console.log(res.data)});
+        console.log(isFaved);
     }
 
     return (
@@ -41,7 +41,10 @@ const PostCards = (props) => {
             <Card.Img className="post-image" variant="top" src={props.image} />
             <Card.Body className="post-body">
                 <Card.Title id="title-here">{props.title}</Card.Title>
-                    <PostProfileImage />
+                    {/* <PostProfileImage /> */}
+
+                    <img id="prof-icon" src={props.profileImage}></img>
+                    <p id="username">@{props.username}</p>
                 <Card.Text id="post-content">
                     {props.content}
                 </Card.Text>
