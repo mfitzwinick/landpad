@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import "../styling/Upload.css"
+import "../styling/Upload.css";
+import PostCards from "./PostCards";
 
 class Upload2 extends React.Component {
     constructor(props) {
@@ -48,18 +49,22 @@ class Upload2 extends React.Component {
             },
         ).open();
     };
+
+
+
     render() {
         const { imageUrl, imageAlt } = this.state;
         return (
-            // <main className="App">
-            //     <section className="left-side">
+            <>
+            {/* // <main className="App">
+             //     <section className="left-side">
             //         <form>
             //             <div className="form-group">
             //                 <input type="file" />
             //             </div>
-            //             <button type="button" className="btn" onClick={this.handleImageUpload}>Submit</button>
+            //             <button type="button" className="btn" onClick={this.handleImageUpload}>Submit</button> */}
             <button type="button" className="btn widget-btn" onClick={this.openWidget}>Upload Via Widget</button>
-            //     </form>
+               {/* </form>
             // </section>
             // <section className="right-side">
             //     <p>The resulting image will be displayed here</p>
@@ -67,7 +72,9 @@ class Upload2 extends React.Component {
             //         <img src={imageUrl} alt={imageAlt} className="displayed-image" />
             //     )}
             // </section>
-            // </main>
+            </main>  */}
+            </>
+          
         );
     }
 }

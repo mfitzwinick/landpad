@@ -1,6 +1,6 @@
 #side-margins {
    margin-left: 20px;
-   /* position: relative; */
+   margin-top: 25px;
 }
 
 
@@ -13,9 +13,9 @@
 }
 
 .post-card {
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.5),
-            2px 2px 5px rgba(0,0,0,0.5),
-            -1px -1px 5px rgba(0,0,0,0.2);
+    box-shadow: 1px 1px 0px rgba(94, 93, 93, 0.5),
+                1px 1px 0px rgba(94, 93, 93, 0.5),
+                -1px 1px 0px rgba(94, 93, 93, 0.5);
 }
 
 .card {
@@ -24,6 +24,10 @@
 
 .post-image {
     border-radius: 20px 20px 0 0;
+}
+
+#post-content {
+    margin-top: 10px;
 }
 
 .post-footer {

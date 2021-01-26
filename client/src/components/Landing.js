@@ -29,8 +29,9 @@ function Landing(){
             password: password
         };
         API.login(data).then(res => {
-            const { token } = res.data;
+            const { token, id  } = res.data;
             localStorage.setItem("token", token);
+            localStorage.setItem("id", id);
             history.push("/share")
         })
     }
@@ -45,7 +46,7 @@ function Landing(){
                 <MainLogo />
                 <Form className="auth">
                     <Form.Group size="lg" controlId="email">
-                        <Form.Label>EMAIL</Form.Label>
+                        <Form.Label>USERNAME</Form.Label>
                         <Form.Control onChange={e =>  setUsername(e.target.value)}/>
                     </Form.Group>
                     <Form.Group size="lg" controlId="password">

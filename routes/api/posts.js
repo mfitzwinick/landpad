@@ -13,23 +13,21 @@ router.route("/share")
 router.route("/addlike/:id")
   .get(postController.addlike)
 
-
+// api/posts/removelike
 router.route("/removelike/:id")
   .get(postController.removelike)
 
-// Matches with "/share/:username"
-// router
-//   .route("share/:username")
-//   .get(postController.findByUsername)
-//   .put(postController.update)
-//   .delete(postController.remove);
+// api/posts/addfavorite
+router.route("/addfavorite/:id")
+  .get(postController.addFavorite)
 
-// // Matches with "/share/:id"
-//   router
-//   .route("share/:id")
-//   .get(postController.findById)
-//   .put(postController.update)
-//   .delete(postController.remove);
+// api/posts/removefavorite
+router.route("/removefavorite/:id")
+  .get(postController.removeFavorite)
+
+// api/posts/favorites
+router.route("/favorites")
+  .get(postController.findAll)
 
 
 module.exports = router;

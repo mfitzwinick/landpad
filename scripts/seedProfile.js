@@ -15,7 +15,7 @@ let profileSeed = [{
     city: "Los Angeles",
     area: "Studio City",
     agree: true,
-    image: "image here"
+    profileImage: "image here"
 },
 {
     firstName: "Jessica",
@@ -25,7 +25,7 @@ let profileSeed = [{
     city: null,
     area: null,
     agree: true,
-    image: "../client/src/images/xs-profile-jc.JPG"
+    profileImage: "../client/src/images/xs-profile-jc.JPG"
 }]
 
 
