@@ -105,9 +105,9 @@ class SavingsProfile extends Component {
 
                 </form>
                 <hr />
-                <h2>Get excited about your goal!</h2>
-                <h2>You got this!</h2>
-                <p>Your savings goal:{this.state.savingsGoal} </p>
+                <p>Get excited about your goal!</p>
+                <p>You got this!</p>
+                <h3>Your savings goal:  ${this.state.savingsGoal} </h3>
                 <button type="button" onClick={this.handleClick}>Update Your Progress</button>
             </main>
         )

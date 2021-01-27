@@ -115,7 +115,7 @@ class PostForm extends Component {
 
                             {/* for cloudinary image upload */}
 
-                            <label className="post-label">UPLOAD IMAGE</label>
+                            <label className="post-label">FIRST UPLOAD IMAGE</label>
                             <InputGroup className="mb-3 image">
                                 <InputGroup.Prepend>
                                    <UploadPost image={this.state.image} handleImage={this.handleImage}/>
@@ -123,7 +123,9 @@ class PostForm extends Component {
                             </InputGroup>
 
                     </div>
-                    
+
+                    <label className="btn-label">NEXT SUBMIT</label>
+
                     <button type="button" className="form-submit-btn" onClick={this.handleClick}>Submit</button>
 
                 </div>
