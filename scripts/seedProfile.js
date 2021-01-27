@@ -1,7 +1,7 @@
 let mongoose = require("mongoose");
 let db = require("../models");
 
-mongoose.connect("mongodb://localhost/landpad", {
+mongoose.connect("mongodb+srv://jesscru:password1234@cluster0.gbtqi.mongodb.net/landpad?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
