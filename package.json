@@ -1,7 +1,10 @@
 {
   "name": "landpad",
   "version": "1.0.0",
-  "description": "![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)",
+  "engines": {
+    "node": "14.15.1"
+  },
+  "description": "a great app!",
   "main": "server.js",
   "dependencies": {
     "apexcharts": "^3.23.1",
