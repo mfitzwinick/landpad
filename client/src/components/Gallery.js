@@ -11,7 +11,7 @@ const Gallery = props => {
       <div className="card text-center">
         <div className="overflow">
           <br></br>
-          <img src={Michelle} alt="Michelle" style={{width: '50%'}}/>        
+          <img className="pic" src={Michelle} alt="Michelle" style={{width: '50%'}}/>        
         </div>
         <div className="card-body text-dark">
           <h4 className="card-title">Michele Fitzgerald-Winick</h4>
@@ -37,7 +37,7 @@ const Gallery = props => {
         </div>
         <div className="overflow">
           <br></br>
-          <img src={Yess} alt="Michelle" style={{width: '50%'}}/>       
+          <img className="pic" src={Yess} alt="Michelle" style={{width: '50%'}}/>       
         </div>
         <div className="card-body text-dark">
           <h4 className="card-title">Yess Samuels</h4>
@@ -61,7 +61,7 @@ const Gallery = props => {
         </div>
         <div className="overflow">
           <br></br>
-          <img src={Jessica} alt="Michelle" style={{width: '50%'}}/>        
+          <img className="pic" src={Jessica} alt="Michelle" style={{width: '50%'}}/>        
         </div>
         <div className="card-body text-dark">
           <h4 className="card-title">Jessica Crump</h4>
@@ -84,7 +84,7 @@ const Gallery = props => {
         </div>
         <div className="overflow">
           <br></br>
-          <img src={Angelo} alt="Michelle" style={{width: '50%'}}/>       
+          <img className="pic" src={Angelo} alt="Michelle" style={{width: '50%'}}/>       
         </div>
         <div className="card-body text-dark">
           <h4 className="card-title">Angelo Rocky Dibello</h4>

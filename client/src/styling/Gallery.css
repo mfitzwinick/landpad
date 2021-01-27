@@ -3,5 +3,11 @@
     text-align:left;
     padding: 40px;
     word-break: break-all;
+    font-size: 23px;
+}
+
+.pic {
+    color: white;
+    box-shadow: 2px 2px 30px #173250;;
 }
 
