@@ -12,7 +12,7 @@
 
 ## Installation
 
-One can access the project via this link: 
+One can access the project via this link: https://radiant-stream-54517.herokuapp.com/
 
 ## Usage 
 
