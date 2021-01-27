@@ -1,10 +1,6 @@
 {
   "name": "landpad",
   "version": "1.0.0",
-  "engines": {
-    "node": "14.15.1",
-    "npm": "6.14.8"
-  },
   "description": "a great app!",
   "main": "server.js",
   "dependencies": {
