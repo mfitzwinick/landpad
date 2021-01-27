@@ -7,5 +7,8 @@ router.use("/posts", postRoute);
 router.use("/profile", profileRoute)
 router.use("/savings", savingsRoute)
 
+router.use(function(req, res) {
+    res.sendFile(path.join(__dirname, "../../client/build/index.html"));
+  });
 
 module.exports = router;
