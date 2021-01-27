@@ -21,11 +21,13 @@ export default {
         return axios.get("/api/posts/share");
     },
 
-    createSavings: function (data) {
-        return axios.post("/api/savings/create", data)
+    createSavings: function (data, id) {
+        return axios.put("/api/savings/create/" + id, data)
+
     },
-    getSavings: function () {
-        return axios.get("/api/savings");
+
+    getSavings: function (id) {
+        return axios.get("/api/savings/" + id);
     },
 
     getAddedLikes: function (id) {
@@ -34,6 +36,40 @@ export default {
 
     getRemovedLikes: function (id) {
         return axios.get("/api/posts/removelike/" + id);
-    }
+    },
+
+    getProfileImage: function (id) {
+        return axios.get("/api/profile/" + id);
+    },
+
+    getAddedFavorites: function (id) {
+        return axios.get("api/posts/addfavorite/" + id);
+    },
+
+    getRemovedFavorites: function (id) {
+        return axios.get("api/posts/removefavorite/" + id);
+    },
+
+    getFavorites: function () {
+        return axios.get("/api/posts/favorites");
+    },
+
+    getAddedLiked: function (id) {
+        return axios.get("api/posts/addliked/" + id);
+    }, 
+
+    getRemovedLiked: function (id) {
+        return axios.get("api/posts/removeliked/" + id);
+    }, 
+
+    getPosterUsername: function(id, data) {
+        return axios.post("api/posts/username/" + id, data);
+    },
+
+    getPosterProfile: function(id, data) {
+        return axios.post("api/posts/profile/" + id, data);
+    },
 }
+
+  
 

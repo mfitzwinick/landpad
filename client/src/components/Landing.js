@@ -29,8 +29,9 @@ function Landing(){
             password: password
         };
         API.login(data).then(res => {
-            const { token } = res.data;
+            const { token, id  } = res.data;
             localStorage.setItem("token", token);
+            localStorage.setItem("id", id);
             history.push("/share")
         })
     }
@@ -42,10 +43,10 @@ function Landing(){
         <img id="photo" variant="top" alt="award winning, modern-looking home" src={PageLogo}></img>
                 </Col>
                 <Col sm={3} className="form-section">
-                <MainLogo />
+                <MainLogo origin="login" />
                 <Form className="auth">
                     <Form.Group size="lg" controlId="email">
-                        <Form.Label>EMAIL</Form.Label>
+                        <Form.Label>USERNAME</Form.Label>
                         <Form.Control onChange={e =>  setUsername(e.target.value)}/>
                     </Form.Group>
                     <Form.Group size="lg" controlId="password">

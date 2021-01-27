@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import { useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -16,15 +16,15 @@ import pool from "../images/pool.jpg"
 
 
 function Financial() {
-    // const [user, setUser] = useState();
-    // const history = useHistory();
-    // useEffect(() => {
-    //     if (localStorage.getItem("token")) {
-    //         setUser(localStorage.getItem("token"))
-    //     } else {
-    //         history.push("/")
-    //     }
-    // }, [])
+    const [user, setUser] = useState();
+    const history = useHistory();
+    useEffect(() => {
+        if (localStorage.getItem("token")) {
+            setUser(localStorage.getItem("token"))
+        } else {
+            history.push("/")
+        }
+    }, [])
     return reactElement
 }
 

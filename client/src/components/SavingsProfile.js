@@ -5,7 +5,7 @@ class SavingsProfile extends Component {
     constructor() {
         super()
         this.state = {
-            userName: "",
+            userName: localStorage.getItem("id"),
             savingsGoal: '',
             downPaymentSavings: '',
             reserveSavings: '',
@@ -37,9 +37,10 @@ class SavingsProfile extends Component {
         }
         console.log(data)
 
-        API.createSavings(data).then(res => {
-            this.props.setShow(false);
+        API.createSavings(data, localStorage.getItem("id")).then(res => {
+            // this.props.setShow(false);
             console.log(res)
+            window.location.reload();
         });
     }
 
@@ -47,13 +48,6 @@ class SavingsProfile extends Component {
         return (
             <main>
                 <form>
-                    <input
-                        name="userName"
-                        value={this.state.userName}
-                        onChange={this.handleChange}
-                        placeholder="User Name"
-                    />
-                    <br />
 
                     <input
                         name="savingsGoal"

@@ -1,6 +1,11 @@
-.logo{
-    width: 180px;
-    height: 57px;
-    /* display: flex;
-    justify-content: flex-end; */
+#main-logo-login {
+    margin-top: 50px;
+    margin-left: 30px;
+    width: 263px;
+    height: 53px;
+}
+
+#main-logo-navbar {
+    width: 263px;
+    height: 53px;
 }

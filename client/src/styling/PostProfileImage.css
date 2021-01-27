@@ -1,0 +1,12 @@
+#username {
+    display: inline;
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+#prof-icon {
+    width: 37px;
+    height: 40px;
+    border-radius: 20px;
+    display: inline;
+}

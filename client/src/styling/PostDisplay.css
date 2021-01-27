@@ -1,6 +1,6 @@
 #side-margins {
    margin-left: 20px;
-   /* position: relative; */
+   margin-top: 25px;
 }
 
 
@@ -13,22 +13,39 @@
 }
 
 .post-card {
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.5),
-            2px 2px 5px rgba(0,0,0,0.5),
-            -1px -1px 5px rgba(0,0,0,0.2);
+    box-shadow: 1px 1px 0px rgba(94, 93, 93, 0.5),
+                1px 1px 0px rgba(94, 93, 93, 0.5),
+                -1px 1px 0px rgba(94, 93, 93, 0.5);
 }
 
 .card {
-    border-radius: 20px;
+    border-radius: 20px !important;
 }
 
 .post-image {
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 0 0 !important;
+}
+
+#username {
+    display: inline;
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+#prof-icon {
+    width: 37px;
+    height: 40px;
+    border-radius: 20px;
+    display: inline;
+}
+
+#post-content {
+    margin-top: 10px;
 }
 
 .post-footer {
-    border-radius: 20px;
-    padding-bottom: 20px;
+    border-radius: 20px !important;
+    padding-bottom: 20px !important;
 }  
 
 .like, 

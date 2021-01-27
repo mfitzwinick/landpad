@@ -9,12 +9,12 @@ module.exports = {
     //         .then(dbModel => res.json(dbModel))
     //         .catch(err => res.status(422).json(err));
     // },
-    // findById: function (req, res) {
-    //     db.Profiles
-    //         .findById(req.params.id)
-    //         .then(dbModel => res.json(dbModel))
-    //         .catch(err => res.status(422).json(err));
-    // },
+    findById: function (req, res) {
+        db.Profiles
+            .findById(req.params.id)
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
+    },
     // findByUsername: function(req, res) {
     //     db.Profiles
     //       .findByUsername({_username: req.params.username })
@@ -46,7 +46,7 @@ module.exports = {
     login: (req, res) => {
         try {
             const { id } = req.user
-            res.status(200).json({ token: jwt.sign(id), token_type: "Bearer" });
+            res.status(200).json({ id:id, token: jwt.sign(id), token_type: "Bearer" });
         } catch (err) {
             console.error(err)
             return res.status(500).send("Server Error, cannot login")

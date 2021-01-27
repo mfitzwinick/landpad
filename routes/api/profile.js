@@ -7,6 +7,10 @@ router.route("/")
   // .get(profileController.findAll)
   .post(profileController.create);
 
+
+router.route("/:id")
+  .get(profileController.findById);
+
 // Matches with "/api/users/:username"
 // router
 //   .route("/:username")

@@ -10,16 +10,29 @@ module.exports = {
     },
     findById: function (req, res) {
         db.Savings
-            .findById(req.params.id)
+            .findOne({ userName: req.params.id })
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
     create: function (req, res) {
-        console.log(req.body)
+
         db.Savings
-            .create(req.body)
-            .then(dbModel => res.json(dbModel))
-            .catch(err => res.status(422).json(err));
+        .findOneAndUpdate({ userName: req.params.id }, { $set: { savingsGoal: req.body.savingsGoal, downPaymentSavings: req.body.downPaymentSavings, reserveSavings: req.body.reserveSavings, movingExpenseSavings: req.body.movingExpenseSavings, closingCostSavings: req.body.closingCostSavings } })
+
+        .then(dbModel => {
+            if (dbModel === null) {
+                db.Savings
+                .create(req.body)
+                .then(dbModel => res.json(dbModel))
+                .catch(err => res.status(422).json(err));
+            }
+            else {
+                res.json(dbModel)
+            }
+        }
+        )
+        .catch(err => res.status(422).json(err));
+  
     },
     update: function (req, res) {
         db.Savings

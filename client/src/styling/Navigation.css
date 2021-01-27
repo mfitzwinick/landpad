@@ -1,11 +1,21 @@
-.nav-area {
+.nav-area, 
+.nav-link,
+.navbar.navbar-light {
     text-align: right;
     background-color: rgb(199, 194, 194);
-    height: 5rem;
     width: 100%;
     letter-spacing: 3px;
-    margin-bottom: 50px;
+    color: rgba(0,0,0,.5) !important;
+    border-bottom: white !important;
 }
+
+.nav-area:hover, 
+.nav-link:hover,
+.navbar.navbar-light:hover {
+    color: white !important;
+}
+
+
 .nav-link {
     letter-spacing: 5px;
 }
