@@ -45,7 +45,7 @@ class UserProfile extends Component {
             city: this.state.city,
             area: this.state.area,
             agree: this.state.agree,
-            image: this.state.profileImage
+            profileImage: this.state.profileImage
         }
 
         API.createUser(data).then(res => {

@@ -60,8 +60,13 @@
     width: 35%;
     border-radius: 20px;
     background-color: rgb(100, 97, 97);
-    margin: 20px 20px;
-    float: right;
+    margin-left: 10px;
+    /* float: right; */
+}
+
+.btn-label {
+    font-weight: 200;
+    display: block;
 }
 
 .form-submit-btn:hover {
