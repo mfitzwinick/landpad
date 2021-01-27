@@ -24,7 +24,7 @@ const Gallery = props => {
           I have always loved a home with a good story behind it. Southern California has a rich combination of old
           and new architecture, which is a constant source of inspiration. It is also the perfect place to blend an established storied industry (real estate) with technology.
           </p>
-          <a href="https://mfitzwinick.github.io/portfolio-inReact/" className="btn btn-outline-success">Portfolio</a>
+          {/*<a href="https://mfitzwinick.github.io/portfolio-inReact/" className="btn btn-outline-success">Portfolio</a>
           <br></br>
           <br></br>
           <a href="https://github.com/mfitzwinick" className="btn btn-outline-success">GiHub</a>
@@ -32,7 +32,7 @@ const Gallery = props => {
           <br></br>
           <a href="https://www.linkedin.com/in/michele-fitzgerald-winick-1a2112b/" className="btn btn-outline-success">LinkedIn</a>
           <br></br>
-          <br></br>
+          <br></br> */}
           <hr></hr>
         </div>
         <div className="overflow">
@@ -48,7 +48,7 @@ const Gallery = props => {
           I’ve obtained from my past experience, as well as utilizing my degree in Interior Architecture and Graphic Design, I’ve developed a unique and creative style 
           that mends both worlds together in a sophisticated blend and have been showcased for multiple top companies in the Real Estate industry.
           </p>
-          <a href="https://www.yessdesignmarketing.com/" className="btn btn-outline-success">Portfolio</a>
+          {/*<a href="https://www.yessdesignmarketing.com/" className="btn btn-outline-success">Portfolio</a>
           <br></br>
           <br></br>
           <a href="https://github.com/yessSamuels" className="btn btn-outline-success">GiHub</a>
@@ -56,7 +56,7 @@ const Gallery = props => {
           <br></br>
           <a href="#" className="btn btn-outline-success">LinkedIn</a>
           <br></br>
-          <br></br>
+          <br></br>*/}
           <hr></hr>
         </div>
         <div className="overflow">
@@ -71,7 +71,7 @@ const Gallery = props => {
           has tons of natural light, hence my choice in a home featuring more windows than walls. I love modern architecture with open floor plans, crisp, clean looks, 
           and monochromatic color palettes. With my love for nature, my home is ideally surrounded by wildlife and flora but also a short drive from a Whole Foods.
           </p>
-          <a href="https://immense-lake-19917.herokuapp.com/" className="btn btn-outline-success">Portfolio</a>
+          {/* <a href="https://immense-lake-19917.herokuapp.com/" className="btn btn-outline-success">Portfolio</a>
           <br></br>
           <br></br>
           <a href="https://github.com/Jesscru" className="btn btn-outline-success">GiHub</a>
@@ -79,7 +79,7 @@ const Gallery = props => {
           <br></br>
           <a href="https://www.linkedin.com/in/jessicacrump7/" className="btn btn-outline-success">LinkedIn</a>
           <br></br>
-          <br></br>
+    <br></br> */}
           <hr></hr>
         </div>
         <div className="overflow">
@@ -95,7 +95,7 @@ const Gallery = props => {
           After that I've decide to pursue a Music career and I've earned my Music Performance Major in Milan, Italy in 2004. I am an up and coming web developer, currently in the UCLA Extension 
           Full-Stack Web Development Coding Bootcamp (2020/21).
           </p>
-          <a href="https://pure-plateau-50431.herokuapp.com/" className="btn btn-outline-success">Portfolio</a>
+          {/*<a href="https://pure-plateau-50431.herokuapp.com/" className="btn btn-outline-success">Portfolio</a>
           <br></br>
           <br></br>
           <a href="https://github.com/Dibello80" className="btn btn-outline-success">GiHub</a>
@@ -103,7 +103,7 @@ const Gallery = props => {
           <br></br>
           <a href="https://www.linkedin.com/in/angelodibello" className="btn btn-outline-success">LinkedIn</a>
           <br></br>
-          <br></br>
+          <br></br>*/}
           <hr></hr>
         </div>
         
