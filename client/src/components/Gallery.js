@@ -22,7 +22,7 @@ const Gallery = props => {
           where family can gather, work and play. I was honored to be recognized by the National Association of
           Home Builders for work on a high rise conversion project focused on cutting edge modern designs; however
           I have always loved a home with a good story behind it. Southern California has a rich combination of old
-          and new architecture, which is a constant source of inspiration.
+          and new architecture, which is a constant source of inspiration. It is also the perfect place to blend an established storied industry (real estate) with technology.
           </p>
           <a href="https://mfitzwinick.github.io/portfolio-inReact/" className="btn btn-outline-success">Portfolio</a>
           <br></br>
