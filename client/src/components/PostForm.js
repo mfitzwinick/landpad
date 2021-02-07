@@ -7,7 +7,7 @@ import UploadPost from "./UploadPost";
 
 
 class PostForm extends Component {
-   
+
     state = {
         profileImage: "",
         username: "",
@@ -15,7 +15,7 @@ class PostForm extends Component {
         content: "",
         likes: "",
         liked: "",
-        image: "", 
+        image: "",
         favorited: "",
     };
 
@@ -40,7 +40,7 @@ class PostForm extends Component {
 
     handleClick = (e) => {
         e.preventDefault();
-        
+
         const data = {
 
             profileImage: this.state.profileImage,
@@ -59,77 +59,77 @@ class PostForm extends Component {
             console.log(res.data);
             const postID = res.data._id;
 
-            
+
 
             API.getProfileImage(localStorage.getItem("id")).then(res => {
                 console.log(res.data);
-     
-                this.setState({ profileImage: res.data.profileImage}, () => { 
+
+                this.setState({ profileImage: res.data.profileImage }, () => {
                     API.getPosterProfile(postID, { profileImage: this.state.profileImage }).then(res => {
                         console.log(res.data);
                     });
                 });
-                this.setState({ username: res.data.userName} , () => {
+                this.setState({ username: res.data.userName }, () => {
                     API.getPosterUsername(postID, { username: this.state.username }).then(res => {
                         console.log(res.data);
                     });
                 })
-                       window.location.reload();
+                //    window.location.reload();
             });
 
-             console.log(res);
+            console.log(res);
 
         });
 
     }
-   
 
-    render(){
+
+    render() {
         return (
-                <div className="post-container">
-                    <div className="add-post">
-                       
-                            <h1 id="add-a-post">ADD A POST</h1>
+            <div className="post-container">
+                <div className="add-post">
 
-                            <label className="post-label">ENTER TITLE</label>
-                            <InputGroup className="mb-3">
-                                <FormControl className="headline"
-                                    name="title"
-                                    onChange={this.handleInputChange}
-                                    value={this.state.title}
-                                    placeholder="Post headline"
-                                    aria-label="Post headline"
-                                    aria-describedby="basic-addon2" />
-                            </InputGroup>
+                    <h1 id="add-a-post">ADD A POST</h1>
 
-                            <label className="post-label">ENTER POST</label>
-                            <InputGroup className="mb-3 ">
-                                <FormControl as="textarea" className="content"
-                                    name="content"
-                                    onChange={this.handleInputChange}
-                                    value={this.state.content}
-                                    placeholder="Share your thoughts"
-                                    aria-label="Share your thoughts"
-                                    aria-describedby="basic-addon2" />
-                            </InputGroup>
+                    <label className="post-label">ENTER TITLE</label>
+                    <InputGroup className="mb-3">
+                        <FormControl className="headline"
+                            name="title"
+                            onChange={this.handleInputChange}
+                            value={this.state.title}
+                            placeholder="Post headline"
+                            aria-label="Post headline"
+                            aria-describedby="basic-addon2" />
+                    </InputGroup>
 
-                            {/* for cloudinary image upload */}
+                    <label className="post-label">ENTER POST</label>
+                    <InputGroup className="mb-3 ">
+                        <FormControl as="textarea" className="content"
+                            name="content"
+                            onChange={this.handleInputChange}
+                            value={this.state.content}
+                            placeholder="Share your thoughts"
+                            aria-label="Share your thoughts"
+                            aria-describedby="basic-addon2" />
+                    </InputGroup>
 
-                            <label className="post-label">UPLOAD IMAGE</label>
-                            <InputGroup className="mb-3 image">
-                                <InputGroup.Prepend>
-                                   <UploadPost image={this.state.image} handleImage={this.handleImage}/>
-                                </InputGroup.Prepend>
-                            </InputGroup>
+                    {/* for cloudinary image upload */}
 
-                    </div>
-                    
-                    <button type="button" className="form-submit-btn" onClick={this.handleClick}>Submit</button>
+                    <label className="post-label">UPLOAD IMAGE</label>
+                    <InputGroup className="mb-3 image">
+                        <InputGroup.Prepend>
+                            <UploadPost image={this.state.image} handleImage={this.handleImage} />
+                        </InputGroup.Prepend>
+                    </InputGroup>
 
                 </div>
-            );
-        }
+
+                <button type="button" className="form-submit-btn" onClick={this.handleClick}>Submit</button>
+
+            </div>
+        );
     }
+}
 
 
 export default PostForm;

@@ -26,7 +26,7 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(apiRoutes);
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://jesscru:password1234@cluster0.gbtqi.mongodb.net/landpad?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/landpad", { useNewUrlParser: true, useUnifiedTopology: true });
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {

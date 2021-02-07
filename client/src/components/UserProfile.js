@@ -116,6 +116,7 @@ class UserProfile extends Component {
                         <option value="sanfrancisco">San Francisco</option>
                         <option value="sanjose">San Jose</option>
                         <option value="fresno">Fresno</option>
+                        <option value="denver">Denver</option>
                     </select>
                     <br />
                     <p>Tell us the name of your neighborhood or area: </p>
@@ -130,10 +131,10 @@ class UserProfile extends Component {
                     <Upload2 profileImage={this.state.profileImage} handleImage={this.handleImage} />
                     <br />
                     <div class="download">
-                      <h6 class="pdf">Terms of Agreement</h6>
-                      <a href="../images/Terms.pdf" download="PDF"> Downloadable PDF
+                        <h6 class="pdf">Terms of Agreement</h6>
+                        <a href="../images/Terms.pdf" download="PDF"> Downloadable PDF
                       </a>
-                      <img src="" class="download-pdf" alt=""></img>
+                        <img src="" class="download-pdf" alt=""></img>
                     </div>
                     <p>Do you agree to LAND PAD terms of use?</p>
                     <select
