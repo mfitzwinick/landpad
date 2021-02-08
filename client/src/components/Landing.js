@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import { Container, Row, Col} from 'react-bootstrap';
+import { Row, Col} from 'react-bootstrap';
 import "../styling/Landing.css";
 import Modal from "./Modal";
 import PageLogo from "../images/1.png";
@@ -40,7 +40,7 @@ function Landing(){
             
             <Row>
                 <Col sm={9} className="img-section">
-        <img id="photo" variant="top" alt="award winning, modern-looking home" src={PageLogo}></img>
+                    <img id="photo" variant="top" alt="award winning, modern-looking home" src={PageLogo}></img>
                 </Col>
                 <Col sm={3} className="form-section">
                 <MainLogo origin="login" />

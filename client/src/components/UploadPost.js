@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "../styling/Upload.css"
 
 class UploadPost extends React.Component {

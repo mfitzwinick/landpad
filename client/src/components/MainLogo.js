@@ -8,7 +8,7 @@ const MainLogo = (props) => {
     return (
 
         <div>
-          <img id={props.origin === "login" ? "main-logo-login" : "main-logo-navbar"} src={logo}/>
+          <img id={props.origin === "login" ? "main-logo-login" : "main-logo-navbar"} alt="LandPad logo" src={logo}/>
         </div>
     );
 

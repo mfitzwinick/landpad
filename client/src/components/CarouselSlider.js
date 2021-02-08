@@ -1,5 +1,5 @@
 import React from "react";
-import { Carousel, Card, Button } from 'react-bootstrap'
+import { Carousel } from 'react-bootstrap'
 import '../styling/CarouselSlider.css';
 import LoginPhoto from "../images/12.png";
 import LoginPhoto1 from "../images/13.png";

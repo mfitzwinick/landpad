@@ -14,10 +14,8 @@ function PostDisplay() {
     useEffect(() => {
        API.getPost().then(res => {
            setAPIcall(res.data)
-        //    console.log(res.data);
 
         API.getProfileImage(localStorage.getItem("id")).then(res => {
-            // console.log(res.data);
  
             setProfileImage({ profileImage: res.data.profileImage});
             setUserName({ username: res.data.userName});
