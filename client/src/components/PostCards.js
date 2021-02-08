@@ -57,7 +57,7 @@ const PostCards = (props) => {
             <Card.Img className="post-image" variant="top" src={props.image} />
             <Card.Body className="post-body">
                 <Card.Title id="title-here">{props.title}</Card.Title>
-                    <img id="prof-icon" src={props.profileImage}></img>
+                    <img id="prof-icon" alt="user's profile image" src={props.profileImage}></img>
                     <p id="username">@{props.username}</p>
                 <Card.Text id="post-content">
                     {props.content}

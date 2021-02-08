@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from 'react-router-dom'
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import { Carousel, Card, Button } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 import Accordion from "react-bootstrap/Accordion";
 import "../styling/Resources.css"
 import CarouselSlider from "../components/CarouselSlider";
