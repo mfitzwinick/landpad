@@ -27,7 +27,7 @@ function Resources() {
             <div className="res-container">
                 <h1 id="title">RESOURCES</h1>
                 <h3 className="info">
-                    Click on the category that applies to you. We've provided information
+                    We've provided information
                     and resources just for you!
                     </h3>
 
@@ -50,13 +50,16 @@ function Resources() {
                                 </ol>
 
                                 <ul>
-                                    <li className="resource">Mortgage shopping worksheet:
+                                    <p>Mortgage shopping worksheet:</p>
+                                    <li className="resource">
                                     <a className="res-link" href="https://www.hud.gov/sites/documents/BOOKLET.PDF" target="_blank" rel="noreferrer">HOUSING AND URBAN DEVELOPMENT</a>
                                     </li>
-                                    <li className="resource">For teachers and first responders:
+                                    <p>For teachers and first responders:</p>
+                                    <li className="resource">
                                     <a className="res-link" href="https://www.hud.gov/program_offices/housing/sfh/reo/goodn/gnndabot" target="_blank" rel="noreferrer">SPECIAL PROGRAMS OFFERED</a>
                                     </li>
-                                    <li className="resource">Fair housing brochure:
+                                    <p>Fair housing brochure:</p>
+                                    <li className="resource">
                                         <a className="res-link" href="https://www.hud.gov/sites/documents/FHEO_BOOKLET_ENG.PDF" target="_blank" rel="noreferrer">KNOW YOUR RIGHTS</a>
                                     </li>
                                 </ul>
@@ -82,7 +85,8 @@ function Resources() {
                                 </p>
 
                                 <ul>
-                                    <li className="resource">Choosing between hiring an agent and FSBO:
+                                    <p>Choosing between hiring an agent and FSBO:</p>
+                                    <li className="resource">
                                         <a className="res-link" href="https://www.investopedia.com/articles/personal-finance/071514/8-reasons-not-sell-your-home-without-agent.asp" target="_blank" rel="noreferrer">SHOULD YOU HIRE AN AGENT?</a>
                                     </li>
 
@@ -102,16 +106,18 @@ function Resources() {
                                     Agents and brokers embody the pulse of the real estate industry.  Depending upon the state in which you work, there are different licensing and continuing education requirements that are important to keep up with.  Here are some CA resources, and updates to keep your business running smoothly:
                             </p>
                                 <ul>
-
-                                    <li className="resource">California Regional MLS Service:
+                                <p>California Regional MLS Service:</p>
+                                    <li className="resource">
                                         <a className="res-link" href="https://go.crmls.org/solutions/" target="_blank" rel="noreferrer">CRMLS</a>
                                     </li>
+                                    <p>Licensing and Continuing Education and Requirements:</p>
                                     <li className="resource"></li>
-                                    <li className="resource">Licensing and Continuing Education and Requirements:
+                                    <li className="resource">
                                         <a className="res-link" href="https://www.dre.ca.gov/" target="_blank" rel="noreferrer">DEPARTMENT OF REAL ESTATE</a>
                                     </li>
+                                    <p>Important information about showing during the pandemic:</p>
                                     <li className="resource"></li>
-                                    <li className="resource">Important information about showing during the pandemic:
+                                    <li className="resource">
                                         <a className="res-link" href="https://www.car.org/aboutus/mediacenter/news/covidnewformsapril" target="_blank" rel="noreferrer">CALIFORNIA ASSOC OF REALTORS</a>
                                     </li>
 

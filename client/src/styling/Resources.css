@@ -38,6 +38,8 @@
     list-style-type: none;
     cursor: pointer;
     font-weight: 300;
+    color:#32CD32;
+    text-decoration: underline;
 }
 
 .res-link {
